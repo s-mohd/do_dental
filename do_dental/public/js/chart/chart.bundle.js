@@ -11,14 +11,14 @@ class Chart {
 	}
 
 	init() {
-		this.setup_page_actions();
+		// this.setup_page_actions();
 		this.setup_app();
 	}
 
 	setup_page_actions() {
 		// setup page actions
 		this.primary_btn = this.page.set_primary_action(__("Print Message"), () =>
-	  frappe.msgprint("Hello My Page!")
+			frappe.msgprint("Hello My Page!")
 		);
 	}
 

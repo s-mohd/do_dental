@@ -12922,39 +12922,33 @@ Expected function or array of functions, received type ${typeof value}.`
       __expose();
       const projection = ref("buccal");
       const patientId = ref("");
-      function resolvePatientId() {
-        var _a;
-        try {
-          const url = new URL(window.location.href);
-          const fromQuery = url.searchParams.get("patient");
-          if (fromQuery) {
-            return fromQuery;
-          }
-        } catch (err) {
-          console.warn("Unable to read patient from URL", err);
+      function updatePatient(newPatient) {
+        if (!newPatient) {
+          patientId.value = "";
+          $('[title="Chart"]').text("Chart");
+          return;
         }
-        try {
-          const stored = (_a = window.localStorage) == null ? void 0 : _a.getItem("do_health_active_patient");
-          if (stored)
-            return stored;
-        } catch (err) {
-          console.warn("Unable to read patient from local storage", err);
-        }
-        return "";
+        patientId.value = newPatient.patient;
+        $('[title="Chart"]').text(`Chart - ${newPatient.patient_name || ""}`);
       }
+      let unsubscribe = null;
       onMounted(() => {
-        var _a;
-        const resolved = resolvePatientId();
-        patientId.value = JSON.parse(resolved).patient;
-        if (resolved) {
-          try {
-            (_a = window.localStorage) == null ? void 0 : _a.setItem("do_health_active_patient", resolved);
-          } catch (err) {
-            console.warn("Unable to persist patient identifier", err);
-          }
+        var _a, _b, _c;
+        if ((_a = window.do_health) == null ? void 0 : _a.patientWatcher) {
+          unsubscribe = window.do_health.patientWatcher.subscribe(updatePatient);
         }
+        const current = (_c = (_b = window.do_health) == null ? void 0 : _b.patientWatcher) == null ? void 0 : _c.read();
+        updatePatient(current);
       });
-      const __returned__ = { projection, patientId, resolvePatientId, DentalChart: DentalChart_default2, onMounted, ref };
+      onBeforeUnmount(() => {
+        if (unsubscribe)
+          unsubscribe();
+      });
+      const __returned__ = { projection, patientId, updatePatient, get unsubscribe() {
+        return unsubscribe;
+      }, set unsubscribe(v) {
+        unsubscribe = v;
+      }, DentalChart: DentalChart_default2, onMounted, onBeforeUnmount, ref };
       Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
       return __returned__;
     }
@@ -12984,7 +12978,6 @@ Expected function or array of functions, received type ${typeof value}.`
       this.init();
     }
     init() {
-      this.setup_page_actions();
       this.setup_app();
     }
     setup_page_actions() {
@@ -13027,4 +13020,4 @@ Expected function or array of functions, received type ${typeof value}.`
 * (c) 2018-present Yuxi (Evan) You and Vue contributors
 * @license MIT
 **/
-//# sourceMappingURL=chart.bundle.Y32SSNSH.js.map
+//# sourceMappingURL=chart.bundle.NPR6RTST.js.map

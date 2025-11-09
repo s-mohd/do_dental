@@ -6,40 +6,37 @@
 
 <script setup>
 import DentalChart from "./DentalChart.vue"
-import { onMounted, ref } from "vue"
+import { onMounted, onBeforeUnmount, ref } from "vue"
 
 const projection = ref("buccal")
 const patientId = ref("")
 
-function resolvePatientId() {
-  try {
-    const url = new URL(window.location.href)
-    const fromQuery = url.searchParams.get("patient")
-    if (fromQuery) {
-      return fromQuery
-    }
-  } catch (err) {
-    console.warn("Unable to read patient from URL", err)
+function updatePatient(newPatient) {
+  if (!newPatient) {
+    patientId.value = ""
+    $('[title="Chart"]').text("Chart")
+    return
   }
-  try {
-    const stored = window.localStorage?.getItem("do_health_active_patient")
-    if (stored) return stored
-  } catch (err) {
-    console.warn("Unable to read patient from local storage", err)
-  }
-  return ""
+
+  patientId.value = newPatient.patient
+  $('[title="Chart"]').text(`Chart - ${newPatient.patient_name || ""}`)
 }
 
+let unsubscribe = null
+
 onMounted(() => {
-  const resolved = resolvePatientId()
-  patientId.value = JSON.parse(resolved).patient
-  if (resolved) {
-    try {
-      window.localStorage?.setItem("do_health_active_patient", resolved)
-    } catch (err) {
-      console.warn("Unable to persist patient identifier", err)
-    }
+  // Subscribe to patientWatcher
+  if (window.do_health?.patientWatcher) {
+    unsubscribe = window.do_health.patientWatcher.subscribe(updatePatient)
   }
+
+  // Initialize immediately with stored patient
+  const current = window.do_health?.patientWatcher?.read()
+  updatePatient(current)
+})
+
+onBeforeUnmount(() => {
+  if (unsubscribe) unsubscribe()
 })
 </script>
 
