@@ -24,7 +24,6 @@ def get_patient_dental_chart(patient_id):
             "tooth",
             "restoration_type",
             "type",
-            "surfaces",
             "material",
             "quality",
             "detail",
@@ -35,7 +34,11 @@ def get_patient_dental_chart(patient_id):
         ],
     )
     for r in restorations:
-        r["surfaces"] = safe_json(r.get("surfaces"))
+        r["surfaces"] = frappe.get_all(
+            "Tooth Surfaces",
+            filters={"parent": r["name"]},
+            fields=["surface"]
+        )
 
     pathology = frappe.get_all(
         "Tooth Pathology",
@@ -61,14 +64,14 @@ def get_patient_dental_chart(patient_id):
         # Fetch decay_surfaces child table
         p["decay_surfaces"] = frappe.get_all(
             "Tooth Surfaces",
-            filters={"parent": p["name"]},
+            filters={"parent": p["name"], 'parentfield': 'decay_surfaces'},
             fields=["surface"]
         )
 
         # Fetch wear_surfaces child table
         p["wear_surfaces"] = frappe.get_all(
             "Tooth Surfaces",
-            filters={"parent": p["name"]},
+            filters={"parent": p["name"], 'parentfield': 'wear_surfaces'},
             fields=["surface"]
         )
 
