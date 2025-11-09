@@ -1,0 +1,72 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-10-22 01:22:15.368588",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "tooth_number",
+  "state",
+  "eruption_status",
+  "mobility",
+  "furcation",
+  "condition_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "tooth_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tooth Number"
+  },
+  {
+   "default": "Normal",
+   "fieldname": "state",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "State",
+   "options": "Normal\nMissing\nImplant\nCrown\nBridge\nProsthesis"
+  },
+  {
+   "fieldname": "eruption_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Eruption Status",
+   "options": "Erupted\nPartially Erupted\nImpacted"
+  },
+  {
+   "fieldname": "mobility",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Mobility"
+  },
+  {
+   "fieldname": "furcation",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Furcation"
+  },
+  {
+   "fieldname": "condition_notes",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Condition Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-11-08 16:22:52.496318",
+ "modified_by": "Administrator",
+ "module": "Do Dental",
+ "name": "Dental Tooth Condition",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

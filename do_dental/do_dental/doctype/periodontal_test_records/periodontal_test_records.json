@@ -1,0 +1,271 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-10-22 02:19:40.703646",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "tooth",
+  "notes",
+  "buccal_section",
+  "db_probing_depths",
+  "db_gingival_margin",
+  "db_bleeding",
+  "db_pus",
+  "db_plaque",
+  "column_break_slvz",
+  "b_probing_depths",
+  "b_gingival_margin",
+  "b_bleeding",
+  "b_pus",
+  "b_plaque",
+  "column_break_bdsw",
+  "mb_probing_depths",
+  "mb_gingival_margin",
+  "mb_bleeding",
+  "mb_pus",
+  "mb_plaque",
+  "lingualpalatal_section",
+  "dl_probing_depths",
+  "dl_gingival_margin",
+  "dl_bleeding",
+  "dl_pus",
+  "dl_plaque",
+  "column_break_phfz",
+  "l_probing_depths",
+  "l_gingival_margin",
+  "l_bleeding",
+  "l_pus",
+  "l_plaque",
+  "column_break_lwht",
+  "ml_probing_depths",
+  "ml_gingival_margin",
+  "ml_bleeding",
+  "ml_pus",
+  "ml_plaque"
+ ],
+ "fields": [
+  {
+   "fieldname": "tooth",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tooth",
+   "reqd": 1
+  },
+  {
+   "fieldname": "db_probing_depths",
+   "fieldtype": "Int",
+   "label": "DB Probing Depths"
+  },
+  {
+   "fieldname": "b_probing_depths",
+   "fieldtype": "Int",
+   "label": "B Probing Depths"
+  },
+  {
+   "fieldname": "mb_probing_depths",
+   "fieldtype": "Int",
+   "label": "MB Probing Depths"
+  },
+  {
+   "fieldname": "dl_probing_depths",
+   "fieldtype": "Int",
+   "label": "DL Probing Depths"
+  },
+  {
+   "fieldname": "l_probing_depths",
+   "fieldtype": "Int",
+   "label": "L Probing Depths"
+  },
+  {
+   "fieldname": "ml_probing_depths",
+   "fieldtype": "Int",
+   "label": "ML Probing Depths"
+  },
+  {
+   "fieldname": "buccal_section",
+   "fieldtype": "Section Break",
+   "label": "Buccal"
+  },
+  {
+   "fieldname": "db_gingival_margin",
+   "fieldtype": "Int",
+   "label": "DB Gingival Margin"
+  },
+  {
+   "fieldname": "column_break_slvz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "b_gingival_margin",
+   "fieldtype": "Int",
+   "label": "B Gingival Margin"
+  },
+  {
+   "fieldname": "column_break_bdsw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mb_gingival_margin",
+   "fieldtype": "Int",
+   "label": "MB Gingival Margin"
+  },
+  {
+   "fieldname": "lingualpalatal_section",
+   "fieldtype": "Section Break",
+   "label": "Lingual/Palatal"
+  },
+  {
+   "fieldname": "dl_gingival_margin",
+   "fieldtype": "Int",
+   "label": "DL Gingival Margin"
+  },
+  {
+   "fieldname": "column_break_phfz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "l_gingival_margin",
+   "fieldtype": "Int",
+   "label": "L Gingival Margin"
+  },
+  {
+   "fieldname": "column_break_lwht",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ml_gingival_margin",
+   "fieldtype": "Int",
+   "label": "ML Gingival Margin"
+  },
+  {
+   "default": "0",
+   "fieldname": "db_bleeding",
+   "fieldtype": "Check",
+   "label": "DB Bleeding"
+  },
+  {
+   "default": "0",
+   "fieldname": "db_pus",
+   "fieldtype": "Check",
+   "label": "DB Pus"
+  },
+  {
+   "default": "0",
+   "fieldname": "db_plaque",
+   "fieldtype": "Check",
+   "label": "DB Plaque"
+  },
+  {
+   "default": "0",
+   "fieldname": "b_bleeding",
+   "fieldtype": "Check",
+   "label": "B Bleeding"
+  },
+  {
+   "default": "0",
+   "fieldname": "b_pus",
+   "fieldtype": "Check",
+   "label": "B Pus"
+  },
+  {
+   "default": "0",
+   "fieldname": "b_plaque",
+   "fieldtype": "Check",
+   "label": "B Plaque"
+  },
+  {
+   "default": "0",
+   "fieldname": "mb_bleeding",
+   "fieldtype": "Check",
+   "label": "MB Bleeding"
+  },
+  {
+   "default": "0",
+   "fieldname": "mb_pus",
+   "fieldtype": "Check",
+   "label": "MB Pus"
+  },
+  {
+   "default": "0",
+   "fieldname": "mb_plaque",
+   "fieldtype": "Check",
+   "label": "MB Plaque"
+  },
+  {
+   "default": "0",
+   "fieldname": "dl_bleeding",
+   "fieldtype": "Check",
+   "label": "DL Bleeding"
+  },
+  {
+   "default": "0",
+   "fieldname": "dl_pus",
+   "fieldtype": "Check",
+   "label": "DL Pus"
+  },
+  {
+   "default": "0",
+   "fieldname": "dl_plaque",
+   "fieldtype": "Check",
+   "label": "DL Plaque"
+  },
+  {
+   "default": "0",
+   "fieldname": "l_bleeding",
+   "fieldtype": "Check",
+   "label": "L Bleeding"
+  },
+  {
+   "default": "0",
+   "fieldname": "l_pus",
+   "fieldtype": "Check",
+   "label": "L Pus"
+  },
+  {
+   "default": "0",
+   "fieldname": "l_plaque",
+   "fieldtype": "Check",
+   "label": "L Plaque"
+  },
+  {
+   "default": "0",
+   "fieldname": "ml_bleeding",
+   "fieldtype": "Check",
+   "label": "ML Bleeding"
+  },
+  {
+   "default": "0",
+   "fieldname": "ml_pus",
+   "fieldtype": "Check",
+   "label": "ML Pus"
+  },
+  {
+   "default": "0",
+   "fieldname": "ml_plaque",
+   "fieldtype": "Check",
+   "label": "ML Plaque"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-10-22 02:32:46.943739",
+ "modified_by": "Administrator",
+ "module": "Do Dental",
+ "name": "Periodontal Test Records",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

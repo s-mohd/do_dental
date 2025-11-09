@@ -1,0 +1,54 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-10-22 02:49:07.818413",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "tooth",
+  "pulp_status",
+  "apical_pathology",
+  "treatment_recommended"
+ ],
+ "fields": [
+  {
+   "fieldname": "tooth",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tooth",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pulp_status",
+   "fieldtype": "Select",
+   "label": "Pulp Status",
+   "options": "Normal\nReversible Pulpitis\nIrreversible Pulpitis\nNecrotic\nPreviously Treated"
+  },
+  {
+   "fieldname": "apical_pathology",
+   "fieldtype": "Small Text",
+   "label": "Apical Pathology"
+  },
+  {
+   "fieldname": "treatment_recommended",
+   "fieldtype": "Small Text",
+   "label": "Treatment Recommended"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-10-22 02:51:53.590142",
+ "modified_by": "Administrator",
+ "module": "Do Dental",
+ "name": "Root Canal Records",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

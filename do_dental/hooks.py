@@ -29,7 +29,10 @@ app_license = "mit"
 # app_include_js = "/assets/do_dental/js/do_dental.js"
 
 app_include_js = [
-  "/assets/do_dental/js/dental_chart.js"
+  "/assets/do_dental/js/dental_chart.js",
+  "/assets/do_dental/js/dental_app.js",
+  "/assets/do_dental/js/dental_charting.js",
+  "/assets/do_dental/js/dental_core.js",
 ]
 
 # app_include_css = [

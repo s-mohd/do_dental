@@ -1,0 +1,180 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-10-22 02:53:02.811123",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "dental_chart",
+  "patient",
+  "tooth",
+  "restoration_type",
+  "column_break_ycdt",
+  "date",
+  "time",
+  "date_placed",
+  "type",
+  "section_break_zdbf",
+  "surfaces",
+  "material",
+  "quality",
+  "detail",
+  "crown_section",
+  "crown_material",
+  "crown_type",
+  "crown_base",
+  "crown_implant_type"
+ ],
+ "fields": [
+  {
+   "fieldname": "dental_chart",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Dental Chart",
+   "options": "Patient Dental Chart",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Time",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date_placed",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date Placed"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Filling\nCrown\nBridge\nOnlay\nInlay\nVeneer"
+  },
+  {
+   "fieldname": "surfaces",
+   "fieldtype": "Table MultiSelect",
+   "label": "Surfaces",
+   "options": "Tooth Surfaces"
+  },
+  {
+   "fieldname": "material",
+   "fieldtype": "Select",
+   "label": "Material",
+   "options": "Composite\nCeramic\nAmalgam\nGold\nNon-Precious Metal\nTemporary"
+  },
+  {
+   "fieldname": "tooth",
+   "fieldtype": "Data",
+   "label": "Tooth",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "dental_chart.patient",
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fieldname": "restoration_type",
+   "fieldtype": "Select",
+   "label": "Restoration Type",
+   "options": "Filling\nInlay\nOnlay\nVeneer\nPartial Crown\nCrown"
+  },
+  {
+   "fieldname": "column_break_ycdt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.restoration_type != 'Crown'",
+   "fieldname": "section_break_zdbf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "quality",
+   "fieldtype": "Select",
+   "label": "Quality",
+   "options": "Sufficient\nUncertain\nInsufficient"
+  },
+  {
+   "fieldname": "detail",
+   "fieldtype": "Select",
+   "label": "Detail",
+   "options": "Overhang\nFlush\nShortfall"
+  },
+  {
+   "depends_on": "eval:doc.restoration_type == 'Crown'",
+   "fieldname": "crown_section",
+   "fieldtype": "Section Break",
+   "label": "Crown"
+  },
+  {
+   "fieldname": "crown_material",
+   "fieldtype": "Select",
+   "label": "Crown Material",
+   "options": "Composite\nCeramic\nGold\nNon-Precious Metal"
+  },
+  {
+   "fieldname": "crown_type",
+   "fieldtype": "Select",
+   "label": "Crown Type",
+   "options": "Single Crown\nAbutment\nPontic"
+  },
+  {
+   "fieldname": "crown_base",
+   "fieldtype": "Select",
+   "label": "Crown Base",
+   "options": "Natural\nImplant"
+  },
+  {
+   "depends_on": "eval:doc.crown_base == 'Implant'",
+   "fieldname": "crown_implant_type",
+   "fieldtype": "Select",
+   "label": "Crown Implant Type",
+   "options": "Bone Level\nTissue Level"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-08 17:40:50.131451",
+ "modified_by": "Administrator",
+ "module": "Do Dental",
+ "name": "Tooth Restoration",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,6910 @@
+.app>[data-view="terms-and-conditions"] {
+    position: fixed;
+    z-index: 200;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.app>[data-view="terms-and-conditions"] .dialog {
+    position: relative;
+    width: auto;
+    min-height: calc(100vh - 64px);
+    padding: 0;
+    margin: 32px;
+    box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 4px;
+}
+
+.app>[data-view="terms-and-conditions"] .dialog header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: normal;
+    margin-bottom: 16px;
+    text-align: center;
+    flex: 0 0 64px;
+    margin: 0;
+    background: #f2f4f7;
+    border-bottom: 1px solid #e6e7eb;
+}
+
+.app>[data-view="terms-and-conditions"] .dialog header:last-child {
+    margin-bottom: 0;
+}
+
+.app>[data-view="terms-and-conditions"] .dialog .content {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    padding: 16px;
+}
+
+.app>[data-view="terms-and-conditions"] .dialog .content h1,
+.app>[data-view="terms-and-conditions"] .dialog .content h2 {
+    margin-bottom: 32px;
+}
+
+.app>[data-view="terms-and-conditions"] .dialog .content h3,
+.app>[data-view="terms-and-conditions"] .dialog .content p {
+    margin-bottom: 16px;
+}
+
+.app>[data-view="terms-and-conditions"] .dialog .content,
+.app>[data-view="terms-and-conditions"] .dialog .content p {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: normal;
+}
+
+.app>[data-view="terms-and-conditions"] .dialog .actions {
+    display: block;
+    margin: 0;
+    text-align: center;
+    flex: 0 0 48px;
+    padding: 16px;
+    text-align: right;
+    padding: 0 16px 16px;
+}
+
+.app>[data-view="terms-and-conditions"] .dialog .actions .toggle-switch {
+    margin-right: 24px;
+}
+
+.app>[data-view="terms-and-conditions"] .dialog .actions .button {
+    vertical-align: top;
+}
+
+/*! modern-normalize | MIT License | https://github.com/sindresorhus/modern-normalize */
+html {
+    box-sizing: border-box;
+}
+
+*,
+:after,
+:before {
+    box-sizing: inherit;
+}
+
+:root {
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+}
+
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+hr {
+    height: 0;
+}
+
+abbr[title] {
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier,
+        monospace;
+    font-size: 1em;
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+[type="button"],
+[type="reset"],
+[type="submit"],
+button {
+    -webkit-appearance: button;
+}
+
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner,
+button::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+.dental-chart-container .chart-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.dental-chart-container .action-tabs {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.dental-chart-container .action-tabs button {
+    border: 1px solid #d0d5dd;
+    background: #ffffff;
+    color: #344054;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 14px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.dental-chart-container .action-tabs button:hover {
+    border-color: #98a2b3;
+    color: #1d2939;
+}
+
+.dental-chart-container .action-tabs button.active {
+    background: #0f62fe;
+    border-color: #0f62fe;
+    color: #ffffff;
+    box-shadow: 0 1px 2px rgba(15, 98, 254, 0.24);
+}
+
+.dental-chart-container .layer-controls {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.dental-chart-container .chart-meta {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.dental-chart-container {
+    position: relative;
+    min-height: 100%;
+}
+
+.dental-chart-container .chart-main {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.dental-chart-container .chart-main .mouth {
+    flex: 0 0 auto;
+}
+
+.chart-loading {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.85);
+    z-index: 40;
+    font-size: 14px;
+    color: #475467;
+}
+
+.chart-loading__spinner {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 3px solid rgba(15, 98, 254, 0.2);
+    border-top-color: #0f62fe;
+    animation: chart-spin 0.8s linear infinite;
+}
+
+@keyframes chart-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.periodontal-panel .panel-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.periodontal-panel .panel-close {
+    border: none;
+    background: transparent;
+    color: #475467;
+    font-size: 20px;
+    line-height: 1;
+    padding: 0 8px;
+    cursor: pointer;
+}
+
+.periodontal-panel .panel-close:hover {
+    color: #0f62fe;
+}
+
+.panel-slide-enter-active,
+.panel-slide-leave-active {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.panel-slide-enter-from,
+.panel-slide-leave-to {
+    opacity: 0;
+    transform: translateX(16px);
+}
+
+.periodontal-panel {
+    position: sticky;
+    top: 72px;
+    flex: 0 0 320px;
+    width: 320px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 16px 32px rgba(15, 23, 42, 0.16);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 10;
+}
+
+.periodontal-panel .panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.periodontal-panel .panel-header .panel-title {
+    text-align: center;
+    flex: 1;
+}
+
+.periodontal-panel .panel-header .panel-title .label {
+    font-size: 12px;
+    color: #667085;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.periodontal-panel .panel-header .panel-title strong {
+    font-size: 24px;
+    color: #101828;
+}
+
+.periodontal-panel .nav-button {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #d0d5dd;
+    background: #f9fafb;
+    color: #344054;
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.periodontal-panel .nav-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+}
+
+.periodontal-panel .site-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.periodontal-panel .site-grid button {
+    border-radius: 12px;
+    border: 1px solid #e4e7ec;
+    padding: 10px 12px;
+    text-align: left;
+    background: #f9fafb;
+    cursor: pointer;
+    transition: border-color 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+.periodontal-panel .site-grid button.active {
+    border-color: #0f62fe;
+    background: rgba(15, 98, 254, 0.1);
+    color: #0f62fe;
+}
+
+.periodontal-panel .site-grid .site-label {
+    font-size: 13px;
+    font-weight: 600;
+    display: block;
+}
+
+.periodontal-panel .site-grid .site-summary {
+    font-size: 11px;
+    color: #667085;
+}
+
+.periodontal-panel .measurement-section {
+    display: grid;
+    gap: 12px;
+}
+
+.periodontal-panel .measurement-section label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 13px;
+    color: #344054;
+}
+
+.periodontal-panel .measurement-section input {
+    border: 1px solid #d0d5dd;
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 16px;
+    color: #101828;
+}
+
+.periodontal-panel .flags-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.periodontal-panel .flag-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #344054;
+}
+
+.periodontal-panel .panel-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.periodontal-panel .auto-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #344054;
+}
+
+.periodontal-panel .footer-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.periodontal-panel .footer-actions button {
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 14px;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.periodontal-panel .footer-actions .secondary {
+    background: #f4f4f5;
+    border-color: #e4e7ec;
+    color: #344054;
+}
+
+.periodontal-panel .footer-actions .primary {
+    background: #0f62fe;
+    color: #ffffff;
+    border-color: #0f62fe;
+}
+
+.periodontal-panel .panel-hint {
+    margin: 0;
+    font-size: 12px;
+    color: #0f7b3b;
+}
+
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring,
+button:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+fieldset {
+    padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+    padding: 0;
+}
+
+progress {
+    vertical-align: baseline;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+[type="search"] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit;
+}
+
+summary {
+    display: list-item;
+}
+
+body,
+html {
+    position: relative;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica,
+        Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+}
+
+body[data-restrict-viewport="true"],
+html {
+    height: 100%;
+}
+
+body[data-viewport-status="ok"] {
+    min-width: 1024px;
+    min-height: 656px;
+}
+
+@media print {
+    @page {
+        size: a4;
+        margin: 2.125cm 0;
+    }
+
+    body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    body[data-restrict-viewport="false"] {
+        min-width: 0;
+    }
+}
+
+:focus:not(.focus-visible) {
+    outline: 0;
+}
+
+.app {
+    display: flex;
+    overflow: hidden;
+    height: 100%;
+}
+
+.app>* {
+    flex: none;
+    overflow: auto;
+    width: 100%;
+}
+
+html[data-env="test"] * {
+    transition-property: none !important;
+}
+
+h1.logo {
+    margin: 0 0 32px;
+    color: #008fd6;
+}
+
+h1.logo a {
+    display: block;
+    padding-left: 20px;
+}
+
+fieldset {
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+body {
+    color: #7a8599;
+    background: #fff;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+p,
+ul {
+    margin: 0;
+}
+
+p {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: normal;
+    margin-bottom: 16px;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+ol,
+ul {
+    position: relative;
+    list-style: none;
+}
+
+ol,
+ol>li,
+ul,
+ul>li {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    transition: 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition-property: color, background-color, border;
+    color: inherit;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    a {
+        transition: none;
+    }
+}
+
+canvas,
+img,
+svg {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+svg {
+    fill: currentcolor;
+}
+
+.visualization {
+    display: block;
+}
+
+canvas {
+    outline: none;
+}
+
+button {
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+
+button[disabled] {
+    cursor: default;
+}
+
+.button {
+    font-size: 13px;
+    line-height: 24px;
+    letter-spacing: 0.08px;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    transition: 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition-property: color, background-color, border;
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    font-weight: 700;
+    color: #fff;
+    background: #008fd6;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .button {
+        transition: none;
+    }
+}
+
+.button:active {
+    background-color: #0075b0;
+}
+
+.button.disabled,
+.button:disabled {
+    pointer-events: none;
+    cursor: default;
+    color: hsla(0, 0%, 100%, 0.5);
+}
+
+.button[data-icon] {
+    position: relative;
+    padding-left: 56px;
+    text-align: left;
+}
+
+.button[data-icon]:before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 18px;
+    width: 24px;
+    height: 24px;
+}
+
+.button[data-icon="add"]:before {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg fill='%23fff' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 0C5.373 0 0 5.372 0 12s5.373 12 12 12 12-5.372 12-12S18.627 0 12 0zm0 21.818c-5.422 0-9.818-4.396-9.818-9.818S6.578 2.182 12 2.182 21.818 6.578 21.818 12 17.422 21.818 12 21.818zm4.364-10.909H13.09V7.636a1.091 1.091 0 0 0-2.182 0v3.273H7.636a1.091 1.091 0 0 0 0 2.182h3.273v3.273a1.091 1.091 0 0 0 2.182 0V13.09h3.273a1.091 1.091 0 0 0 0-2.182z'/%3E%3C/svg%3E");
+}
+
+.button[data-icon="to-be-extracted"]:before {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg fill='%23fff' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 0C5.373 0 0 5.372 0 12s5.373 12 12 12 12-5.372 12-12S18.627 0 12 0m0 21.818c-5.422 0-9.818-4.396-9.818-9.818S6.578 2.182 12 2.182 21.818 6.578 21.818 12 17.422 21.818 12 21.818M15.5 9.39V7.74c0-.409-.348-.74-.778-.74H9.278c-.43 0-.778.331-.778.74v1.666c0 .233.116.452.312.593l2.54 1.813-2.54 1.814a.73.73 0 0 0-.312.593v1.666c0 .409.348.74.778.74h5.444c.43 0 .778-.331.778-.74v-1.65a.73.73 0 0 0-.31-.59l-2.545-1.832L15.19 9.98a.73.73 0 0 0 .309-.591'/%3E%3C/svg%3E");
+}
+
+.button[data-icon="missing"]:before {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg fill='%23fff' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath fill='%23FFF' d='M-620-27H404v748H-620z'/%3E%3Cg fill='%23008fd6' fill-rule='nonzero'%3E%3Cpath d='M12 0C5.373 0 0 5.372 0 12s5.373 12 12 12 12-5.372 12-12S18.627 0 12 0m0 21.818c-5.422 0-9.818-4.396-9.818-9.818S6.578 2.182 12 2.182 21.818 6.578 21.818 12 17.422 21.818 12 21.818'/%3E%3Cpath d='m8.2 8.5 7.586 7.586m0-7.586L8.2 16.086' stroke='%23008fd6' stroke-linecap='round' stroke-width='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.button[data-icon="reset"]:before {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg fill='%23fff' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.53 9.03c-1.62-3.23-5.02-5.32-8.68-5.32-.31 0-.62.02-.93.04l.5 1.21-6.4-.1L8.44-.02l.66 1.56c.62-.1 1.25-.15 1.88-.15 3.05 0 6.03 1.22 8.16 3.36.98.88 1.78 1.98 2.37 3.26l.12.26-1.97 1.05-.13-.29zM8.12 23.09l-3.05-5.67-.84 1.04a9.517 9.517 0 0 1-.27-10.98l.17-.25-1.88-1.24-.16.27C1.25 7.72.76 8.87.5 10c-.84 3.63.04 7.45 2.36 10.27L1.83 21.6l6.29 1.49zm2.36.93c1.51 0 2.83-.17 3.93-.51 3.57-1.05 6.38-3.65 7.75-7.15l1.65.2-1.84-6.21-3.47 5.64 1.37.14c-1.59 3.48-5.01 5.71-8.81 5.71-.19 0-.39-.01-.58-.02l-.3-.02-.11 2.22h.41z'/%3E%3C/svg%3E");
+}
+
+.button[data-icon="jaws"]:before {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg fill='%23fff' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18 14.9c-.3 2.5-1.5 4.5-3 4.5s-2.7-1.9-3-4.5c-.3 2.5-1.5 4.5-3 4.5s-2.7-2-3-4.5c-.2 1.9-1.1 3.3-2.3 3.3-1.3 0-2.3-1.8-2.3-4 .1-.6 1.1-1 2.3-1 1.1 0 2.1.4 2.2.9.3-.7 1.5-1.2 3-1.2s2.7.5 2.9 1.2c.3-.7 1.5-1.2 3-1.2s2.7.5 2.9 1.2c.2-.5 1.2-.9 2.3-.9 1.2 0 2.2.4 2.3 1v.1c0 2.2-1 3.9-2.3 3.9-.9-.1-1.8-1.5-2-3.3zM5.3 9.8c.3-2.9 1.6-5.1 3.3-5.1s3.2 2.2 3.3 5.1c.3-2.8 1.6-5.1 3.3-5.1s3.2 2.2 3.4 5.1C19 7.6 20.1 6 21.3 6c1.5 0 2.7 2.1 2.7 4.6-.1.7-1.3 1.2-2.7 1.2-1.3 0-2.4-.4-2.6-1-.3.8-1.7 1.4-3.4 1.4s-3.1-.6-3.3-1.4c-.3.8-1.7 1.4-3.4 1.4-1.6 0-3.1-.6-3.3-1.4-.3.6-1.4 1-2.7 1-1.4 0-2.6-.5-2.6-1.2v-.1C0 8.1 1.2 6 2.7 6c1.3.1 2.4 1.6 2.6 3.8z'/%3E%3C/svg%3E");
+}
+
+.button.secondary {
+    -moz-osx-font-smoothing: auto;
+    -webkit-font-smoothing: auto;
+    box-shadow: inset 0 0 0 2px #008fd6;
+    color: #008fd6;
+    background: transparent;
+}
+
+.button.secondary:active {
+    color: #fff;
+    background-color: #008fd6;
+}
+
+.button.danger,
+.button.danger:active {
+    background: #e13830;
+}
+
+.button.link {
+    -moz-osx-font-smoothing: auto;
+    -webkit-font-smoothing: auto;
+    color: #008fd6;
+    background: none;
+}
+
+.button.link:active {
+    color: #0075b0;
+}
+
+.button.link[data-icon] {
+    padding: 0 0 0 32px;
+}
+
+.button.link[data-icon]:before {
+    left: 0;
+}
+
+.button.link[data-icon="add"]:before {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg fill='%23008fd6' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 0C5.373 0 0 5.372 0 12s5.373 12 12 12 12-5.372 12-12S18.627 0 12 0zm0 21.818c-5.422 0-9.818-4.396-9.818-9.818S6.578 2.182 12 2.182 21.818 6.578 21.818 12 17.422 21.818 12 21.818zm4.364-10.909H13.09V7.636a1.091 1.091 0 0 0-2.182 0v3.273H7.636a1.091 1.091 0 0 0 0 2.182h3.273v3.273a1.091 1.091 0 0 0 2.182 0V13.09h3.273a1.091 1.091 0 0 0 0-2.182z'/%3E%3C/svg%3E");
+}
+
+.button.link[data-icon="to-be-extracted"]:before {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg fill='%23008fd6' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 0C5.373 0 0 5.372 0 12s5.373 12 12 12 12-5.372 12-12S18.627 0 12 0m0 21.818c-5.422 0-9.818-4.396-9.818-9.818S6.578 2.182 12 2.182 21.818 6.578 21.818 12 17.422 21.818 12 21.818M15.5 9.39V7.74c0-.409-.348-.74-.778-.74H9.278c-.43 0-.778.331-.778.74v1.666c0 .233.116.452.312.593l2.54 1.813-2.54 1.814a.73.73 0 0 0-.312.593v1.666c0 .409.348.74.778.74h5.444c.43 0 .778-.331.778-.74v-1.65a.73.73 0 0 0-.31-.59l-2.545-1.832L15.19 9.98a.73.73 0 0 0 .309-.591'/%3E%3C/svg%3E");
+}
+
+.button.link[data-icon="missing"]:before {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg fill='%23008fd6' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath fill='%23FFF' d='M-620-27H404v748H-620z'/%3E%3Cg fill='%23008fd6' fill-rule='nonzero'%3E%3Cpath d='M12 0C5.373 0 0 5.372 0 12s5.373 12 12 12 12-5.372 12-12S18.627 0 12 0m0 21.818c-5.422 0-9.818-4.396-9.818-9.818S6.578 2.182 12 2.182 21.818 6.578 21.818 12 17.422 21.818 12 21.818'/%3E%3Cpath d='m8.2 8.5 7.586 7.586m0-7.586L8.2 16.086' stroke='%23008fd6' stroke-linecap='round' stroke-width='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.button.link[data-icon="reset"]:before {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg fill='%23008fd6' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.53 9.03c-1.62-3.23-5.02-5.32-8.68-5.32-.31 0-.62.02-.93.04l.5 1.21-6.4-.1L8.44-.02l.66 1.56c.62-.1 1.25-.15 1.88-.15 3.05 0 6.03 1.22 8.16 3.36.98.88 1.78 1.98 2.37 3.26l.12.26-1.97 1.05-.13-.29zM8.12 23.09l-3.05-5.67-.84 1.04a9.517 9.517 0 0 1-.27-10.98l.17-.25-1.88-1.24-.16.27C1.25 7.72.76 8.87.5 10c-.84 3.63.04 7.45 2.36 10.27L1.83 21.6l6.29 1.49zm2.36.93c1.51 0 2.83-.17 3.93-.51 3.57-1.05 6.38-3.65 7.75-7.15l1.65.2-1.84-6.21-3.47 5.64 1.37.14c-1.59 3.48-5.01 5.71-8.81 5.71-.19 0-.39-.01-.58-.02l-.3-.02-.11 2.22h.41z'/%3E%3C/svg%3E");
+}
+
+.button.link[data-icon="jaws"]:before {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg fill='%23008fd6' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18 14.9c-.3 2.5-1.5 4.5-3 4.5s-2.7-1.9-3-4.5c-.3 2.5-1.5 4.5-3 4.5s-2.7-2-3-4.5c-.2 1.9-1.1 3.3-2.3 3.3-1.3 0-2.3-1.8-2.3-4 .1-.6 1.1-1 2.3-1 1.1 0 2.1.4 2.2.9.3-.7 1.5-1.2 3-1.2s2.7.5 2.9 1.2c.3-.7 1.5-1.2 3-1.2s2.7.5 2.9 1.2c.2-.5 1.2-.9 2.3-.9 1.2 0 2.2.4 2.3 1v.1c0 2.2-1 3.9-2.3 3.9-.9-.1-1.8-1.5-2-3.3zM5.3 9.8c.3-2.9 1.6-5.1 3.3-5.1s3.2 2.2 3.3 5.1c.3-2.8 1.6-5.1 3.3-5.1s3.2 2.2 3.4 5.1C19 7.6 20.1 6 21.3 6c1.5 0 2.7 2.1 2.7 4.6-.1.7-1.3 1.2-2.7 1.2-1.3 0-2.4-.4-2.6-1-.3.8-1.7 1.4-3.4 1.4s-3.1-.6-3.3-1.4c-.3.8-1.7 1.4-3.4 1.4-1.6 0-3.1-.6-3.3-1.4-.3.6-1.4 1-2.7 1-1.4 0-2.6-.5-2.6-1.2v-.1C0 8.1 1.2 6 2.7 6c1.3.1 2.4 1.6 2.6 3.8z'/%3E%3C/svg%3E");
+}
+
+input,
+select,
+textarea {
+    -webkit-appearance: none;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+}
+
+input::-webkit-input-placeholder {
+    color: inherit;
+    opacity: 0.54;
+}
+
+input::-moz-placeholder {
+    color: inherit;
+    opacity: 0.54;
+}
+
+input::-webkit-inner-spin-button {
+    display: none;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.field {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: normal;
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.field:last-child {
+    margin-bottom: 0;
+}
+
+.field>.label {
+    color: #7a8599;
+}
+
+.field .control {
+    display: block;
+    height: 56px;
+}
+
+.field .control input,
+.field .control select,
+.field .control textarea {
+    transition: 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition-property: padding, border-color, box-shadow;
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+    border: 1px solid #e6e7eb;
+    outline: 0;
+    border-radius: 4px;
+    color: #202633;
+    background: #f2f4f7;
+    line-height: 24px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .field .control input,
+    .field .control select,
+    .field .control textarea {
+        transition: none;
+    }
+}
+
+.field .control input:focus:not([readonly]),
+.field .control input:hover:not([readonly]),
+.field .control select:focus:not([readonly]),
+.field .control select:hover:not([readonly]),
+.field .control textarea:focus:not([readonly]),
+.field .control textarea:hover:not([readonly]) {
+    border-color: #98a1b3;
+    box-shadow: 0 2px 4px 0 rgba(77, 85, 101, 0.2);
+}
+
+.field .control.checkbox,
+.field .control.radio,
+.field .control.textarea {
+    height: auto;
+}
+
+.field .control.radio {
+    display: inline-block;
+}
+
+.field .control.radio input {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    margin: -1px;
+}
+
+.field .control.radio input+label {
+    display: inline-block;
+    padding-left: 29px;
+}
+
+.field .control.radio input+label:before {
+    content: "";
+    display: inline-block;
+    overflow: hidden;
+    width: 18px;
+    height: 18px;
+    padding: 3px;
+    border: 2px solid #e6e7eb;
+    border-radius: 50%;
+    margin-right: 11px;
+    margin-left: -29px;
+    margin-bottom: 1px;
+    vertical-align: middle;
+}
+
+.field .control.radio input:checked+label {
+    color: #202633;
+}
+
+.field .control.radio input:checked+label:before {
+    border-color: #008fd6;
+    background: #008fd6;
+    background-clip: content-box;
+}
+
+.field .control.radio input:focus.focus-visible+label:before {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+.field .control.radio .option {
+    margin-right: 20px;
+}
+
+.field .control.radio .option:last-child {
+    margin-right: 0;
+}
+
+.field .control.checkbox input {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    margin: -1px;
+}
+
+.field .control.checkbox input+label {
+    display: inline-block;
+    padding: 16px 0 16px 38px;
+}
+
+.field .control.checkbox input+label:before {
+    content: "";
+    display: inline-block;
+    overflow: hidden;
+    width: 20px;
+    height: 20px;
+    padding: 3px;
+    border: 2px solid #008fd6;
+    border-radius: 50%;
+    margin-right: 18px;
+    margin-left: -38px;
+    font-size: 10px;
+    line-height: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.field .control.checkbox input:checked+label:before {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg fill='%23fff' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.6 9.5c-.8-.7-.8-1.9-.1-2.7l.1-.1c.8-.7 2.1-.7 2.9 0l2.4 2.4 6.7-6.5c.8-.8 2-.8 2.8 0 .8.8.8 2 0 2.8L7 13.6c-.6.6-1.6.6-2.2 0L.6 9.5z'/%3E%3C/svg%3E");
+    background-color: #008fd6;
+}
+
+.field .control.checkbox input:focus.focus-visible+label:before {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+.field .control.select option:disabled,
+.field .control.select select:invalid {
+    color: rgba(32, 38, 51, 0.54);
+}
+
+.field .control.select option {
+    color: #202633;
+}
+
+.field[data-type="textarea"] .control textarea {
+    display: block;
+}
+
+.field[data-type="textarea"][data-sizing="fixed"] .control textarea {
+    height: 130px;
+    resize: none;
+}
+
+.field[data-type="textarea"][data-sizing="auto"] .control textarea {
+    height: auto;
+}
+
+.field[data-label-type="normal"]>.label {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: normal;
+    color: #7a8599;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.field[data-label-type="compact"]>.label {
+    transition: 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition-property: top, transform, font-size;
+    position: absolute;
+    top: 16px;
+    left: 17px;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .field[data-label-type="compact"]>.label {
+        transition: none;
+    }
+}
+
+.field[data-label-type="compact"].dirty>.label {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: normal;
+    top: 7px;
+    transform: none;
+}
+
+.field[data-label-type="compact"].dirty .control input,
+.field[data-label-type="compact"].dirty .control select,
+.field[data-label-type="compact"].dirty .control textarea {
+    padding-top: 22px;
+    padding-bottom: 10px;
+}
+
+.field.has-errors>.control input,
+.field.has-errors>.control select,
+.field.has-errors>.control textarea {
+    border-color: #e13830;
+}
+
+.field.has-errors .error {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: normal;
+    display: block;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    color: #e13830;
+}
+
+.field[data-type="radio"] {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.field[data-type="radio"]>.label {
+    position: static;
+    float: left;
+    margin-right: 20px;
+    color: #202633;
+}
+
+.field[data-type="birth-date"] .controls {
+    transition: 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition-property: border-color, box-shadow;
+    display: flex;
+    border: 1px solid #e6e7eb;
+    border-radius: 4px;
+    background: #f2f4f7;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .field[data-type="birth-date"] .controls {
+        transition: none;
+    }
+}
+
+.field[data-type="birth-date"] .controls:focus-within,
+.field[data-type="birth-date"] .controls:hover {
+    border-color: #98a1b3;
+    box-shadow: 0 2px 4px 0 rgba(77, 85, 101, 0.2);
+}
+
+.field[data-type="birth-date"] .controls input,
+.field[data-type="birth-date"] .controls select {
+    border: 0;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+}
+
+.field[data-type="birth-date"] .control {
+    transition: 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition-property: opacity;
+    position: relative;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .field[data-type="birth-date"] .control {
+        transition: none;
+    }
+}
+
+.field[data-type="birth-date"] .control:before {
+    transition: 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition-property: top;
+    content: "/";
+    position: absolute;
+    top: 22px;
+    left: -3px;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .field[data-type="birth-date"] .control:before {
+        transition: none;
+    }
+}
+
+.field[data-type="birth-date"] .control.text {
+    width: 88px;
+}
+
+.field[data-type="birth-date"] .control.text:first-child {
+    width: 56px;
+}
+
+.field[data-type="birth-date"] .control.text:first-child:before {
+    content: none;
+}
+
+.field[data-type="birth-date"] .control.select {
+    width: 144px;
+}
+
+.field[data-type="birth-date"] .control.select:after {
+    transition: 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition-property: top;
+    position: absolute;
+    top: 28px;
+    right: 16px;
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg fill='%237a8599' viewBox='0 0 12 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.9 11.5c-.4-.4-.5-1.1 0-1.6L6.7 6 2.9 2c-.5-.5-.4-1.2 0-1.6.5-.4 1.2-.4 1.7.1.4.4 4.5 4.7 4.5 4.7.4.4.4 1.1 0 1.6 0 0-4.1 4.3-4.5 4.7-.5.5-1.2.5-1.7 0z'/%3E%3C/svg%3E");
+    width: 12px;
+    height: 12px;
+    line-height: 12px;
+    transform: rotate(90deg);
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .field[data-type="birth-date"] .control.select:after {
+        transition: none;
+    }
+}
+
+.field[data-type="birth-date"] .control.select select {
+    padding-right: 32px;
+}
+
+.field[data-type="birth-date"]:not(.dirty) .control {
+    opacity: 0;
+}
+
+.field[data-type="birth-date"]:not(.dirty) .control:before {
+    top: 16px;
+}
+
+.field[data-type="birth-date"]:not(.dirty) .control.select:after {
+    top: 22px;
+}
+
+.field[data-type="birth-date"].has-errors .controls {
+    border-color: #e13830;
+}
+
+.field[data-type="birth-date"].has-errors .error {
+    margin-bottom: 4px;
+}
+
+.field.toggle-switch {
+    padding: 20px 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.field.toggle-switch label {
+    display: inline-block;
+    margin-right: 64px;
+    color: #4d5565;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+.field.toggle-switch label:before {
+    transition: 0.25s linear;
+    transition-property: box-shadow, border-color;
+    content: "";
+    position: absolute;
+    top: 17px;
+    right: 0;
+    overflow: hidden;
+    width: 50px;
+    height: 30px;
+    border-radius: 18px;
+    background: #7a8599;
+    box-shadow: inset 0 0 #e6e7eb;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .field.toggle-switch label:before {
+        transition: none;
+    }
+}
+
+.field.toggle-switch label:after {
+    transition: 0.2s ease-in-out;
+    transition-property: transform;
+    content: "";
+    position: absolute;
+    top: 19px;
+    right: 22px;
+    overflow: hidden;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .field.toggle-switch label:after {
+        transition: none;
+    }
+}
+
+.field.toggle-switch input {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    margin: -1px;
+}
+
+.field.toggle-switch input:checked+label:before {
+    border-color: #4cd964;
+    box-shadow: inset 0 0 0 15px #4cd964;
+}
+
+.field.toggle-switch input:checked+label:after {
+    transform: translateX(20px);
+}
+
+.field.toggle-switch input:focus.focus-visible+label:before {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+.field.toggle-switch input:disabled+label {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.5;
+}
+
+.overlay {
+    position: fixed;
+    z-index: 200;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.dialog {
+    position: relative;
+    width: 480px;
+    padding: 64px 80px;
+    border-radius: 4px;
+    margin: 48px auto;
+    box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.2);
+    background: #fff;
+}
+
+.dialog>.title {
+    font-weight: 300;
+    color: #4d5565;
+    font-size: 21px;
+    line-height: 24px;
+    letter-spacing: 0.13px;
+    border-bottom: 1px solid #e6e7eb;
+    padding: 20px 80px;
+    margin: -64px -80px 56px;
+    text-align: center;
+    max-width: none;
+}
+
+.dialog .actions {
+    display: flex;
+    margin: 16px -8px 0;
+}
+
+.dialog .actions .button {
+    flex-grow: 1;
+    margin: 0 8px;
+}
+
+.dialog .button.cancel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: auto;
+    padding: 20px 28px;
+    margin: 0;
+    font-weight: 600;
+}
+
+.dialog.confirmation,
+.dialog.unsaved-changes {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    text-align: center;
+}
+
+.dialog.confirmation>.title,
+.dialog.unsaved-changes>.title {
+    margin-top: -48px;
+    margin-bottom: 40px;
+}
+
+.dialog.confirmation .actions,
+.dialog.unsaved-changes .actions {
+    margin-top: 32px;
+}
+
+.dialog.confirmation .actions .button.link,
+.dialog.unsaved-changes .actions .button.link {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 32px;
+    margin-right: 32px;
+}
+
+.dialog.unsaved-changes {
+    width: 560px;
+}
+
+.dialog.history-record {
+    padding: 32px;
+}
+
+.dialog.history-record>.title {
+    padding-left: 32px;
+    padding-right: 32px;
+    margin: -32px -32px 32px;
+}
+
+.dialog.error {
+    width: 800px;
+    padding: 16px;
+    text-align: center;
+}
+
+.dialog.error .message {
+    margin-bottom: 8px;
+}
+
+.dialog.error button.details {
+    color: #98a1b3;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: normal;
+}
+
+.dialog.error .field.details textarea {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: normal;
+    padding: 0 8px;
+    height: 320px;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    user-select: text;
+    pointer-events: all;
+}
+
+.dialog.error .actions {
+    max-width: 320px;
+    margin: 32px auto 0;
+}
+
+.half-circle-spinner {
+    margin: auto;
+}
+
+.half-circle-spinner .circle {
+    border-top-color: currentcolor !important;
+    border-bottom-color: currentcolor !important;
+}
+
+.waiting.overlay>div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition-property: opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .fade-enter-active,
+    .fade-leave-active {
+        transition: none;
+    }
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}
+
+.slide-top-enter-active,
+.slide-top-leave-active {
+    transition: 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition-property: transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .slide-top-enter-active,
+    .slide-top-leave-active {
+        transition: none;
+    }
+}
+
+.slide-top-enter,
+.slide-top-leave-to {
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.horizontal-page-slide-backward-enter-active,
+.horizontal-page-slide-backward-leave-active,
+.horizontal-page-slide-forward-enter-active,
+.horizontal-page-slide-forward-leave-active {
+    transition: 0.3s linear;
+    transition-property: margin, transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .horizontal-page-slide-backward-enter-active,
+    .horizontal-page-slide-backward-leave-active,
+    .horizontal-page-slide-forward-enter-active,
+    .horizontal-page-slide-forward-leave-active {
+        transition: none;
+    }
+}
+
+.horizontal-page-slide-forward-enter-to {
+    margin-left: -100%;
+}
+
+.horizontal-page-slide-forward-leave-to {
+    transform: translateX(-100%);
+}
+
+.horizontal-page-slide-backward-enter {
+    margin-left: -200%;
+}
+
+.horizontal-page-slide-backward-enter-to {
+    margin-left: -100%;
+}
+
+.horizontal-page-slide-backward-leave-to {
+    transform: translateX(100%);
+}
+
+.browser-warning {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 8px 48px;
+    background: #f2f4f7;
+    border: 1px solid #e6e7eb;
+    text-align: center;
+    z-index: 2000;
+}
+
+.browser-warning p {
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: normal;
+}
+
+.browser-warning a {
+    text-decoration: underline;
+}
+
+.browser-warning button {
+    position: absolute;
+    right: 16px;
+    top: 5px;
+}
+
+.buorg {
+    display: none;
+}
+
+.signin-button>div>div>svg {
+    height: 48px;
+    width: 100%;
+    color: #fff;
+}
+
+main[data-view="account"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 24px;
+    background: #202633;
+}
+
+main[data-view="account"] h1.logo {
+    color: #fff;
+}
+
+main[data-view="account"] a.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    margin: 20px;
+    color: #fff;
+}
+
+main[data-view="account"] .actions {
+    margin: 16px 0;
+}
+
+main[data-view="account"] .actions:last-child {
+    margin-bottom: 0;
+}
+
+main[data-view="account"] .actions .button {
+    width: 100%;
+}
+
+main[data-view="account"] .links {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: normal;
+    margin-top: 32px;
+    text-align: center;
+}
+
+main[data-view="account"] .links .text {
+    display: block;
+    margin-bottom: 16px;
+    color: #bcc1cc;
+}
+
+main[data-view="account"] .links a {
+    color: #008fd6;
+}
+
+main[data-view="account"] .links a:active {
+    color: #0075b0;
+}
+
+main[data-view="account"] .errors {
+    margin: 16px 0;
+    color: #bcc1cc;
+}
+
+main[data-view="account"] .errors:last-child {
+    margin-bottom: 0;
+}
+
+main[data-view="account"] .errors p {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: normal;
+    margin-bottom: 0;
+}
+
+main[data-view="account"] .panel {
+    width: 480px;
+    padding: 48px 80px;
+    border-radius: 4px;
+    margin-bottom: 72px;
+    background: #fff;
+}
+
+main[data-view="account"] .panel:last-child {
+    margin-bottom: 0;
+}
+
+main[data-view="account"] .panel>.heading {
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: normal;
+    margin-bottom: 16px;
+    font-weight: 600;
+    color: #4d5565;
+}
+
+main[data-view="account"] .panel>.text {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: normal;
+}
+
+main[data-view="account"] .panel .errors {
+    color: #7a8599;
+}
+
+main[data-view="account"] .panel .actions .errors .error {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: normal;
+    display: block;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    color: #e13830;
+}
+
+div[data-view="get-started"] .panel {
+    margin-bottom: 0;
+}
+
+div[data-view="get-started"] form h1 {
+    font-weight: 300;
+    color: #4d5565;
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: 0.17px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+div[data-view="get-started"] form .footer .conditions {
+    margin: 32px 0;
+    color: #98a1b3;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: normal;
+}
+
+div[data-view="get-started"] form .footer .actions {
+    text-align: right;
+}
+
+div[data-view="sign-in"] {
+    width: 320px;
+}
+
+div[data-view="sign-in"] .field {
+    margin-bottom: 0;
+}
+
+div[data-view="sign-in"] .field>.control input:focus,
+div[data-view="sign-in"] .field>.control input:hover {
+    border-color: #e6e7eb;
+    box-shadow: none;
+}
+
+div[data-view="sign-in"] .field>.control.email input {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+div[data-view="sign-in"] .field>.control.password input {
+    border-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+[data-view="viewport-warning"] {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+[data-view="viewport-warning"]>.decoration {
+    margin-bottom: 16px;
+}
+
+[data-view="viewport-warning"]>.decoration>svg {
+    max-height: 50vh;
+}
+
+div[data-view="user"] {
+    display: flex;
+    flex-direction: column;
+}
+
+div[data-view="user"]>header {
+    flex: none;
+    display: flex;
+    width: 100%;
+    padding: 0 24px;
+    border-bottom: 1px solid #e6e7eb;
+}
+
+div[data-view="user"]>header>.profile {
+    display: flex;
+    order: 1;
+    align-items: center;
+    padding: 16px 0;
+    margin-left: auto;
+}
+
+div[data-view="user"]>header>.profile p {
+    margin: 0;
+}
+
+div[data-view="user"]>header>.profile .name {
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: normal;
+}
+
+div[data-view="user"]>header>.profile .actions {
+    margin-left: 16px;
+}
+
+div[data-view="user"]>header>.profile .actions button {
+    color: #008fd6;
+    vertical-align: top;
+}
+
+div[data-view="user"]>header>.tools .panel {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+    background-color: #202633;
+    display: flex;
+    flex-direction: column;
+    width: 264px;
+    min-height: 100%;
+    margin-left: auto;
+}
+
+div[data-view="user"]>header>.tools .panel>.actions,
+div[data-view="user"]>header>.tools .panel>.heading,
+div[data-view="user"]>header>.tools .panel>.menu {
+    padding: 24px;
+}
+
+div[data-view="user"]>header>.tools .panel>.heading {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: normal;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #4d5565;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+}
+
+div[data-view="user"]>header>.tools .panel>.heading:last-child {
+    margin-bottom: 0;
+}
+
+div[data-view="user"]>header>.tools .panel>.menu {
+    padding: 24px;
+}
+
+div[data-view="user"]>header>.tools .panel>.menu .heading {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: normal;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 700;
+    color: #7a8599;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+div[data-view="user"]>header>.tools .panel>.menu>li {
+    padding-bottom: 16px;
+    border-bottom: 1px solid #4d5565;
+    margin-bottom: 16px;
+}
+
+div[data-view="user"]>header>.tools .panel>.menu>li:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+    margin-bottom: 0;
+}
+
+div[data-view="user"]>header>.tools .panel>.menu>li li {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: normal;
+    margin-bottom: 16px;
+    margin: 0;
+}
+
+div[data-view="user"]>header>.tools .panel>.menu>li li:last-child {
+    margin-bottom: 0;
+}
+
+div[data-view="user"]>header>.tools .panel>.menu>li a {
+    display: block;
+    padding: 8px 0;
+}
+
+div[data-view="user"]>header>.tools .panel>.actions {
+    margin-top: auto;
+}
+
+div[data-view="user"]>header>.tools .panel>.actions button {
+    color: #fff;
+}
+
+div[data-view="user"]>header>.tools.sidebar-slide-enter-active,
+div[data-view="user"]>header>.tools.sidebar-slide-enter-active>.panel,
+div[data-view="user"]>header>.tools.sidebar-slide-leave-active,
+div[data-view="user"]>header>.tools.sidebar-slide-leave-active>.panel {
+    transition: 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition-property: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    div[data-view="user"]>header>.tools.sidebar-slide-enter-active,
+    div[data-view="user"]>header>.tools.sidebar-slide-enter-active>.panel,
+    div[data-view="user"]>header>.tools.sidebar-slide-leave-active,
+    div[data-view="user"]>header>.tools.sidebar-slide-leave-active>.panel {
+        transition: none;
+    }
+}
+
+div[data-view="user"]>header>.tools.sidebar-slide-enter>.panel,
+div[data-view="user"]>header>.tools.sidebar-slide-leave-to>.panel {
+    transform: translateX(264px);
+}
+
+div[data-view="user"]>header nav.main ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -16px;
+    margin-right: -16px;
+}
+
+div[data-view="user"]>header nav.main ul li {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: normal;
+    position: relative;
+    padding: 0 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+div[data-view="user"]>header nav.main ul li:after {
+    transition: 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition-property: left, right;
+    content: "";
+    position: absolute;
+    left: calc(100% + 16px);
+    right: -16px;
+    bottom: 0;
+    height: 3px;
+    background: #008fd6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    div[data-view="user"]>header nav.main ul li:after {
+        transition: none;
+    }
+}
+
+div[data-view="user"]>header nav.main ul a {
+    color: #008fd6;
+    display: block;
+    padding: 24px 0;
+}
+
+div[data-view="user"]>header nav.main ul a:active {
+    color: #0075b0;
+}
+
+div[data-view="user"]>header nav.main ul .router-link-exact-active:after {
+    left: 16px;
+    right: 16px;
+}
+
+div[data-view="user"]>header nav.main ul .router-link-exact-active~li:after {
+    left: -16px;
+    right: calc(100% + 16px);
+}
+
+div[data-view="user"]>main {
+    flex-grow: 1;
+    display: flex;
+    overflow: hidden;
+    background: #f2f4f7;
+}
+
+div[data-view="user"]>main>div[data-view] {
+    flex: none;
+    overflow: auto;
+    width: 100%;
+    padding: 24px;
+}
+
+.banner {
+    z-index: 10;
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    width: 288px;
+    padding: 32px 32px 32px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.2);
+}
+
+.banner img {
+    height: 128px;
+}
+
+.banner .message span {
+    display: block;
+}
+
+.banner .subscribe.button {
+    width: 100%;
+}
+
+.banner .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    margin: 28px;
+    color: #bcc1cc;
+    margin: 0;
+}
+
+div[data-view="patients"] {
+    display: flex;
+    flex-direction: column;
+}
+
+div[data-view="patients"]>.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+div[data-view="patients"]>.actions .search {
+    position: relative;
+    padding-left: 36px;
+}
+
+div[data-view="patients"]>.actions .search:not(.waiting):before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg fill='%23008fd6' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.787 14.759 11.66 10.63a6.545 6.545 0 1 0-1.029 1.028l4.128 4.128a.725.725 0 0 0 1.028 0 .727.727 0 0 0 0-1.028zm-9.242-3.123a5.09 5.09 0 1 1 0-10.181 5.09 5.09 0 0 1 0 10.181z'/%3E%3C/svg%3E");
+    left: 0;
+    width: 24px;
+    height: 24px;
+    padding: 4px;
+}
+
+div[data-view="patients"]>.actions .search.waiting .half-circle-spinner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #008fd6;
+}
+
+div[data-view="patients"]>.actions .search input {
+    font-size: 21px;
+    line-height: 24px;
+    letter-spacing: 0.13px;
+    width: 448px;
+    padding: 0;
+    border: 0;
+    font-weight: 300;
+    background: none;
+}
+
+div[data-view="patients"]>.content {
+    flex-grow: 1;
+    overflow: auto;
+}
+
+div[data-view="patients"]>.content .more {
+    margin-bottom: 16px;
+}
+
+div[data-view="patients"] table.patients {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 8px;
+    margin: -8px 0 16px;
+    text-align: left;
+}
+
+div[data-view="patients"] table.patients tr {
+    background: #fff;
+}
+
+div[data-view="patients"] table.patients td,
+div[data-view="patients"] table.patients th {
+    padding: 24px;
+}
+
+div[data-view="patients"] table.patients thead th {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: normal;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    position: sticky;
+    z-index: 2;
+    top: 0;
+    padding-top: 8px;
+    padding-bottom: 12px;
+    font-weight: 600;
+    background: #f2f4f7;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+div[data-view="patients"] table.patients tbody th,
+div[data-view="patients"] table.patients td {
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: normal;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 256px;
+    border: 1px solid #e6e7eb;
+}
+
+div[data-view="patients"] table.patients tbody th {
+    border-right: 0;
+    font-weight: 400;
+    color: #008fd6;
+}
+
+div[data-view="patients"] table.patients td {
+    border-left: 0;
+}
+
+div[data-view="patients"] table.patients td:not(:last-child) {
+    border-right: 0;
+}
+
+div[data-view="patients"] table.patients th.name {
+    width: 25%;
+}
+
+div[data-view="patients"] table.patients th.id {
+    width: 14%;
+}
+
+div[data-view="patients"] table.patients th.date {
+    width: 10%;
+}
+
+div[data-view="patients"] table.patients th.actions {
+    width: 80px;
+}
+
+div[data-view="patients"] table.patients td.actions {
+    position: relative;
+    overflow: visible;
+    text-align: right;
+}
+
+div[data-view="patients"] table.patients .tools-toggle {
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    position: relative;
+    width: 48px;
+    height: 48px;
+    margin: -16px -16px -16px 0;
+}
+
+div[data-view="patients"] table.patients .tools-toggle:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #7a8599;
+    box-shadow: 6px 0 0 #7a8599, -6px 0 0 #7a8599;
+}
+
+div[data-view="patients"] table.patients .tools {
+    border: 1px solid #e6e7eb;
+    border-radius: 8px;
+    background: #fff;
+    text-align: left;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    right: 12px;
+    min-width: 144px;
+}
+
+div[data-view="patients"] table.patients .tools li {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: normal;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #e6e7eb;
+    margin-bottom: 0;
+    color: #008fd6;
+    white-space: nowrap;
+}
+
+div[data-view="patients"] table.patients .tools li:last-child {
+    margin-bottom: 0;
+    border-bottom: 0;
+}
+
+div[data-view="patients"] table.patients .tools button {
+    width: 100%;
+    height: 64px;
+    padding: 0 24px;
+    line-height: inherit;
+    color: inherit;
+    text-align: inherit;
+}
+
+div[data-view="patients"] table.patients tr:last-child:not(:only-child) .tools {
+    top: auto;
+    bottom: 10px;
+}
+
+div[data-view="patients"] .dialog .last-free-patient {
+    text-align: center;
+    margin-top: -40px;
+}
+
+div[data-view="patient"] {
+    display: flex;
+}
+
+div[data-view="patient"] .error {
+    padding: 32px;
+}
+
+div[data-view="patient"]>aside {
+    flex: none;
+    display: flex;
+    flex-direction: column;
+    width: 64px;
+    color: #fff;
+    background: #008fd6;
+}
+
+div[data-view="patient"]>aside nav li {
+    text-align: center;
+}
+
+div[data-view="patient"]>aside nav li.primary {
+    opacity: 0.5;
+}
+
+div[data-view="patient"]>aside nav li.primary.router-link-active {
+    opacity: 1;
+}
+
+div[data-view="patient"]>aside nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 64px;
+}
+
+div[data-view="patient"]>aside nav a.back {
+    background: #33a5de;
+}
+
+div[data-view="patient"]>aside .chart-layers {
+    margin-top: auto;
+    margin-bottom: 8px;
+}
+
+div[data-view="patient"]>aside .chart-layers input {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    margin: -1px;
+}
+
+div[data-view="patient"]>aside .chart-layers input+label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: normal;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    flex-direction: column;
+    height: 64px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+div[data-view="patient"]>aside .chart-layers input+label:before {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg fill='%23fff' viewBox='0 0 15 15' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.5 2.4C4.1 2.4 1.2 4.5 0 7.5c1.2 3 4.1 5.1 7.5 5.1s6.3-2.1 7.5-5.1c-1.2-3-4.1-5.1-7.5-5.1zm0 8.5c-1.9 0-3.4-1.5-3.4-3.4s1.5-3.4 3.4-3.4 3.4 1.5 3.4 3.4-1.5 3.4-3.4 3.4zm2-3.4c0 1.2-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .8 2 2z'/%3E%3C/svg%3E");
+    width: 18px;
+    height: 18px;
+}
+
+div[data-view="patient"]>aside .chart-layers input:checked+label {
+    opacity: 1;
+}
+
+div[data-view="patient"]>aside .chart-layers input:focus.focus-visible+label {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+div[data-view="patient"]>main {
+    flex-grow: 1;
+}
+
+div[data-view="periodontal-probing"] .zones,
+section.panel.periodontal .zones {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -4px;
+}
+
+div[data-view="periodontal-probing"] .zone,
+section.panel.periodontal .zone {
+    flex-basis: 33.33%;
+    min-height: 96px;
+    padding: 4px;
+    color: #7a8599;
+    text-align: center;
+}
+
+div[data-view="periodontal-probing"] .zone a,
+section.panel.periodontal .zone a {
+    transition: 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition-property: color, box-shadow;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    box-shadow: inset 0 0 0 1px #e6e7eb;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    div[data-view="periodontal-probing"] .zone a,
+    section.panel.periodontal .zone a {
+        transition: none;
+    }
+}
+
+div[data-view="periodontal-probing"] .zone .label,
+section.panel.periodontal .zone .label {
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: normal;
+    order: 1;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+div[data-view="periodontal-probing"] .zone .depth,
+section.panel.periodontal .zone .depth {
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: 0.19px;
+    transition: 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition-property: color, border-color;
+    border-bottom: 1px solid #d0d3d9;
+    padding-bottom: 12px;
+    margin-bottom: 2px;
+    font-weight: 300;
+    color: #4d5565;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    div[data-view="periodontal-probing"] .zone .depth,
+    section.panel.periodontal .zone .depth {
+        transition: none;
+    }
+}
+
+div[data-view="periodontal-probing"] .zone .margin,
+section.panel.periodontal .zone .margin {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: normal;
+    transition: 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition-property: color;
+    width: 28px;
+    height: 18px;
+    border: 1px solid;
+    border-radius: 9px;
+    margin: -12px auto 5px;
+    color: #d0d3d9;
+    background: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    div[data-view="periodontal-probing"] .zone .margin,
+    section.panel.periodontal .zone .margin {
+        transition: none;
+    }
+}
+
+div[data-view="periodontal-probing"] .zone .issues,
+section.panel.periodontal .zone .issues {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+}
+
+div[data-view="periodontal-probing"] .zone .issues .indicator,
+section.panel.periodontal .zone .issues .indicator {
+    width: 8px;
+    height: 8px;
+    border: 1px solid #4d5565;
+    border-radius: 50%;
+    position: absolute;
+}
+
+div[data-view="periodontal-probing"] .zone .issues .indicator.active,
+section.panel.periodontal .zone .issues .indicator.active {
+    border-color: currentcolor;
+    background-color: currentcolor;
+}
+
+div[data-view="periodontal-probing"] .zone .issues .indicator.active[data-type="bleeding"],
+section.panel.periodontal .zone .issues .indicator.active[data-type="bleeding"] {
+    color: #d0021b;
+}
+
+div[data-view="periodontal-probing"] .zone .issues .indicator.active[data-type="plaque"],
+section.panel.periodontal .zone .issues .indicator.active[data-type="plaque"] {
+    color: #4a90e2;
+}
+
+div[data-view="periodontal-probing"] .zone .issues .indicator.active[data-type="pus"],
+section.panel.periodontal .zone .issues .indicator.active[data-type="pus"] {
+    color: #f8e71c;
+}
+
+div[data-view="periodontal-probing"] .zone .issues .indicator.active[data-type="tartar"],
+section.panel.periodontal .zone .issues .indicator.active[data-type="tartar"] {
+    color: transparent;
+    border-color: #bcc1cc;
+}
+
+div[data-view="periodontal-probing"] .zone .issues .indicator[data-type="bleeding"],
+section.panel.periodontal .zone .issues .indicator[data-type="bleeding"] {
+    top: 0;
+    right: 0;
+}
+
+div[data-view="periodontal-probing"] .zone .issues .indicator[data-type="plaque"],
+section.panel.periodontal .zone .issues .indicator[data-type="plaque"] {
+    top: 12px;
+    right: 0;
+}
+
+div[data-view="periodontal-probing"] .zone .issues .indicator[data-type="pus"],
+section.panel.periodontal .zone .issues .indicator[data-type="pus"] {
+    top: 0;
+    right: 12px;
+}
+
+div[data-view="periodontal-probing"] .zone .issues .indicator[data-type="tartar"],
+section.panel.periodontal .zone .issues .indicator[data-type="tartar"] {
+    top: 12px;
+    right: 0;
+    z-index: 1;
+    background-color: #fff;
+}
+
+div[data-view="periodontal-probing"] .zone a.router-link-exact-active,
+section.panel.periodontal .zone a.router-link-exact-active {
+    box-shadow: inset 0 0 0 2px #98a1b3;
+}
+
+div[data-view="periodontal-probing"] .zone.warning,
+div[data-view="periodontal-probing"] .zone.warning .depth,
+div[data-view="periodontal-probing"] .zone.warning .margin,
+section.panel.periodontal .zone.warning,
+section.panel.periodontal .zone.warning .depth,
+section.panel.periodontal .zone.warning .margin {
+    color: #e13830;
+}
+
+div[data-view="periodontal-probing"] .zone.warning .depth,
+section.panel.periodontal .zone.warning .depth {
+    border-bottom-color: #e13830;
+}
+
+div[data-view="periodontal-probing"] {
+    display: flex;
+    flex-direction: column;
+}
+
+div[data-view="periodontal-probing"] button.audio {
+    position: absolute;
+    top: 0;
+    right: 45px;
+    padding: 10px;
+    margin: 28px;
+    color: #7a8599;
+}
+
+div[data-view="periodontal-probing"] button.audio.active {
+    color: #008fd6;
+}
+
+div[data-view="periodontal-probing"] form {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+div[data-view="periodontal-probing"] form .actions .button {
+    min-width: 120px;
+}
+
+div[data-view="periodontal-probing"] .measurements {
+    display: flex;
+    margin: 0 -24px 24px;
+}
+
+div[data-view="periodontal-probing"] .measurements .selector {
+    flex: 0 0 50%;
+    padding: 0 24px;
+}
+
+div[data-view="periodontal-probing"] .measurements .selector legend {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: normal;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 700;
+    color: #7a8599;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+div[data-view="periodontal-probing"] .measurements .options {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 60px);
+    border: solid #e6e7eb;
+    border-width: 1px 0 0 1px;
+    background: linear-gradient(0deg, #e6e7eb 1px, rgba(230, 231, 235, 0) 0),
+        linear-gradient(270deg, #e6e7eb 1px, rgba(230, 231, 235, 0) 0), #f2f4f7;
+    background-size: 20% 33.33%;
+}
+
+div[data-view="periodontal-probing"] .measurements .option label {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: normal;
+    font-weight: 600;
+    color: #33a5de;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    transition: 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition-property: color, background-color, box-shadow;
+    height: 48px;
+    padding: 0 16px;
+    border-radius: 6px;
+    background: #f2f4f7;
+    box-shadow: 0 2px 0 0 #e6e7eb;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    div[data-view="periodontal-probing"] .measurements .option label {
+        transition: none;
+    }
+}
+
+div[data-view="periodontal-probing"] .measurements .option input {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    margin: -1px;
+}
+
+div[data-view="periodontal-probing"] .measurements .option input:checked+label {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+    background-color: #7a8599;
+}
+
+div[data-view="periodontal-probing"] .measurements .option input:focus.focus-visible+label {
+    outline: thin dotted #202633;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+div[data-view="periodontal-probing"] .measurements .option label {
+    height: 100%;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+}
+
+div[data-view="periodontal-probing"] .measurements .option+button:last-child {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: normal;
+    font-weight: 600;
+    color: #33a5de;
+    text-align: center;
+    grid-column-end: -1;
+    grid-row-end: -1;
+}
+
+div[data-view="periodontal-probing"] .measurements .option.disabled label {
+    pointer-events: none;
+    cursor: default;
+    color: #e6e7eb;
+}
+
+div[data-view="periodontal-probing"] .selector.furcation legend,
+div[data-view="periodontal-probing"] .selector.issue legend,
+div[data-view="periodontal-probing"] .selector.mobility legend {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: normal;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 700;
+    color: #7a8599;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+div[data-view="periodontal-probing"] .selector.furcation .options,
+div[data-view="periodontal-probing"] .selector.issue .options,
+div[data-view="periodontal-probing"] .selector.mobility .options {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+div[data-view="periodontal-probing"] .selector.furcation .options label,
+div[data-view="periodontal-probing"] .selector.issue .options label,
+div[data-view="periodontal-probing"] .selector.mobility .options label {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: normal;
+    font-weight: 600;
+    color: #33a5de;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    transition: 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition-property: color, background-color, box-shadow;
+    height: 48px;
+    padding: 0 16px;
+    border-radius: 6px;
+    background: #f2f4f7;
+    box-shadow: 0 2px 0 0 #e6e7eb;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    div[data-view="periodontal-probing"] .selector.furcation .options label,
+    div[data-view="periodontal-probing"] .selector.issue .options label,
+    div[data-view="periodontal-probing"] .selector.mobility .options label {
+        transition: none;
+    }
+}
+
+div[data-view="periodontal-probing"] .selector.furcation .options input,
+div[data-view="periodontal-probing"] .selector.issue .options input,
+div[data-view="periodontal-probing"] .selector.mobility .options input {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    margin: -1px;
+}
+
+div[data-view="periodontal-probing"] .selector.furcation .options input:checked+label,
+div[data-view="periodontal-probing"] .selector.issue .options input:checked+label,
+div[data-view="periodontal-probing"] .selector.mobility .options input:checked+label {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+    background-color: #7a8599;
+}
+
+div[data-view="periodontal-probing"] .selector.furcation .options input:focus.focus-visible+label,
+div[data-view="periodontal-probing"] .selector.issue .options input:focus.focus-visible+label,
+div[data-view="periodontal-probing"] .selector.mobility .options input:focus.focus-visible+label {
+    outline: thin dotted #202633;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+div[data-view="periodontal-probing"] .selector.furcation .option label,
+div[data-view="periodontal-probing"] .selector.issue .option label,
+div[data-view="periodontal-probing"] .selector.mobility .option label {
+    position: relative;
+}
+
+div[data-view="periodontal-probing"] .selector.furcation .option label:after,
+div[data-view="periodontal-probing"] .selector.issue .option label:after,
+div[data-view="periodontal-probing"] .selector.mobility .option label:after {
+    font-size: 8px;
+    line-height: 8px;
+    letter-spacing: normal;
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 8px;
+    height: 8px;
+}
+
+div[data-view="periodontal-probing"] .selector.issue {
+    margin-bottom: 24px;
+}
+
+div[data-view="periodontal-probing"] .selector.issue .option label:after {
+    border-radius: 50%;
+}
+
+div[data-view="periodontal-probing"] .selector.issue .option[data-name="bleeding"] label:after {
+    background: #d0021b;
+}
+
+div[data-view="periodontal-probing"] .selector.issue .option[data-name="plaque"] label:after {
+    background: #4a90e2;
+}
+
+div[data-view="periodontal-probing"] .selector.issue .option[data-name="pus"] label:after {
+    background: #f8e71c;
+}
+
+div[data-view="periodontal-probing"] .selector.issue .option[data-name="tartar"] label:after {
+    background: transparent;
+    border: 1px solid #bcc1cc;
+}
+
+div[data-view="periodontal-probing"] .selector.furcation {
+    margin-bottom: 24px;
+}
+
+div[data-view="periodontal-probing"] .selector.furcation .option input[value="1"]+label:after {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg fill='%23202633' viewBox='0 0 8 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m3.989 2.954-2.51 5.02h-1.49L3.982-.044l.007.013.006-.013L7.99 7.974H6.5l-2.51-5.02z'/%3E%3C/svg%3E");
+}
+
+div[data-view="periodontal-probing"] .selector.furcation .option input[value="2"]+label:after {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg fill='%23202633' viewBox='0 0 8 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 8H0l4-8 4 8zM2.3 6.6h3.5L4 3.1 2.3 6.6z'/%3E%3C/svg%3E");
+}
+
+div[data-view="periodontal-probing"] .selector.furcation .option input[value="3"]+label:after {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg fill='%23202633' viewBox='0 0 8 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m4 0 4 8H0z'/%3E%3C/svg%3E");
+}
+
+div[data-view="periodontal-probing"] .selector.mobility {
+    margin-bottom: 24px;
+}
+
+div[data-view="periodontal-probing"] .selector.mobility .option input[value="1"]+label:after {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg fill='%23202633' viewBox='0 0 23 9' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.978.498a.571.571 0 0 1 .864.743l-.061.07-3.063 3.022 3.063 3.022c.202.2.224.513.065.737l-.06.071a.57.57 0 0 1-.736.065l-.072-.06L.503 4.74a.57.57 0 0 1-.06-.742l.06-.071zM19.26 8.169a.571.571 0 0 1-.864-.743l.061-.07 3.063-3.023-3.063-3.021a.57.57 0 0 1-.065-.737l.06-.072a.57.57 0 0 1 .737-.065l.07.06 3.476 3.429a.57.57 0 0 1 .06.742l-.06.071z'/%3E%3C/svg%3E");
+    width: 23px;
+    height: 9px;
+}
+
+div[data-view="periodontal-probing"] .selector.mobility .option input[value="2"]+label:after {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg fill='%23202633' viewBox='0 0 23 9' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.978.498a.571.571 0 0 1 .864.743l-.061.07-3.063 3.022 3.063 3.022c.202.2.224.513.065.737l-.06.071a.57.57 0 0 1-.736.065l-.072-.06L.503 4.74a.57.57 0 0 1-.06-.742l.06-.071z'/%3E%3Cpath d='M6.874.498a.571.571 0 0 1 .863.743l-.06.07-3.063 3.021 3.063 3.023c.202.2.224.513.065.737l-.06.071a.57.57 0 0 1-.737.065l-.07-.06L3.398 4.74a.57.57 0 0 1-.061-.742l.061-.071zm9.208 7.671a.571.571 0 0 1-.863-.743l.06-.07 3.064-3.022-3.064-3.022a.57.57 0 0 1-.065-.737l.06-.072a.57.57 0 0 1 .737-.065l.071.06 3.475 3.429a.57.57 0 0 1 .061.742l-.06.071z'/%3E%3Cpath d='M19.26 8.169a.571.571 0 0 1-.864-.743l.061-.07 3.063-3.023-3.063-3.021a.57.57 0 0 1-.065-.737l.06-.072a.57.57 0 0 1 .737-.065l.07.06 3.476 3.429a.57.57 0 0 1 .06.742l-.06.071z'/%3E%3C/svg%3E");
+    width: 23px;
+    height: 9px;
+}
+
+div[data-view="periodontal-probing"] .selector.mobility .option input[value="3"]+label:after {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg fill='%23202633' viewBox='0 0 23 9' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.978.498a.571.571 0 0 1 .864.743l-.061.07-3.063 3.022 3.063 3.022c.202.2.224.513.065.737l-.06.071a.57.57 0 0 1-.736.065l-.072-.06L.503 4.74a.57.57 0 0 1-.06-.742l.06-.071z'/%3E%3Cpath d='M6.874.498a.571.571 0 0 1 .863.743l-.06.07-3.063 3.021 3.063 3.023c.202.2.224.513.065.737l-.06.071a.57.57 0 0 1-.737.065l-.07-.06L3.398 4.74a.57.57 0 0 1-.061-.742l.061-.071z'/%3E%3Cpath d='M9.77.498a.571.571 0 0 1 .863.743l-.06.07-3.064 3.022 3.064 3.022c.202.2.224.513.065.737l-.06.071a.57.57 0 0 1-.737.065l-.071-.06L6.295 4.74a.57.57 0 0 1-.061-.742l.06-.071zm3.416 7.671a.571.571 0 0 1-.863-.743l.06-.07 3.064-3.023-3.063-3.021a.57.57 0 0 1-.065-.737l.06-.072a.57.57 0 0 1 .736-.065l.071.06 3.475 3.429a.57.57 0 0 1 .062.742l-.062.071z'/%3E%3Cpath d='M16.082 8.169a.571.571 0 0 1-.863-.743l.06-.07 3.064-3.022-3.064-3.022a.57.57 0 0 1-.065-.737l.06-.072a.57.57 0 0 1 .737-.065l.071.06 3.475 3.429a.57.57 0 0 1 .061.742l-.06.071z'/%3E%3Cpath d='M19.26 8.169a.571.571 0 0 1-.864-.743l.061-.07 3.063-3.023-3.063-3.021a.57.57 0 0 1-.065-.737l.06-.072a.57.57 0 0 1 .737-.065l.07.06 3.476 3.429a.57.57 0 0 1 .06.742l-.06.071z'/%3E%3C/svg%3E");
+    width: 23px;
+    height: 9px;
+}
+
+div[data-view="periodontal-probing"] .toggle-switch[data-name="periodontal-probing-sequential-mode-switch"] {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    margin-top: auto;
+    padding-bottom: 8px;
+}
+
+div[data-view="periodontal-probing"] .toggle-switch[data-name="periodontal-probing-sequential-mode-switch"] label {
+    color: #7a8599;
+}
+
+div[data-view="periodontal-probing"] .toggle-switch[data-name="periodontal-probing-sequential-mode-switch"]+.actions {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+main[data-view="chart"] {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 24px;
+    color: #4d5565;
+    text-align: center;
+}
+
+.app[data-theme="dark"] main[data-view="chart"] {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+    background-color: #202633;
+}
+
+@media (prefers-color-scheme: dark) {
+    .app[data-theme="auto"] main[data-view="chart"] {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        color: #fff;
+        background-color: #202633;
+    }
+}
+
+main[data-view="chart"]>.header {
+    position: absolute;
+    z-index: 5;
+    left: 24px;
+    right: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+main[data-view="chart"] h1 {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: normal;
+    margin-bottom: 16px;
+    max-width: 50%;
+    padding-right: 80px;
+    font-weight: 400;
+    color: #7a8599;
+    text-align: left;
+}
+
+main[data-view="chart"] h1:last-child {
+    margin-bottom: 0;
+}
+
+main[data-view="chart"] .mode-selector {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -8px;
+}
+
+main[data-view="chart"] .mode-selector .menu {
+    position: relative;
+    display: flex;
+    border-radius: 4px;
+    border: 1px solid #98a1b3;
+    color: #98a1b3;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: normal;
+    margin-bottom: 16px;
+}
+
+main[data-view="chart"] .mode-selector .menu:last-child {
+    margin-bottom: 0;
+}
+
+main[data-view="chart"] .mode-selector .menu li {
+    margin: 0;
+    border: 0;
+}
+
+main[data-view="chart"] .mode-selector .menu li:not(:first-child) {
+    border-left: 1px solid #4d5565;
+}
+
+main[data-view="chart"] .mode-selector .menu li a {
+    display: block;
+    padding: 8px 16px;
+}
+
+main[data-view="chart"] .mode-selector .menu .router-link-active {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+    background-color: #008fd6;
+}
+
+main[data-view="chart"] .basic-periodontal-examination .trigger {
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: normal;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #33a5de;
+}
+
+main[data-view="chart"] nav.mouth {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    right: 24px;
+    overflow: hidden;
+    border: 1px solid #4d5565;
+    border-radius: 4px;
+}
+
+main[data-view="chart"] nav.mouth li {
+    width: 48px;
+    height: 48px;
+    border-bottom: 1px solid #4d5565;
+    color: #7a8599;
+}
+
+main[data-view="chart"] nav.mouth li:last-child {
+    border-bottom: 0;
+}
+
+main[data-view="chart"] nav.mouth svg {
+    display: block;
+    width: auto;
+    padding: 10px;
+}
+
+main[data-view="chart"] nav.mouth .router-link-exact-active {
+    color: #33a5de;
+}
+
+.app[data-theme="dark"] main[data-view="chart"] nav.mouth .router-link-exact-active {
+    color: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+    .app[data-theme="auto"] main[data-view="chart"] nav.mouth .router-link-exact-active {
+        color: #fff;
+    }
+}
+
+main[data-view="chart"] .jaw-heading {
+    font-weight: 300;
+    color: #4d5565;
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: 0.17px;
+    margin-bottom: 24px;
+    position: absolute;
+    width: 100%;
+    margin: -32px 0 0;
+}
+
+.app[data-theme="dark"] main[data-view="chart"] .jaw-heading {
+    color: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+    .app[data-theme="auto"] main[data-view="chart"] .jaw-heading {
+        color: #fff;
+    }
+}
+
+main[data-view="chart"]>div[data-view] {
+    position: relative;
+    margin: auto 0;
+}
+
+main[data-view="chart"]>div[data-view="full-mouth"] {
+    padding: 45px 0;
+}
+
+main[data-view="chart"]>div[data-view="lower-jaw"],
+main[data-view="chart"]>div[data-view="upper-jaw"] {
+    padding: 66px 0;
+}
+
+main[data-view="chart"] .jaw-box {
+    position: relative;
+    width: 118vh;
+    min-width: 774.08px;
+    max-width: 100%;
+    padding: 0 72px;
+    margin: auto;
+}
+
+main[data-view="chart"] .jaw-box .jaw {
+    display: flex;
+    justify-content: center;
+}
+
+main[data-view="chart"] .jaw-box .jaw .tooth {
+    position: relative;
+    text-align: center;
+}
+
+main[data-view="chart"] .jaw-box .jaw .tooth .trigger:not([role="none"]) {
+    cursor: pointer;
+}
+
+main[data-view="chart"] .jaw-box .jaw .tooth .trigger[aria-checked="true"]:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg fill='%23fff' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.6 9.5c-.8-.7-.8-1.9-.1-2.7l.1-.1c.8-.7 2.1-.7 2.9 0l2.4 2.4 6.7-6.5c.8-.8 2-.8 2.8 0 .8.8.8 2 0 2.8L7 13.6c-.6.6-1.6.6-2.2 0L.6 9.5z'/%3E%3C/svg%3E");
+    overflow: hidden;
+    width: 20px;
+    height: 20px;
+    padding: 3px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    font-size: 10px;
+    line-height: 10px;
+    background: #008fd6;
+}
+
+main[data-view="chart"] .jaw-box .jaw .tooth .visualization {
+    position: relative;
+}
+
+main[data-view="chart"] .jaw-box .jaw .tooth .visualization[data-eruption="erupted"][data-state="to-be-extracted"] {
+    outline: 3px dotted #e13830;
+    border-radius: 20px;
+}
+
+main[data-view="chart"] .jaw-box .jaw .tooth .visualization[data-eruption="erupted"][data-state="to-be-extracted"][data-projection="incisal"]:after,
+main[data-view="chart"] .jaw-box .jaw .tooth .visualization[data-eruption="erupted"][data-state="to-be-extracted"][data-projection="incisal"]:before {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Ccircle cx='9' cy='9' r='9' fill='%23E13830'/%3E%3Cpath fill='%23FFF' fill-rule='nonzero' d='M12.5 6.39V4.74c0-.409-.348-.74-.778-.74H6.278c-.43 0-.778.331-.778.74v1.666c0 .233.116.452.312.593l2.54 1.814-2.54 1.813a.73.73 0 0 0-.312.593v1.666c0 .409.348.74.778.74h5.444c.43 0 .778-.331.778-.74v-1.65a.73.73 0 0 0-.31-.59L9.646 8.812 12.19 6.98a.73.73 0 0 0 .309-.591'/%3E%3C/g%3E%3C/svg%3E");
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    height: 18px;
+    width: 18px;
+    overflow: hidden;
+    margin-left: -9px;
+    margin-top: -9px;
+    z-index: 3;
+}
+
+main[data-view="chart"] .jaw-box .jaw .tooth .visualization[data-eruption="erupted"][data-state="to-be-extracted"][data-projection="incisal"]:before {
+    top: 0;
+}
+
+main[data-view="chart"] .jaw-box .jaw .tooth .visualization[data-eruption="erupted"][data-state="to-be-extracted"][data-projection="incisal"]:after {
+    top: 100%;
+}
+
+main[data-view="chart"] .jaw-box .jaw .tooth .number {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: normal;
+    display: block;
+    width: 24px;
+    height: 24px;
+    padding: 4px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    color: inherit;
+}
+
+main[data-view="chart"] .jaw-box .jaw .tooth .number[data-treatment-plan-level="urgent"] {
+    color: #fff;
+    background: #e13830;
+}
+
+main[data-view="chart"] .jaw-box .jaw .tooth .number[data-treatment-plan-level="monitor"] {
+    color: #202633;
+    background: #ffd00a;
+}
+
+main[data-view="chart"] .jaw-box .jaw .periodontal-issues {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 41px;
+}
+
+@media (max-height: 759px) {
+    main[data-view="chart"] .jaw-box .jaw .periodontal-issues {
+        width: 31px;
+        border-spacing: 1px 4px;
+    }
+}
+
+main[data-view="chart"] .jaw-box .jaw .periodontal-issues .indicator {
+    width: 11px;
+    height: 11px;
+    border: 1px solid #4d5565;
+    border-radius: 50%;
+}
+
+main[data-view="chart"] .jaw-box .jaw .periodontal-issues .indicator.active {
+    border-color: currentcolor;
+    background-color: currentcolor;
+}
+
+main[data-view="chart"] .jaw-box .jaw .periodontal-issues .indicator.active[data-type="bleeding"] {
+    color: #d0021b;
+}
+
+main[data-view="chart"] .jaw-box .jaw .periodontal-issues .indicator.active[data-type="plaque"] {
+    color: #4a90e2;
+}
+
+main[data-view="chart"] .jaw-box .jaw .periodontal-issues .indicator.active[data-type="pus"] {
+    color: #f8e71c;
+}
+
+main[data-view="chart"] .jaw-box .jaw .periodontal-issues .indicator.active[data-type="tartar"] {
+    color: transparent;
+    border-color: #bcc1cc;
+}
+
+@media (max-height: 759px) {
+    main[data-view="chart"] .jaw-box .jaw .periodontal-issues .indicator {
+        width: 9px;
+        height: 9px;
+        border: 1px solid #4d5565;
+        border-radius: 50%;
+    }
+
+    main[data-view="chart"] .jaw-box .jaw .periodontal-issues .indicator.active {
+        border-color: currentcolor;
+        background-color: currentcolor;
+    }
+
+    main[data-view="chart"] .jaw-box .jaw .periodontal-issues .indicator.active[data-type="bleeding"] {
+        color: #d0021b;
+    }
+
+    main[data-view="chart"] .jaw-box .jaw .periodontal-issues .indicator.active[data-type="plaque"] {
+        color: #4a90e2;
+    }
+
+    main[data-view="chart"] .jaw-box .jaw .periodontal-issues .indicator.active[data-type="pus"] {
+        color: #f8e71c;
+    }
+
+    main[data-view="chart"] .jaw-box .jaw .periodontal-issues .indicator.active[data-type="tartar"] {
+        color: transparent;
+        border-color: #bcc1cc;
+    }
+}
+
+main[data-view="chart"] .jaw-box .jaw[data-type="lower"] .periodontal-issues[data-projection="lingual"],
+main[data-view="chart"] .jaw-box .jaw[data-type="upper"] .periodontal-issues[data-projection="buccal"] {
+    top: 0;
+    margin-top: 32px;
+    margin-bottom: 24px;
+}
+
+main[data-view="chart"] .jaw-box .jaw[data-type="lower"] .periodontal-issues[data-projection="buccal"],
+main[data-view="chart"] .jaw-box .jaw[data-type="upper"] .periodontal-issues[data-projection="palatal"] {
+    bottom: 0;
+    margin-top: 24px;
+    margin-bottom: 32px;
+}
+
+main[data-view="chart"] .jaw-box .jaw .endodontic-issues {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 64px;
+}
+
+main[data-view="chart"] .jaw-box .jaw .endodontic-issues:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 16px;
+    border-left: 1px solid #98a1b3;
+}
+
+main[data-view="chart"] .jaw-box .jaw .endodontic-issues .issue {
+    width: 24px;
+    height: 24px;
+    margin: auto;
+    overflow: hidden;
+}
+
+main[data-view="chart"] .jaw-box .jaw .endodontic-issues .issue .text {
+    position: absolute;
+    left: -99999px;
+    top: -99999px;
+}
+
+main[data-view="chart"] .jaw-box .jaw[data-type="upper"] .endodontic-issues {
+    top: 0;
+}
+
+main[data-view="chart"] .jaw-box .jaw[data-type="upper"] .endodontic-issues:before {
+    top: 34px;
+}
+
+main[data-view="chart"] .jaw-box .jaw[data-type="lower"] .endodontic-issues {
+    bottom: 0;
+    padding-top: 40px;
+}
+
+main[data-view="chart"] .jaw-box .jaw[data-type="lower"] .endodontic-issues:before {
+    bottom: 34px;
+}
+
+main[data-view="chart"] .jaw-box.full-mouth .jaw[data-type="upper"] .tooth {
+    padding-top: 64px;
+}
+
+main[data-view="chart"] .jaw-box.full-mouth .jaw[data-type="upper"] .tooth .trigger[data-erupted="true"][aria-checked="true"]:after {
+    margin-top: 38%;
+}
+
+main[data-view="chart"] .jaw-box.full-mouth .jaw[data-type="upper"] .tooth .trigger[data-erupted="false"][aria-checked="true"]:after {
+    margin-top: 10px;
+}
+
+main[data-view="chart"] .jaw-box.full-mouth .jaw[data-type="upper"] .tooth .visualization[data-eruption="erupted"][data-state="to-be-extracted"][data-projection="incisal"]:after {
+    display: none;
+}
+
+main[data-view="chart"] .jaw-box.full-mouth .jaw[data-type="lower"] .tooth {
+    padding-bottom: 64px;
+}
+
+main[data-view="chart"] .jaw-box.full-mouth .jaw[data-type="lower"] .tooth .trigger[data-erupted="true"][aria-checked="true"]:after {
+    margin-top: -38%;
+}
+
+main[data-view="chart"] .jaw-box.full-mouth .jaw[data-type="lower"] .tooth .trigger[data-erupted="false"][aria-checked="true"]:after {
+    margin-top: -10px;
+}
+
+main[data-view="chart"] .jaw-box.full-mouth .jaw[data-type="lower"] .tooth .visualization[data-eruption="erupted"][data-state="to-be-extracted"][data-projection="incisal"]:before {
+    display: none;
+}
+
+main[data-view="chart"] .jaw-box.full-mouth .tooth .number {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+main[data-view="chart"] .jaw-box.single-jaw .tooth {
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+main[data-view="chart"] .jaw-box.single-jaw .tooth .number {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+main[data-view="chart"] .jaw-box .periodontal-issue-legend {
+    position: absolute;
+    left: 0;
+    text-align: left;
+}
+
+main[data-view="chart"] .jaw-box .periodontal-issue-legend[data-row="top"] {
+    top: 32px;
+}
+
+main[data-view="chart"] .jaw-box .periodontal-issue-legend[data-row="bottom"] {
+    bottom: 31px;
+}
+
+main[data-view="chart"] .jaw-box .periodontal-issue-legend p {
+    font-size: 8px;
+    line-height: 14px;
+    letter-spacing: 0.5px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+main[data-view="chart"] .jaw-box .periodontal-issue-legend p[data-type="bleeding"] {
+    color: #d0021b;
+}
+
+main[data-view="chart"] .jaw-box .periodontal-issue-legend p[data-type="plaque"] {
+    color: #4a90e2;
+}
+
+main[data-view="chart"] .jaw-box .periodontal-issue-legend p[data-type="pus"] {
+    color: #f8e71c;
+}
+
+main[data-view="chart"] .jaw-box .periodontal-issue-legend p[data-type="tartar"] {
+    color: transparent;
+}
+
+main[data-view="chart"] .legend {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+main[data-view="chart"] .legend .toggle {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    border: 2px solid;
+    border-radius: 50%;
+    color: #202633;
+}
+
+main[data-view="chart"] .legend .toggle svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.app[data-theme="dark"] main[data-view="chart"] .legend:not(.open) .toggle {
+    color: #7a8599;
+    border-color: #30394c;
+    background: #30394c;
+}
+
+@media (prefers-color-scheme: dark) {
+    .app[data-theme="auto"] main[data-view="chart"] .legend:not(.open) .toggle {
+        color: #7a8599;
+        border-color: #30394c;
+        background: #30394c;
+    }
+}
+
+main[data-view="chart"] .legend .toggle {
+    right: 24px;
+    bottom: 12px;
+}
+
+main[data-view="chart"] .legend .panel {
+    overflow: auto;
+    width: 272px;
+    height: 100%;
+    padding: 24px;
+    border-left: 1px solid #98a1b3;
+    background: #fff;
+    text-align: left;
+    box-shadow: -3px 0 6px 0 rgba(0, 0, 0, 0.08);
+}
+
+main[data-view="chart"] .legend .panel .legend-list {
+    margin-bottom: 40px;
+}
+
+main[data-view="chart"] .legend .panel .legend-list .group {
+    margin-bottom: 32px;
+}
+
+main[data-view="chart"] .legend .panel .legend-list .group:last-child {
+    margin-bottom: 0;
+}
+
+main[data-view="chart"] .legend .panel .legend-list .group .heading,
+main[data-view="chart"] .legend .panel .legend-list .group li {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: normal;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 700;
+    color: #7a8599;
+    text-transform: uppercase;
+    line-height: 24px;
+}
+
+main[data-view="chart"] .legend .panel .legend-list .group .heading {
+    color: #202633;
+}
+
+main[data-view="chart"] .legend .panel .legend-list .group li {
+    display: flex;
+    padding-left: 40px;
+    margin: 16px 0;
+    font-weight: 600;
+}
+
+main[data-view="chart"] .legend .panel .legend-list .group li[data-name]:before {
+    content: "";
+    flex: none;
+    width: 24px;
+    height: 24px;
+    margin-left: -40px;
+    margin-right: 16px;
+    vertical-align: middle;
+}
+
+main[data-view="chart"] .legend .panel .legend-list .group li[data-name="depth"]:before {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.51 6.49c-2.09 0-3.29 2.82-4.57 5.81-1.28 3-2.72 6.36-5.52 7.13h18.57v-4.32c-2.24-.81-3.37-2.97-4.32-4.78-1.25-2.38-2.12-3.84-4.16-3.84' fill='%239ad4f2'/%3E%3Cpath d='M15.51 4.49c-3.41 0-4.93 3.57-6.41 7.02-1.34 3.13-2.6 6.08-4.93 6.08-2.45 0-3.31.82-3.62 1.84h4.87c2.8-.77 4.24-4.13 5.52-7.13 1.28-2.99 2.48-5.81 4.57-5.81 2.04 0 2.91 1.46 4.16 3.84.95 1.81 2.09 3.97 4.32 4.78v-2.22c-.99-.65-1.7-1.87-2.55-3.49-1.21-2.3-2.58-4.91-5.93-4.91' fill='%2337a5dd'/%3E%3C/svg%3E");
+}
+
+main[data-view="chart"] .legend .panel .legend-list .group li[data-name="margin"]:before {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.6 2.4c-3.1 0-4.6 1.6-5.9 3-1.4 1.5-2.6 2.9-6 2.9-4.2-.1-5.5 3.7-6.7 7-.3 1-.7 1.8-1 2.6v3.8c1.4-1.6 2.2-3.8 2.9-5.7 1.3-3.6 2.2-5.7 4.8-5.7 4.3 0 6.1-1.9 7.5-3.5 1.2-1.3 2.1-2.3 4.4-2.3 2.1 0 3.2 1 4.4 2.2V3.8c-1.1-.8-2.5-1.4-4.4-1.4' fill='%23e13b30'/%3E%3C/svg%3E");
+}
+
+main[data-view="chart"] .legend .panel .legend-list .group li[data-name="furcation1"]:before {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 8 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m3.989 2.954-2.51 5.02h-1.49L3.982-.044l.007.013.006-.013L7.99 7.974H6.5l-2.51-5.02z'/%3E%3C/svg%3E");
+}
+
+main[data-view="chart"] .legend .panel .legend-list .group li[data-name="furcation2"]:before {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 8 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 8H0l4-8 4 8zM2.3 6.6h3.5L4 3.1 2.3 6.6z'/%3E%3C/svg%3E");
+}
+
+main[data-view="chart"] .legend .panel .legend-list .group li[data-name="furcation3"]:before {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 8 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m4 0 4 8H0z'/%3E%3C/svg%3E");
+}
+
+main[data-view="chart"] .legend .panel .legend-list .group li[data-name="mobility1"]:before {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 23 9' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.978.498a.571.571 0 0 1 .864.743l-.061.07-3.063 3.022 3.063 3.022c.202.2.224.513.065.737l-.06.071a.57.57 0 0 1-.736.065l-.072-.06L.503 4.74a.57.57 0 0 1-.06-.742l.06-.071zM19.26 8.169a.571.571 0 0 1-.864-.743l.061-.07 3.063-3.023-3.063-3.021a.57.57 0 0 1-.065-.737l.06-.072a.57.57 0 0 1 .737-.065l.07.06 3.476 3.429a.57.57 0 0 1 .06.742l-.06.071z'/%3E%3C/svg%3E");
+}
+
+main[data-view="chart"] .legend .panel .legend-list .group li[data-name="mobility2"]:before {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 23 9' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.978.498a.571.571 0 0 1 .864.743l-.061.07-3.063 3.022 3.063 3.022c.202.2.224.513.065.737l-.06.071a.57.57 0 0 1-.736.065l-.072-.06L.503 4.74a.57.57 0 0 1-.06-.742l.06-.071z'/%3E%3Cpath d='M6.874.498a.571.571 0 0 1 .863.743l-.06.07-3.063 3.021 3.063 3.023c.202.2.224.513.065.737l-.06.071a.57.57 0 0 1-.737.065l-.07-.06L3.398 4.74a.57.57 0 0 1-.061-.742l.061-.071zm9.208 7.671a.571.571 0 0 1-.863-.743l.06-.07 3.064-3.022-3.064-3.022a.57.57 0 0 1-.065-.737l.06-.072a.57.57 0 0 1 .737-.065l.071.06 3.475 3.429a.57.57 0 0 1 .061.742l-.06.071z'/%3E%3Cpath d='M19.26 8.169a.571.571 0 0 1-.864-.743l.061-.07 3.063-3.023-3.063-3.021a.57.57 0 0 1-.065-.737l.06-.072a.57.57 0 0 1 .737-.065l.07.06 3.476 3.429a.57.57 0 0 1 .06.742l-.06.071z'/%3E%3C/svg%3E");
+}
+
+main[data-view="chart"] .legend .panel .legend-list .group li[data-name="mobility3"]:before {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 23 9' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.978.498a.571.571 0 0 1 .864.743l-.061.07-3.063 3.022 3.063 3.022c.202.2.224.513.065.737l-.06.071a.57.57 0 0 1-.736.065l-.072-.06L.503 4.74a.57.57 0 0 1-.06-.742l.06-.071z'/%3E%3Cpath d='M6.874.498a.571.571 0 0 1 .863.743l-.06.07-3.063 3.021 3.063 3.023c.202.2.224.513.065.737l-.06.071a.57.57 0 0 1-.737.065l-.07-.06L3.398 4.74a.57.57 0 0 1-.061-.742l.061-.071z'/%3E%3Cpath d='M9.77.498a.571.571 0 0 1 .863.743l-.06.07-3.064 3.022 3.064 3.022c.202.2.224.513.065.737l-.06.071a.57.57 0 0 1-.737.065l-.071-.06L6.295 4.74a.57.57 0 0 1-.061-.742l.06-.071zm3.416 7.671a.571.571 0 0 1-.863-.743l.06-.07 3.064-3.023-3.063-3.021a.57.57 0 0 1-.065-.737l.06-.072a.57.57 0 0 1 .736-.065l.071.06 3.475 3.429a.57.57 0 0 1 .062.742l-.062.071z'/%3E%3Cpath d='M16.082 8.169a.571.571 0 0 1-.863-.743l.06-.07 3.064-3.022-3.064-3.022a.57.57 0 0 1-.065-.737l.06-.072a.57.57 0 0 1 .737-.065l.071.06 3.475 3.429a.57.57 0 0 1 .061.742l-.06.071z'/%3E%3Cpath d='M19.26 8.169a.571.571 0 0 1-.864-.743l.061-.07 3.063-3.023-3.063-3.021a.57.57 0 0 1-.065-.737l.06-.072a.57.57 0 0 1 .737-.065l.07.06 3.476 3.429a.57.57 0 0 1 .06.742l-.06.071z'/%3E%3C/svg%3E");
+}
+
+main[data-view="chart"] .legend .panel .legend-list .group li[data-name="monitor"]:before {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 0c6.6 0 12 5.4 12 12s-5.4 12-12 12S0 18.6 0 12 5.4 0 12 0z' fill='%23ffd00a'/%3E%3Cpath d='m12.6 16.3.5-2.4h-1.9l-.5 2.4h-.9l.5-2.4H8.9l.2-.8h1.4l.4-2.1H9.5l.2-.8h1.4l.5-2.3h.8l-.5 2.3h1.9l.5-2.3h.8l-.5 2.3h1.5l-.1.8h-1.5l-.4 2.1h1.5l-.2.8h-1.5l-.5 2.4h-.8zm-1.3-3.2h1.9l.4-2.2h-1.9l-.4 2.2z' fill='%23202633'/%3E%3C/svg%3E");
+}
+
+main[data-view="chart"] .legend .panel .legend-list .group li[data-name="treatment"]:before {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 0c6.6 0 12 5.4 12 12s-5.4 12-12 12S0 18.6 0 12 5.4 0 12 0z' fill='%23e13830'/%3E%3Cpath d='m12.6 16.3.5-2.4h-1.9l-.5 2.4h-.9l.5-2.4H8.9l.2-.8h1.4l.4-2.1H9.5l.2-.8h1.4l.5-2.3h.8l-.5 2.3h1.9l.5-2.3h.8l-.5 2.3h1.5l-.1.8h-1.5l-.4 2.1h1.5l-.2.8h-1.5l-.5 2.4h-.8zm-1.3-3.2h1.9l.4-2.2h-1.9l-.4 2.2z' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+main[data-view="chart"] .legend .panel .legend-list .group li[data-name="extract"]:before {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Ccircle cx='12' cy='12' r='12' fill='%23E13830'/%3E%3Cpath fill='%23FFF' fill-rule='nonzero' d='M16.667 8.52v-2.2c0-.545-.465-.987-1.037-.987H8.37c-.572 0-1.037.442-1.037.988v2.22a.976.976 0 0 0 .416.79l3.387 2.419-3.388 2.419a.98.98 0 0 0-.415.79v2.22c0 .546.465.988 1.037.988h7.26c.572 0 1.037-.442 1.037-.988v-2.198a.97.97 0 0 0-.413-.788L12.86 11.75l3.395-2.443a.98.98 0 0 0 .413-.788'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+main[data-view="chart"] .legend .panel .legend-list .group li[data-name^="furcation"]:before {
+    padding: 1px 5px 9px;
+}
+
+main[data-view="chart"] .legend .panel .legend-list .group li[data-name^="mobility"]:before {
+    width: 32px;
+    margin-left: -44px;
+    margin-right: 12px;
+}
+
+main[data-view="chart"] .legend.open {
+    z-index: 5;
+}
+
+main[data-view="chart"] .rollback {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+main[data-view="chart"] .rollback .toggle {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    border: 2px solid;
+    border-radius: 50%;
+    color: #202633;
+}
+
+main[data-view="chart"] .rollback .toggle svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.app[data-theme="dark"] main[data-view="chart"] .rollback:not(.open) .toggle {
+    color: #7a8599;
+    border-color: #30394c;
+    background: #30394c;
+}
+
+@media (prefers-color-scheme: dark) {
+    .app[data-theme="auto"] main[data-view="chart"] .rollback:not(.open) .toggle {
+        color: #7a8599;
+        border-color: #30394c;
+        background: #30394c;
+    }
+}
+
+main[data-view="chart"] .rollback .toggle {
+    left: 24px;
+    bottom: 12px;
+}
+
+main[data-view="chart"] .rollback.open {
+    z-index: 3;
+}
+
+main[data-view="chart"] .rollback .panel {
+    border-top: 1px solid #e6e7eb;
+    background: #fff;
+    height: 72px;
+    padding: 8px;
+}
+
+main[data-view="chart"] .rollback .panel .button {
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial,
+        sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+}
+
+main[data-view="chart"] .rollback .panel .button,
+main[data-view="chart"] .rollback .panel .field {
+    vertical-align: middle;
+}
+
+main[data-view="chart"] .rollback .panel .field {
+    display: inline-block;
+    margin: 0 16px;
+}
+
+main[data-view="chart"][data-mode="pathology"].has-selected-tooth .tooth:not(.selected),
+main[data-view="chart"][data-mode="periodontal-probing"].has-selected-tooth .tooth:not(.selected),
+main[data-view="chart"][data-mode="restoration"].has-selected-tooth .tooth:not(.selected) {
+    opacity: 0.3;
+}
+
+main[data-view="chart"]>div[data-view="pathology"],
+main[data-view="chart"]>div[data-view="periodontal-probing"],
+main[data-view="chart"]>div[data-view="restoration"] {
+    transition: 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition-property: left, transform;
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 24px 16px 0;
+    width: 35%;
+    min-width: 336px;
+    max-width: 400px;
+    background: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    main[data-view="chart"]>div[data-view="pathology"],
+    main[data-view="chart"]>div[data-view="periodontal-probing"],
+    main[data-view="chart"]>div[data-view="restoration"] {
+        transition: none;
+    }
+}
+
+main[data-view="chart"]>div[data-view="pathology"][data-quadrant="1"],
+main[data-view="chart"]>div[data-view="pathology"][data-quadrant="4"],
+main[data-view="chart"]>div[data-view="periodontal-probing"][data-quadrant="1"],
+main[data-view="chart"]>div[data-view="periodontal-probing"][data-quadrant="4"],
+main[data-view="chart"]>div[data-view="restoration"][data-quadrant="1"],
+main[data-view="chart"]>div[data-view="restoration"][data-quadrant="4"] {
+    left: 100%;
+    transform: translateX(-100%);
+    box-shadow: -3px 0 6px 0 rgba(0, 0, 0, 0.08);
+}
+
+main[data-view="chart"]>div[data-view="pathology"][data-quadrant="2"],
+main[data-view="chart"]>div[data-view="pathology"][data-quadrant="3"],
+main[data-view="chart"]>div[data-view="periodontal-probing"][data-quadrant="2"],
+main[data-view="chart"]>div[data-view="periodontal-probing"][data-quadrant="3"],
+main[data-view="chart"]>div[data-view="restoration"][data-quadrant="2"],
+main[data-view="chart"]>div[data-view="restoration"][data-quadrant="3"] {
+    box-shadow: 3px 0 6px 0 rgba(0, 0, 0, 0.08);
+}
+
+main[data-view="chart"]>div[data-view="pathology"]>.heading,
+main[data-view="chart"]>div[data-view="periodontal-probing"]>.heading,
+main[data-view="chart"]>div[data-view="restoration"]>.heading {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: normal;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 700;
+    color: #7a8599;
+    text-transform: uppercase;
+    padding: 0 88px;
+    margin-bottom: 24px;
+    font-weight: 600;
+}
+
+main[data-view="chart"]>div[data-view="pathology"] nav.teeth,
+main[data-view="chart"]>div[data-view="periodontal-probing"] nav.teeth,
+main[data-view="chart"]>div[data-view="restoration"] nav.teeth {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    margin: 12px;
+}
+
+main[data-view="chart"]>div[data-view="pathology"] nav.teeth a,
+main[data-view="chart"]>div[data-view="periodontal-probing"] nav.teeth a,
+main[data-view="chart"]>div[data-view="restoration"] nav.teeth a {
+    display: block;
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+}
+
+main[data-view="chart"]>div[data-view="pathology"] nav.teeth a:before,
+main[data-view="chart"]>div[data-view="periodontal-probing"] nav.teeth a:before,
+main[data-view="chart"]>div[data-view="restoration"] nav.teeth a:before {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg fill='%23008fd6' viewBox='0 0 12 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.9 11.5c-.4-.4-.5-1.1 0-1.6L6.7 6 2.9 2c-.5-.5-.4-1.2 0-1.6.5-.4 1.2-.4 1.7.1.4.4 4.5 4.7 4.5 4.7.4.4.4 1.1 0 1.6 0 0-4.1 4.3-4.5 4.7-.5.5-1.2.5-1.7 0z'/%3E%3C/svg%3E");
+    display: block;
+    height: 100%;
+    padding: 14px;
+    line-height: 12px;
+}
+
+main[data-view="chart"]>div[data-view="pathology"] nav.teeth a.previous:before,
+main[data-view="chart"]>div[data-view="periodontal-probing"] nav.teeth a.previous:before,
+main[data-view="chart"]>div[data-view="restoration"] nav.teeth a.previous:before {
+    transform: scaleX(-1);
+}
+
+main[data-view="chart"]>div[data-view="pathology"] a.close,
+main[data-view="chart"]>div[data-view="periodontal-probing"] a.close,
+main[data-view="chart"]>div[data-view="restoration"] a.close {
+    margin: 11px;
+}
+
+@media (max-height: 742px) {
+
+    main[data-view="chart"]>div[data-view="pathology"],
+    main[data-view="chart"]>div[data-view="periodontal-probing"],
+    main[data-view="chart"]>div[data-view="restoration"] {
+        padding-top: 16px;
+    }
+
+    main[data-view="chart"]>div[data-view="pathology"]>.heading,
+    main[data-view="chart"]>div[data-view="periodontal-probing"]>.heading,
+    main[data-view="chart"]>div[data-view="restoration"]>.heading {
+        margin-bottom: 16px;
+    }
+
+    main[data-view="chart"]>div[data-view="pathology"] nav.teeth,
+    main[data-view="chart"]>div[data-view="periodontal-probing"] nav.teeth,
+    main[data-view="chart"]>div[data-view="restoration"] nav.teeth {
+        margin-top: 4px;
+    }
+
+    main[data-view="chart"]>div[data-view="pathology"] a.close,
+    main[data-view="chart"]>div[data-view="periodontal-probing"] a.close,
+    main[data-view="chart"]>div[data-view="restoration"] a.close {
+        margin-top: 3px;
+    }
+}
+
+main[data-view="chart"]>div[data-view="periodontal-probing"] button.audio {
+    margin: 11px;
+}
+
+main[data-view="chart"]>div[data-view="periodontal-probing"] .zones {
+    margin-bottom: 20px;
+}
+
+main[data-view="chart"]>div[data-view="periodontal-probing"] .measurement-selector {
+    z-index: 1;
+    display: flex;
+    border: solid #e6e7eb;
+    border-width: 1px 0 0 1px;
+}
+
+main[data-view="chart"]>div[data-view="periodontal-probing"] .measurement-selector .measurement {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: normal;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 700;
+    color: #7a8599;
+    text-transform: uppercase;
+    flex: 0 0 50%;
+    border-right: 1px solid #e6e7eb;
+}
+
+main[data-view="chart"]>div[data-view="periodontal-probing"] .measurement-selector .measurement label {
+    display: block;
+    height: 100%;
+    padding: 16px;
+    cursor: pointer;
+}
+
+main[data-view="chart"]>div[data-view="periodontal-probing"] .measurement-selector .measurement input {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    margin: -1px;
+}
+
+main[data-view="chart"]>div[data-view="periodontal-probing"] .measurement-selector .measurement input:checked+label {
+    color: #008fd6;
+}
+
+main[data-view="chart"]>div[data-view="periodontal-probing"] .measurement-selector .measurement input:focus.focus-visible+label {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+main[data-view="chart"]>div[data-view="periodontal-probing"] .measurements {
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+main[data-view="chart"]>div[data-view="periodontal-probing"] .measurements .selector {
+    padding: 0;
+}
+
+main[data-view="chart"]>div[data-view="periodontal-probing"] .selector.issue {
+    margin-bottom: 0;
+}
+
+main[data-view="chart"]>div[data-view="periodontal-probing"] .selector.issue .options {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+main[data-view="chart"]>div[data-view="periodontal-probing"] .selector.issue .option[data-name="bleeding"] {
+    grid-column: 1/-1;
+}
+
+main[data-view="chart"]>div[data-view="periodontal-probing"] .actions {
+    padding-bottom: 16px;
+}
+
+main[data-view="chart"]>div[data-view="periodontal-probing"] .actions .button {
+    width: 100%;
+}
+
+@media (max-height: 742px) {
+    main[data-view="chart"]>div[data-view="periodontal-probing"] button.audio {
+        margin-top: 3px;
+    }
+
+    main[data-view="chart"]>div[data-view="periodontal-probing"] .zones {
+        margin-bottom: 12px;
+    }
+
+    main[data-view="chart"]>div[data-view="periodontal-probing"] .measurements {
+        margin-bottom: 16px;
+    }
+
+    main[data-view="chart"]>div[data-view="periodontal-probing"] .actions {
+        padding-top: 16px;
+    }
+}
+
+main[data-view="chart"]>div[data-view="pathology"],
+main[data-view="chart"]>div[data-view="restoration"] {
+    display: flex;
+    flex-direction: column;
+}
+
+main[data-view="chart"]>div[data-view="pathology"] .wizard,
+main[data-view="chart"]>div[data-view="restoration"] .wizard {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+main[data-view="chart"]>div[data-view="pathology"] .wizard .step,
+main[data-view="chart"]>div[data-view="restoration"] .wizard .step {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+main[data-view="chart"]>div[data-view="pathology"] .wizard .step>.header,
+main[data-view="chart"]>div[data-view="restoration"] .wizard .step>.header {
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: normal;
+    margin-bottom: 16px;
+}
+
+main[data-view="chart"]>div[data-view="pathology"] .wizard .step>.header button,
+main[data-view="chart"]>div[data-view="restoration"] .wizard .step>.header button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: block;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
+    text-overflow: ellipsis;
+}
+
+main[data-view="chart"]>div[data-view="pathology"] .wizard .step>.header .label,
+main[data-view="chart"]>div[data-view="restoration"] .wizard .step>.header .label {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: normal;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 700;
+    color: #7a8599;
+    text-transform: uppercase;
+    margin-right: 8px;
+}
+
+main[data-view="chart"]>div[data-view="pathology"] .wizard .step>.header .value,
+main[data-view="chart"]>div[data-view="restoration"] .wizard .step>.header .value {
+    color: #008fd6;
+}
+
+main[data-view="chart"]>div[data-view="pathology"] .wizard .step[data-type="detail"] .options .option label,
+main[data-view="chart"]>div[data-view="pathology"] .wizard .step[data-type="type"] a,
+main[data-view="chart"]>div[data-view="restoration"] .wizard .step[data-type="detail"] .options .option label,
+main[data-view="chart"]>div[data-view="restoration"] .wizard .step[data-type="type"] a {
+    margin-bottom: 16px;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: normal;
+    font-weight: 600;
+    color: #33a5de;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    transition: 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition-property: color, background-color, box-shadow;
+    height: 48px;
+    padding: 0 16px;
+    border-radius: 6px;
+    background: #f2f4f7;
+    box-shadow: 0 2px 0 0 #e6e7eb;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    main[data-view="chart"]>div[data-view="pathology"] .wizard .step[data-type="detail"] .options .option label,
+    main[data-view="chart"]>div[data-view="pathology"] .wizard .step[data-type="type"] a,
+    main[data-view="chart"]>div[data-view="restoration"] .wizard .step[data-type="detail"] .options .option label,
+    main[data-view="chart"]>div[data-view="restoration"] .wizard .step[data-type="type"] a {
+        transition: none;
+    }
+}
+
+main[data-view="chart"]>div[data-view="pathology"] .wizard .step[data-type="detail"] .options .option label:focus.focus-visible,
+main[data-view="chart"]>div[data-view="pathology"] .wizard .step[data-type="type"] a:focus.focus-visible,
+main[data-view="chart"]>div[data-view="restoration"] .wizard .step[data-type="detail"] .options .option label:focus.focus-visible,
+main[data-view="chart"]>div[data-view="restoration"] .wizard .step[data-type="type"] a:focus.focus-visible {
+    outline: thin dotted #202633;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+main[data-view="chart"]>div[data-view="pathology"] .wizard .step[data-type="detail"] .options .option input:checked+label,
+main[data-view="chart"]>div[data-view="pathology"] .wizard .step[data-type="type"] a.router-link-exact-active,
+main[data-view="chart"]>div[data-view="restoration"] .wizard .step[data-type="detail"] .options .option input:checked+label,
+main[data-view="chart"]>div[data-view="restoration"] .wizard .step[data-type="type"] a.router-link-exact-active {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+    background-color: #7a8599;
+}
+
+main[data-view="chart"]>div[data-view="pathology"] .wizard .step[data-type="detail"] .option,
+main[data-view="chart"]>div[data-view="restoration"] .wizard .step[data-type="detail"] .option {
+    display: block;
+    position: relative;
+}
+
+main[data-view="chart"]>div[data-view="pathology"] .wizard .step[data-type="detail"] .option input,
+main[data-view="chart"]>div[data-view="restoration"] .wizard .step[data-type="detail"] .option input {
+    position: absolute;
+}
+
+main[data-view="chart"]>div[data-view="pathology"] .wizard .step[data-type="zones"] .zones,
+main[data-view="chart"]>div[data-view="restoration"] .wizard .step[data-type="zones"] .zones {
+    width: 100%;
+    max-width: none;
+    height: 464px;
+    padding: 0;
+    box-shadow: none;
+    grid-template-rows: repeat(1, 1fr) repeat(3, 1.3fr) repeat(1, 1fr) repeat(2,
+            1.3fr);
+}
+
+main[data-view="chart"]>div[data-view="pathology"] .wizard .step[data-type="zones"] .close,
+main[data-view="chart"]>div[data-view="restoration"] .wizard .step[data-type="zones"] .close {
+    margin: 16px 0;
+}
+
+main[data-view="chart"]>div[data-view="pathology"] .wizard .step[data-type="zones"] .close .button,
+main[data-view="chart"]>div[data-view="restoration"] .wizard .step[data-type="zones"] .close .button {
+    width: 100%;
+}
+
+main[data-view="chart"]>div[data-view="pathology"] .wizard .actions,
+main[data-view="chart"]>div[data-view="restoration"] .wizard .actions {
+    margin-top: auto;
+}
+
+main[data-view="chart"] .quickselect.panel {
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 48px;
+    border-top: 1px solid #e6e7eb;
+    background: #fff;
+}
+
+main[data-view="chart"] .quickselect.panel>.actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+main[data-view="chart"] .quickselect.panel>.actions .action {
+    margin: 0 16px;
+}
+
+main[data-view="chart"] .quickselect.panel>.actions .action button {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: normal;
+    color: #008fd6;
+    padding: 8px 0;
+}
+
+main[data-view="chart"] .quickselect.panel>.actions .action button:active {
+    color: #0075b0;
+}
+
+main[data-view="chart"] .quickselect.panel>.actions .action button:disabled {
+    pointer-events: none;
+    cursor: default;
+    color: #7a8599;
+}
+
+main[data-view="chart"] .quickselect.panel .details {
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 24px 16px 0;
+    width: 35%;
+    min-width: 336px;
+    max-width: 400px;
+    background: #fff;
+    box-shadow: -3px 0 6px 0 rgba(0, 0, 0, 0.08);
+}
+
+main[data-view="chart"] .quickselect.panel .details button.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    margin: 28px;
+    color: #bcc1cc;
+    margin: 11px;
+}
+
+main[data-view="chart"] .quickselect.panel .details button.clear {
+    width: 100%;
+    margin-top: 16px;
+}
+
+main[data-view="chart"] .quickselect.panel .details .options {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 32px;
+}
+
+main[data-view="chart"] .quickselect.panel .details .options label {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: normal;
+    font-weight: 600;
+    color: #33a5de;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    transition: 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition-property: color, background-color, box-shadow;
+    height: 48px;
+    padding: 0 16px;
+    border-radius: 6px;
+    background: #f2f4f7;
+    box-shadow: 0 2px 0 0 #e6e7eb;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    main[data-view="chart"] .quickselect.panel .details .options label {
+        transition: none;
+    }
+}
+
+main[data-view="chart"] .quickselect.panel .details .options input {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    margin: -1px;
+}
+
+main[data-view="chart"] .quickselect.panel .details .options input:checked+label {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+    background-color: #7a8599;
+}
+
+main[data-view="chart"] .quickselect.panel .details .options input:focus.focus-visible+label {
+    outline: thin dotted #202633;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+main[data-view="chart"] .quickselect.panel .details .options[data-endo-test="electricity"] {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+main[data-view="chart"] .quickselect.panel .details .options[data-endo-test="electricity"] label {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: normal;
+    font-weight: 600;
+    color: #33a5de;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    transition: 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition-property: color, background-color, box-shadow;
+    height: 48px;
+    padding: 0 16px;
+    border-radius: 6px;
+    background: #f2f4f7;
+    box-shadow: 0 2px 0 0 #e6e7eb;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    main[data-view="chart"] .quickselect.panel .details .options[data-endo-test="electricity"] label {
+        transition: none;
+    }
+}
+
+main[data-view="chart"] .quickselect.panel .details .options[data-endo-test="electricity"] input {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    margin: -1px;
+}
+
+main[data-view="chart"] .quickselect.panel .details .options[data-endo-test="electricity"] input:checked+label {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+    background-color: #7a8599;
+}
+
+main[data-view="chart"] .quickselect.panel .details .options[data-endo-test="electricity"] input:focus.focus-visible+label {
+    outline: thin dotted #202633;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+main[data-view="chart"] .quickselect.panel .details .options[data-endo-test="electricity"] .clear {
+    grid-column: 1 / span 5;
+}
+
+main[data-view="chart"] .quickselect.panel .details .actions {
+    padding-top: 32px;
+    padding-bottom: 16px;
+    margin-top: auto;
+}
+
+main[data-view="chart"] .quickselect.panel .details .actions .button {
+    width: 100%;
+}
+
+@media (max-height: 742px) {
+    main[data-view="chart"] .quickselect.panel .details {
+        padding-top: 16px;
+    }
+
+    main[data-view="chart"] .quickselect.panel .details button.close {
+        margin-top: 3px;
+    }
+
+    main[data-view="chart"] .quickselect.panel .details .actions {
+        padding-top: 16px;
+    }
+}
+
+.basic-periodontal-examination .sextants {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -4px;
+}
+
+.basic-periodontal-examination .dialog {
+    text-align: left;
+    color: #7a8599;
+}
+
+.basic-periodontal-examination .dialog .sextants {
+    margin-bottom: 16px;
+}
+
+.basic-periodontal-examination .sextant {
+    flex: 0 0 33.33%;
+    min-height: 96px;
+    padding: 4px;
+    color: #7a8599;
+    text-align: center;
+}
+
+.basic-periodontal-examination .sextant button {
+    transition: 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition-property: color, box-shadow;
+    color: inherit;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    box-shadow: inset 0 0 0 1px #e6e7eb;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .basic-periodontal-examination .sextant button {
+        transition: none;
+    }
+}
+
+.basic-periodontal-examination .sextant .label {
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: normal;
+    order: 1;
+    margin-bottom: 0;
+    font-weight: 600;
+    width: 100%;
+}
+
+.basic-periodontal-examination .sextant .level {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: normal;
+    transition: 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition-property: color, border-color;
+    border-bottom: 1px solid #d0d3d9;
+    padding-bottom: 12px;
+    margin-bottom: 2px;
+    font-weight: 300;
+    color: #4d5565;
+    width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .basic-periodontal-examination .sextant .level {
+        transition: none;
+    }
+}
+
+.basic-periodontal-examination .sextant .furcation {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: normal;
+    transition: 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition-property: color;
+    width: 28px;
+    height: 18px;
+    border: 1px solid;
+    border-radius: 9px;
+    margin: -12px auto 5px;
+    color: #7a8599;
+    background: #fff;
+    font-weight: 700;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .basic-periodontal-examination .sextant .furcation {
+        transition: none;
+    }
+}
+
+.basic-periodontal-examination .sextant[data-level="0"] .furcation,
+.basic-periodontal-examination .sextant[data-level="0"] .level,
+.basic-periodontal-examination .sextant[data-level="1"] .furcation,
+.basic-periodontal-examination .sextant[data-level="1"] .level {
+    color: #a3d554;
+}
+
+.basic-periodontal-examination .sextant[data-level="2"] .furcation,
+.basic-periodontal-examination .sextant[data-level="2"] .level,
+.basic-periodontal-examination .sextant[data-level="3"] .furcation,
+.basic-periodontal-examination .sextant[data-level="3"] .level {
+    color: #ffd00a;
+}
+
+.basic-periodontal-examination .sextant[data-level="4"] .furcation,
+.basic-periodontal-examination .sextant[data-level="4"] .level {
+    color: #e13830;
+}
+
+.basic-periodontal-examination .sextant .furcation.blank,
+.basic-periodontal-examination .sextant .level.blank {
+    color: #d0d3d9;
+    font-weight: 400;
+}
+
+.basic-periodontal-examination .sextant button.selected {
+    box-shadow: inset 0 0 0 2px #98a1b3;
+}
+
+.basic-periodontal-examination .rollback-date-note,
+.basic-periodontal-examination .rollback-editing-note {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: normal;
+    text-align: center;
+    margin-top: 8px;
+}
+
+.basic-periodontal-examination fieldset[data-name="score"] legend {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: normal;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 700;
+    color: #7a8599;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.basic-periodontal-examination fieldset[data-name="score"] .score-selector {
+    display: flex;
+    height: 56px;
+    margin: 0 -3px 16px;
+}
+
+.basic-periodontal-examination fieldset[data-name="score"] .score-selector label {
+    font-weight: 300;
+    color: #4d5565;
+    font-size: 21px;
+    line-height: 24px;
+    letter-spacing: 0.13px;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    flex: 1 1;
+    border-radius: 4px;
+    margin: 0 3px;
+    background: #f2f4f7;
+    cursor: pointer;
+}
+
+.basic-periodontal-examination fieldset[data-name="score"] .score-selector[data-level="0"] label.level:nth-child(-n + 1),
+.basic-periodontal-examination fieldset[data-name="score"] .score-selector[data-level="1"] label.level:nth-child(-n + 2) {
+    color: #fff;
+    background: #a3d554;
+}
+
+.basic-periodontal-examination fieldset[data-name="score"] .score-selector[data-level="2"] label.level:nth-child(-n + 3),
+.basic-periodontal-examination fieldset[data-name="score"] .score-selector[data-level="3"] label.level:nth-child(-n + 4) {
+    color: #fff;
+    background: #ffd00a;
+}
+
+.basic-periodontal-examination fieldset[data-name="score"] .score-selector[data-level="4"] label.level:nth-child(-n + 5) {
+    color: #fff;
+    background: #e13830;
+}
+
+.basic-periodontal-examination fieldset[data-name="score"] .score-selector[data-furcation="true"] label.furcation {
+    color: #fff;
+    background: #7a8599;
+}
+
+.basic-periodontal-examination fieldset[data-name="score"] .score-selector input {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    margin: -1px;
+}
+
+.basic-periodontal-examination fieldset[data-name="score"] .score-selector input+span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.basic-periodontal-examination fieldset[data-name="score"] .score-selector input:focus.focus-visible+span {
+    outline: thin dotted #4d5565;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+main[data-view="dashboard"] {
+    display: flex;
+    min-width: 0;
+}
+
+main[data-view="dashboard"] .content.primary {
+    flex-grow: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 40px;
+}
+
+main[data-view="dashboard"] .content.secondary {
+    display: grid;
+    grid-template-rows: minmax(auto, max-content) max-content minmax(auto,
+            max-content);
+    flex: none;
+    width: 328px;
+    border-left: 1px solid #e6e7eb;
+}
+
+main[data-view="dashboard"] .content.secondary aside {
+    padding: 16px 24px;
+    border-bottom: 1px solid #e6e7eb;
+}
+
+main[data-view="dashboard"] .content.secondary aside:last-child {
+    border-bottom: 0;
+}
+
+main[data-view="dashboard"] .content.secondary aside>header {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 24px;
+}
+
+main[data-view="dashboard"] .content.secondary aside>header .heading {
+    font-weight: 300;
+    color: #4d5565;
+    font-size: 21px;
+    line-height: 24px;
+    letter-spacing: 0.13px;
+    flex-grow: 1;
+}
+
+main[data-view="dashboard"] .content.secondary aside>header .button.edit {
+    flex: none;
+    padding: 0;
+    margin-left: 24px;
+    text-align: right;
+}
+
+main[data-view="dashboard"] .header {
+    display: flex;
+    margin-bottom: 16px;
+}
+
+main[data-view="dashboard"] .header .text {
+    margin-right: 32px;
+}
+
+main[data-view="dashboard"] .header .name {
+    font-weight: 300;
+    color: #4d5565;
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: 0.17px;
+    margin-bottom: 24px;
+    margin-bottom: 0;
+}
+
+main[data-view="dashboard"] .header .actions {
+    margin-left: auto;
+}
+
+main[data-view="dashboard"] nav.dashboard {
+    border-bottom: 1px solid #e6e7eb;
+    margin-bottom: 24px;
+}
+
+main[data-view="dashboard"] nav.dashboard ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -16px;
+    margin-right: -16px;
+}
+
+main[data-view="dashboard"] nav.dashboard ul li {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: normal;
+    position: relative;
+    padding: 0 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+main[data-view="dashboard"] nav.dashboard ul li:after {
+    transition: 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition-property: left, right;
+    content: "";
+    position: absolute;
+    left: calc(100% + 16px);
+    right: -16px;
+    bottom: 0;
+    height: 3px;
+    background: #008fd6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    main[data-view="dashboard"] nav.dashboard ul li:after {
+        transition: none;
+    }
+}
+
+main[data-view="dashboard"] nav.dashboard ul a {
+    color: #008fd6;
+    display: block;
+    padding: 24px 0;
+}
+
+main[data-view="dashboard"] nav.dashboard ul a:active {
+    color: #0075b0;
+}
+
+main[data-view="dashboard"] nav.dashboard ul .router-link-exact-active:after {
+    left: 16px;
+    right: 16px;
+}
+
+main[data-view="dashboard"] nav.dashboard ul .router-link-exact-active~li:after {
+    left: -16px;
+    right: calc(100% + 16px);
+}
+
+main[data-view="dashboard"] ul.records {
+    position: relative;
+    overflow: auto;
+}
+
+main[data-view="dashboard"] ul.records li {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: normal;
+    margin-bottom: 16px;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    display: flex;
+    padding: 11px 18px;
+    border: 1px solid #e6e7eb;
+    margin-bottom: 8px;
+    color: #4d5565;
+    background: #f2f4f7;
+}
+
+main[data-view="dashboard"] ul.records li:last-child {
+    margin-bottom: 0;
+}
+
+main[data-view="dashboard"] ul.records li[data-type]:before {
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    bottom: -1px;
+    width: 4px;
+}
+
+main[data-view="dashboard"] ul.records li>a {
+    position: relative;
+    flex: 1;
+    margin: -12px -19px;
+    padding: 12px 19px;
+}
+
+main[data-view="dashboard"] ul.records li[data-type="urgent"]:before {
+    background-color: #e13830;
+}
+
+main[data-view="dashboard"] ul.records li[data-type="monitor"]:before {
+    background-color: #ffd00a;
+}
+
+main[data-view="dashboard"] ul.records p {
+    margin: 0;
+}
+
+main[data-view="dashboard"] ul.records .text {
+    margin-right: auto;
+    color: #7a8599;
+}
+
+main[data-view="dashboard"] ul.records .date {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: normal;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 700;
+    color: #7a8599;
+    text-transform: uppercase;
+    margin-left: 32px;
+    line-height: 24px;
+    white-space: nowrap;
+}
+
+main[data-view="dashboard"] ul.records .actions {
+    margin-left: 16px;
+}
+
+main[data-view="dashboard"] ul.records .delete {
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    width: 24px;
+    height: 24px;
+    padding: 2px;
+    border-radius: 50%;
+    background: linear-gradient(#fff 2px, hsla(0, 0%, 100%, 0) 0) 50%/10px 2px no-repeat,
+        #e13830 content-box;
+    text-indent: 40px;
+}
+
+main[data-view="dashboard"] ul.records .done {
+    height: 24px;
+    padding: 0 12px;
+    border: 1px solid #e6e7eb;
+    border-radius: 6px;
+    margin-right: 16px;
+    color: inherit;
+    background: #fff;
+}
+
+main[data-view="dashboard"] .basic-periodontal-examination,
+main[data-view="dashboard"] .medical-issues,
+main[data-view="dashboard"] .oral-health {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+main[data-view="dashboard"] .oral-health dl.issues {
+    overflow: auto;
+    margin: 0;
+}
+
+main[data-view="dashboard"] .oral-health dl.issues .issue {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+main[data-view="dashboard"] .oral-health dl.issues .issue:last-child {
+    margin-bottom: 0;
+}
+
+main[data-view="dashboard"] .oral-health dl.issues .issue[data-value] dd {
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    flex: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    margin-top: 4px;
+    background: #e6e7eb;
+}
+
+main[data-view="dashboard"] .oral-health dl.issues .issue[data-value="1"] dd {
+    background: linear-gradient(90deg, #fff 1px, hsla(0, 0%, 100%, 0) 0) -1px/20.1%,
+        linear-gradient(90deg, #a3d554, #a3d554) 0/20% 100% no-repeat, #e6e7eb;
+}
+
+main[data-view="dashboard"] .oral-health dl.issues .issue[data-value="2"] dd {
+    background: linear-gradient(90deg, #fff 1px, hsla(0, 0%, 100%, 0) 0) -1px/20.1%,
+        linear-gradient(90deg, #a3d554, #a3d554) 0/40% 100% no-repeat, #e6e7eb;
+}
+
+main[data-view="dashboard"] .oral-health dl.issues .issue[data-value="3"] dd {
+    background: linear-gradient(90deg, #fff 1px, hsla(0, 0%, 100%, 0) 0) -1px/20.1%,
+        linear-gradient(90deg, #12cbcb, #12cbcb) 0/60% 100% no-repeat, #e6e7eb;
+}
+
+main[data-view="dashboard"] .oral-health dl.issues .issue[data-value="4"] dd {
+    background: linear-gradient(90deg, #fff 1px, hsla(0, 0%, 100%, 0) 0) -1px/20.1%,
+        linear-gradient(90deg, #ffd00a, #ffd00a) 0/80% 100% no-repeat, #e6e7eb;
+}
+
+main[data-view="dashboard"] .oral-health dl.issues .issue[data-value="5"] dd {
+    background: linear-gradient(90deg, #fff 1px, hsla(0, 0%, 100%, 0) 0) -1px/20.1%,
+        linear-gradient(90deg, #e13830, #e13830) 0/100% 100% no-repeat, #e6e7eb;
+}
+
+main[data-view="dashboard"] .oral-health dl.issues dd,
+main[data-view="dashboard"] .oral-health dl.issues dt {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: normal;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 700;
+    color: #7a8599;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+main[data-view="dashboard"] .oral-health dl.issues dd.visual {
+    flex: none;
+    width: 100%;
+    margin-top: 4px;
+}
+
+main[data-view="dashboard"] .oral-health dl.issues meter {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    background: #e6e7eb;
+}
+
+main[data-view="dashboard"] .oral-health dl.issues meter::-webkit-meter-bar {
+    background: none;
+}
+
+main[data-view="dashboard"] .oral-health dl.issues meter::-webkit-meter-optimum-value {
+    background: #a3d554;
+}
+
+main[data-view="dashboard"] .oral-health dl.issues meter::-webkit-meter-suboptimum-value {
+    background: #ffd00a;
+}
+
+main[data-view="dashboard"] .oral-health dl.issues meter::-webkit-meter-even-less-good-value {
+    background: #e13830;
+}
+
+main[data-view="dashboard"] .oral-health dl.issues meter:-moz-meter-optimum::-moz-meter-bar {
+    background: #a3d554;
+}
+
+main[data-view="dashboard"] .oral-health dl.issues meter:-moz-meter-sub-optimum::-moz-meter-bar {
+    background: #ffd00a;
+}
+
+main[data-view="dashboard"] .oral-health dl.issues meter:-moz-meter-sub-sub-optimum::-moz-meter-bar {
+    background: #e13830;
+}
+
+main[data-view="dashboard"] .oral-health fieldset.issue {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+main[data-view="dashboard"] .oral-health fieldset.issue legend {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: normal;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 700;
+    color: #7a8599;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+main[data-view="dashboard"] .oral-health fieldset.issue .level-selector {
+    display: flex;
+    height: 56px;
+    margin: 0 -3px;
+}
+
+main[data-view="dashboard"] .oral-health fieldset.issue .level-selector[data-value="1"] label:nth-child(-n + 1),
+main[data-view="dashboard"] .oral-health fieldset.issue .level-selector[data-value="2"] label:nth-child(-n + 2) {
+    color: #fff;
+    background: #a3d554;
+}
+
+main[data-view="dashboard"] .oral-health fieldset.issue .level-selector[data-value="3"] label:nth-child(-n + 3) {
+    color: #fff;
+    background: #12cbcb;
+}
+
+main[data-view="dashboard"] .oral-health fieldset.issue .level-selector[data-value="4"] label:nth-child(-n + 4) {
+    color: #fff;
+    background: #ffd00a;
+}
+
+main[data-view="dashboard"] .oral-health fieldset.issue .level-selector[data-value="5"] label:nth-child(-n + 5) {
+    color: #fff;
+    background: #e13830;
+}
+
+main[data-view="dashboard"] .oral-health fieldset.issue label {
+    font-weight: 300;
+    color: #4d5565;
+    font-size: 21px;
+    line-height: 24px;
+    letter-spacing: 0.13px;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    flex: 1 1;
+    border-radius: 4px;
+    margin: 0 3px;
+    background: #f2f4f7;
+    cursor: pointer;
+}
+
+main[data-view="dashboard"] .oral-health fieldset.issue input {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    margin: -1px;
+}
+
+main[data-view="dashboard"] .oral-health fieldset.issue input+span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+main[data-view="dashboard"] .oral-health fieldset.issue input:focus.focus-visible+span {
+    outline: thin dotted #4d5565;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+main[data-view="dashboard"] .oral-health fieldset.issue .delete {
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    width: 24px;
+    height: 24px;
+    padding: 2px;
+    border-radius: 50%;
+    background: linear-gradient(#fff 2px, hsla(0, 0%, 100%, 0) 0) 50%/10px 2px no-repeat,
+        #e13830 content-box;
+    text-indent: 40px;
+    position: absolute;
+    bottom: 16px;
+    right: -36px;
+}
+
+main[data-view="dashboard"] .oral-health .dialog .actions,
+main[data-view="dashboard"] .oral-health .dialog .tools {
+    margin-top: 32px;
+}
+
+main[data-view="dashboard"] .medical-issues>.issues {
+    margin-top: -8px;
+    overflow: auto;
+}
+
+main[data-view="dashboard"] .medical-issues>.issues .issue {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: normal;
+    margin-bottom: 16px;
+    position: relative;
+    padding-left: 40px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 0;
+    background: 0 0/24px 24px no-repeat;
+}
+
+main[data-view="dashboard"] .medical-issues>.issues .issue:last-child {
+    margin-bottom: 0;
+}
+
+main[data-view="dashboard"] .medical-issues .dialog {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+}
+
+main[data-view="dashboard"] .medical-issues .dialog>.title {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+main[data-view="dashboard"] .medical-issues .dialog fieldset {
+    overflow: auto;
+    height: 50vh;
+}
+
+main[data-view="dashboard"] .medical-issues .dialog .issue {
+    position: relative;
+    background: right 24px top 16px/24px 24px no-repeat;
+}
+
+main[data-view="dashboard"] .medical-issues .dialog .issue:after {
+    content: "";
+    position: absolute;
+    left: 62px;
+    right: 0;
+    bottom: 0;
+    border-bottom: 1px solid #e6e7eb;
+}
+
+main[data-view="dashboard"] .medical-issues .dialog .issue:last-child:after {
+    content: none;
+}
+
+main[data-view="dashboard"] .medical-issues .dialog .field .control.checkbox label {
+    display: block;
+    padding-left: 62px;
+    padding-right: 64px;
+}
+
+main[data-view="dashboard"] .medical-issues .dialog .actions {
+    padding: 32px 80px 64px;
+    border-top: 1px solid #e6e7eb;
+    margin-top: 0;
+}
+
+main[data-view="dashboard"] div[data-view] {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    flex: 1;
+}
+
+main[data-view="dashboard"] div[data-view="history"]>.actions {
+    margin-bottom: 24px;
+}
+
+main[data-view="dashboard"] div[data-view="soft-tissue"] {
+    margin-bottom: -16px;
+}
+
+main[data-view="dashboard"] div[data-view="soft-tissue"] .rollback-notes {
+    margin-bottom: 32px;
+}
+
+main[data-view="dashboard"] div[data-view="soft-tissue"] .rollback-notes .rollback-date-note,
+main[data-view="dashboard"] div[data-view="soft-tissue"] .rollback-notes .rollback-editing-note {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: normal;
+    margin-top: 8px;
+}
+
+main[data-view="dashboard"] div[data-view="soft-tissue"] form {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+}
+
+main[data-view="dashboard"] div[data-view="soft-tissue"] form .content {
+    flex: 1;
+    overflow: auto;
+}
+
+main[data-view="dashboard"] div[data-view="soft-tissue"] form .content .zone {
+    margin-bottom: 24px;
+    margin-right: 32px;
+    max-width: 720px;
+}
+
+main[data-view="dashboard"] div[data-view="soft-tissue"] form .actions {
+    height: 64px;
+    border-top: 1px solid #e6e7eb;
+    display: flex;
+    align-items: flex-end;
+}
+
+main[data-view="dashboard"] div[data-view="soft-tissue"] form .actions .save.button {
+    min-width: 160px;
+    margin-right: 48px;
+}
+
+main[data-view="dashboard"] [data-view="data-processing-agreement"] {
+    flex: none;
+    position: fixed;
+}
+
+main[data-view="dashboard"] [data-view="data-processing-agreement"] .warning {
+    position: fixed;
+    bottom: 24px;
+    left: 88px;
+    right: 24px;
+    min-height: 72px;
+    background: #fff;
+    border: 1px solid #e13830;
+    border-radius: 4px;
+    border-left-width: 4px;
+    box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.2);
+    color: #e13830;
+    display: flex;
+    justify-content: space-between;
+}
+
+main[data-view="dashboard"] [data-view="data-processing-agreement"] .warning p {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: normal;
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 32px;
+    padding-left: 32px;
+    position: relative;
+}
+
+main[data-view="dashboard"] [data-view="data-processing-agreement"] .warning p:last-child {
+    margin-bottom: 0;
+}
+
+main[data-view="dashboard"] [data-view="data-processing-agreement"] .warning p:before {
+    display: block;
+    width: 22px;
+    height: 19px;
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg fill='%23e13830' viewBox='0 0 22 19' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 19h22L11 0 0 19zm12-3h-2v-2h2v2zm0-4h-2V8h2v4z'/%3E%3C/svg%3E");
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-9.5px);
+}
+
+main[data-view="dashboard"] [data-view="data-processing-agreement"] .warning .button {
+    border-radius: 0;
+}
+
+main[data-view="dashboard"] [data-view="data-processing-agreement"] .overlay {
+    position: fixed;
+    z-index: 200;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+main[data-view="dashboard"] [data-view="data-processing-agreement"] .overlay .dialog {
+    position: relative;
+    width: auto;
+    min-height: calc(100vh - 64px);
+    padding: 0;
+    margin: 32px;
+    box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 4px;
+}
+
+main[data-view="dashboard"] [data-view="data-processing-agreement"] .overlay .dialog header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: normal;
+    margin-bottom: 16px;
+    text-align: center;
+    flex: 0 0 64px;
+    margin: 0;
+    background: #f2f4f7;
+    border-bottom: 1px solid #e6e7eb;
+}
+
+main[data-view="dashboard"] [data-view="data-processing-agreement"] .overlay .dialog header:last-child {
+    margin-bottom: 0;
+}
+
+main[data-view="dashboard"] [data-view="data-processing-agreement"] .overlay .dialog .content {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    padding: 16px;
+}
+
+main[data-view="dashboard"] [data-view="data-processing-agreement"] .overlay .dialog .content h1,
+main[data-view="dashboard"] [data-view="data-processing-agreement"] .overlay .dialog .content h2 {
+    margin-bottom: 32px;
+}
+
+main[data-view="dashboard"] [data-view="data-processing-agreement"] .overlay .dialog .content h3,
+main[data-view="dashboard"] [data-view="data-processing-agreement"] .overlay .dialog .content p {
+    margin-bottom: 16px;
+}
+
+main[data-view="dashboard"] [data-view="data-processing-agreement"] .overlay .dialog .content,
+main[data-view="dashboard"] [data-view="data-processing-agreement"] .overlay .dialog .content p {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: normal;
+}
+
+main[data-view="dashboard"] [data-view="data-processing-agreement"] .overlay .dialog .actions {
+    display: block;
+    margin: 0;
+    text-align: center;
+    flex: 0 0 48px;
+    padding: 16px;
+}
+
+main[data-view="tooth"] {
+    display: flex;
+}
+
+main[data-view="tooth"] .tooth-wheel {
+    position: relative;
+    z-index: 100;
+    flex: none;
+    display: flex;
+    overflow: hidden;
+    min-width: 176.66448px;
+    max-width: 20.833%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+main[data-view="tooth"] .tooth-wheel .navigation {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+    background-color: #2e333c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: none;
+    width: 40px;
+    padding: 16px 0;
+    color: #7a8599;
+    text-align: center;
+}
+
+main[data-view="tooth"] .tooth-wheel .navigation li {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: normal;
+    flex: 1 1;
+    max-height: 32px;
+}
+
+main[data-view="tooth"] .tooth-wheel .navigation a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+main[data-view="tooth"] .tooth-wheel .navigation .router-link-active {
+    color: #fff;
+    position: relative;
+}
+
+main[data-view="tooth"] .tooth-wheel .navigation .router-link-active:before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "";
+    left: 0;
+    border: 6px solid;
+    border-color: transparent transparent transparent #008fd6;
+    pointer-events: none;
+}
+
+main[data-view="tooth"] .tooth-wheel .viewport {
+    overflow: hidden;
+    width: 20.833vh;
+    min-width: 136.66448px;
+    max-width: 320px;
+    border-right: 1px solid #e6e7eb;
+    background: #f2f4f7;
+    touch-action: none;
+}
+
+.app[data-theme="dark"] main[data-view="tooth"] .tooth-wheel .viewport {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+    background-color: #202633;
+    border-right: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+    .app[data-theme="auto"] main[data-view="tooth"] .tooth-wheel .viewport {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        color: #fff;
+        background-color: #202633;
+        border-right: 0;
+    }
+}
+
+main[data-view="tooth"] .tooth-wheel .viewport .track {
+    cursor: grab;
+}
+
+main[data-view="tooth"] .tooth-wheel .viewport .track .teeth .tooth {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+main[data-view="tooth"] .tooth-wheel .viewport .track .teeth .tooth .visualization {
+    position: relative;
+}
+
+main[data-view="tooth"] .tooth-wheel .viewport .track .teeth .tooth .visualization[data-state="to-be-extracted"][data-projection="incisal"]:after,
+main[data-view="tooth"] .tooth-wheel .viewport .track .teeth .tooth .visualization[data-state="to-be-extracted"][data-projection="incisal"]:before {
+    content: attr(data-label);
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    height: 16px;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: normal;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 700;
+    color: #7a8599;
+    text-transform: uppercase;
+    color: #e13830;
+    z-index: 10;
+}
+
+main[data-view="tooth"] .tooth-wheel .viewport .track .teeth .tooth .visualization[data-state="to-be-extracted"][data-projection="incisal"]:before {
+    top: -8px;
+}
+
+main[data-view="tooth"] .tooth-wheel .viewport .track .teeth .tooth .visualization[data-state="to-be-extracted"][data-projection="incisal"]:after {
+    top: calc(100% - 8px);
+}
+
+main[data-view="tooth"]>div[data-view] {
+    flex-grow: 1;
+}
+
+main[data-view="tooth"]>div[data-view="periodontal-probing"] .zones {
+    flex-wrap: nowrap;
+    margin: 0 -8px 32px;
+}
+
+main[data-view="tooth"]>div[data-view="periodontal-probing"] .zone {
+    flex: 1 1;
+    padding: 0 8px;
+}
+
+div[data-view="pathology"],
+div[data-view="periodontal-probing"],
+div[data-view="restoration"] {
+    position: relative;
+    overflow: auto;
+    padding: 32px 40px;
+    padding-bottom: 0;
+}
+
+div[data-view="pathology"]>.heading,
+div[data-view="periodontal-probing"]>.heading,
+div[data-view="restoration"]>.heading {
+    font-weight: 300;
+    color: #4d5565;
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: 0.17px;
+    margin-bottom: 24px;
+}
+
+div[data-view="pathology"] a.close,
+div[data-view="periodontal-probing"] a.close,
+div[data-view="restoration"] a.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    margin: 28px;
+    color: #bcc1cc;
+}
+
+div[data-view="pathology"] .actions,
+div[data-view="periodontal-probing"] .actions,
+div[data-view="restoration"] .actions {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-top: auto;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr minmax(408px, auto);
+}
+
+main[data-view="tooth"]>div[data-view="overview"] .tools {
+    position: absolute;
+    top: 32px;
+    right: 40px;
+    display: flex;
+    margin-top: 5px;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] .tools li {
+    margin-left: 16px;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] .tools li.reset {
+    margin-right: 32px;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] section.panel {
+    padding: 32px 40px;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] section.panel header {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 24px;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] section.panel header .heading {
+    flex-grow: 1;
+    margin-bottom: 0;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] section.panel header .button {
+    flex: none;
+    margin-top: 5px;
+    margin-left: 24px;
+    text-align: right;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] section.panel .heading {
+    font-weight: 300;
+    color: #4d5565;
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: 0.17px;
+    margin-bottom: 24px;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] section.panel.dental {
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] section.panel.dental:last-child {
+    grid-row: 1/-1;
+}
+
+@media (max-width: 1200px) {
+    main[data-view="tooth"]>div[data-view="overview"] section.panel.dental>.heading {
+        visibility: hidden;
+    }
+}
+
+main[data-view="tooth"]>div[data-view="overview"] section.panel.dental>.text {
+    padding: 24px 0;
+    border-top: 1px solid #e6e7eb;
+    text-align: center;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] section.panel.endodontic-list,
+main[data-view="tooth"]>div[data-view="overview"] section.panel.endodontic-test,
+main[data-view="tooth"]>div[data-view="overview"] section.panel.periodontal {
+    border-top: 1px solid #e6e7eb;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] section.panel.endodontic-test,
+main[data-view="tooth"]>div[data-view="overview"] section.panel.periodontal {
+    grid-area: 2 / auto/auto/-1;
+    border-left: 1px solid #e6e7eb;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] section.panel.endodontic-list .tests {
+    border-top: 1px solid #e6e7eb;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] section.panel.endodontic-list .test {
+    border-bottom: 1px solid #e6e7eb;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] section.panel.endodontic-list .test button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 12px 2px 12px 28px;
+    color: inherit;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] section.panel.endodontic-list .test button:before {
+    margin-left: -28px;
+    filter: contrast(0) sepia(100%) hue-rotate(176deg) brightness(1.25) saturate(0.4);
+}
+
+
+main[data-view="tooth"]>div[data-view="overview"] section.panel.endodontic-list .test .name {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: normal;
+    font-weight: 700;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] section.panel.endodontic-list .test .value {
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: normal;
+    position: relative;
+    padding-right: 18px;
+    margin-left: auto;
+    text-align: right;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] section.panel.endodontic-list .test .value:after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg fill='%237a8599' viewBox='0 0 12 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.9 11.5c-.4-.4-.5-1.1 0-1.6L6.7 6 2.9 2c-.5-.5-.4-1.2 0-1.6.5-.4 1.2-.4 1.7.1.4.4 4.5 4.7 4.5 4.7.4.4.4 1.1 0 1.6 0 0-4.1 4.3-4.5 4.7-.5.5-1.2.5-1.7 0z'/%3E%3C/svg%3E");
+    width: 12px;
+    height: 12px;
+    line-height: 12px;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] section.panel.endodontic-list .test.active {
+    color: #008fd6;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] section.panel.endodontic-list .test.active button:before {
+    filter: contrast(0) sepia(100%) hue-rotate(159deg) brightness(0.86) saturate(3.35);
+}
+
+main[data-view="tooth"]>div[data-view="overview"] section.panel.endodontic-list .test.active .value:after {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg fill='%23008fd6' viewBox='0 0 12 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.9 11.5c-.4-.4-.5-1.1 0-1.6L6.7 6 2.9 2c-.5-.5-.4-1.2 0-1.6.5-.4 1.2-.4 1.7.1.4.4 4.5 4.7 4.5 4.7.4.4.4 1.1 0 1.6 0 0-4.1 4.3-4.5 4.7-.5.5-1.2.5-1.7 0z'/%3E%3C/svg%3E");
+}
+
+main[data-view="tooth"]>div[data-view="overview"] section.panel.endodontic-test {
+    position: relative;
+    background: #f2f4f7;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] section.panel.endodontic-test .heading {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: normal;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    margin-top: 8px;
+    font-weight: 700;
+    color: #4d5565;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] section.panel.endodontic-test .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    margin: 28px;
+    color: #bcc1cc;
+    margin: 10px;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] section.panel.endodontic-test .options li {
+    margin-bottom: 10px;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] section.panel.endodontic-test .options li:last-child {
+    margin-bottom: 0;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] section.panel.endodontic-test .options button {
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: normal;
+    width: 100%;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    color: #33a5de;
+    background: #fff;
+    box-shadow: 0 2px 0 0 #e6e7eb;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] section.panel.endodontic-test .actions {
+    margin-top: 16px;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] section.panel.endodontic-test .actions .button {
+    width: 100%;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] section.panel.endodontic-test[data-name="electricity"] .options {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -4px;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] section.panel.endodontic-test[data-name="electricity"] .options li {
+    flex: 0 0 20%;
+    padding: 4px;
+    margin: 0;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] section.panel.endodontic-test[data-name="electricity"] .options button {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] ul.records {
+    position: relative;
+    overflow: auto;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] ul.records li {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: normal;
+    margin-bottom: 16px;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    display: flex;
+    padding: 11px 18px;
+    border: 1px solid #e6e7eb;
+    margin-bottom: 8px;
+    color: #4d5565;
+    background: #f2f4f7;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] ul.records li:last-child {
+    margin-bottom: 0;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] ul.records li[data-type]:before {
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    bottom: -1px;
+    width: 4px;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] ul.records li>a {
+    position: relative;
+    flex: 1;
+    margin: -12px -19px;
+    padding: 12px 19px;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] ul.records li[data-type="urgent"]:before {
+    background-color: #e13830;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] ul.records li[data-type="monitor"]:before {
+    background-color: #ffd00a;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] ul.records p {
+    margin: 0;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] ul.records .text {
+    margin-right: auto;
+    color: #7a8599;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] ul.records .date {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: normal;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 700;
+    color: #7a8599;
+    text-transform: uppercase;
+    margin-left: 32px;
+    line-height: 24px;
+    white-space: nowrap;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] ul.records .actions {
+    margin-left: 16px;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] ul.records .delete {
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    width: 24px;
+    height: 24px;
+    padding: 2px;
+    border-radius: 50%;
+    background: linear-gradient(#fff 2px, hsla(0, 0%, 100%, 0) 0) 50%/10px 2px no-repeat,
+        #e13830 content-box;
+    text-indent: 40px;
+}
+
+main[data-view="tooth"]>div[data-view="overview"] ul.records .done {
+    height: 24px;
+    padding: 0 12px;
+    border: 1px solid #e6e7eb;
+    border-radius: 6px;
+    margin-right: 16px;
+    color: inherit;
+    background: #fff;
+}
+
+div[data-view="pathology"],
+div[data-view="restoration"] {
+    display: flex;
+    padding: 0;
+}
+
+div[data-view="pathology"] .main,
+div[data-view="restoration"] .main {
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    padding: 32px 40px;
+    padding-bottom: 0;
+    background: #f2f4f7;
+}
+
+div[data-view="pathology"] .main>.heading,
+div[data-view="restoration"] .main>.heading {
+    font-weight: 300;
+    color: #4d5565;
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: 0.17px;
+    margin-bottom: 24px;
+}
+
+div[data-view="pathology"] .types[data-context="tooth"],
+div[data-view="restoration"] .types[data-context="tooth"] {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 24px;
+}
+
+div[data-view="pathology"] .types[data-context="tooth"] a,
+div[data-view="restoration"] .types[data-context="tooth"] a {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: normal;
+    font-weight: 600;
+    color: #33a5de;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    transition: 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition-property: color, background-color, box-shadow;
+    height: 48px;
+    padding: 0 16px;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 2px 0 0 #e6e7eb;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    div[data-view="pathology"] .types[data-context="tooth"] a,
+    div[data-view="restoration"] .types[data-context="tooth"] a {
+        transition: none;
+    }
+}
+
+div[data-view="pathology"] .types[data-context="tooth"] a:focus.focus-visible,
+div[data-view="restoration"] .types[data-context="tooth"] a:focus.focus-visible {
+    outline: thin dotted #202633;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+div[data-view="pathology"] .types[data-context="tooth"] .router-link-exact-active,
+div[data-view="restoration"] .types[data-context="tooth"] .router-link-exact-active {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+    background-color: #7a8599;
+}
+
+div[data-view="pathology"] .zones,
+div[data-view="restoration"] .zones {
+    order: -1;
+    width: 40vh;
+    min-width: 304px;
+    max-width: 40%;
+    padding: 16px;
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr) repeat(2, 1.5fr);
+    grid-template-areas: "cervical1 cervical1 cervical1 cervical1 cervical1 cervical1" ". . direction1 direction1 . ." "direction2 direction2 direction3 direction3 direction4 direction4" ". . direction5 direction5 . ." "cervical2 cervical2 cervical2 cervical2 cervical2 cervical2" "cusp1 cusp1 cusp1 cusp2 cusp2 cusp2" "cusp3 cusp3 cusp3 cusp4 cusp4 cusp4";
+    box-shadow: 3px 0 6px 0 rgba(0, 0, 0, 0.08);
+}
+
+div[data-view="pathology"] .zones .pad,
+div[data-view="restoration"] .zones .pad {
+    color: #7a8599;
+}
+
+div[data-view="pathology"] .zones .pad label,
+div[data-view="restoration"] .zones .pad label {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: normal;
+    font-weight: 600;
+    color: #33a5de;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    transition: 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition-property: color, background-color, box-shadow;
+    height: 48px;
+    padding: 0 16px;
+    border-radius: 6px;
+    background: #f2f4f7;
+    box-shadow: 0 2px 0 0 #e6e7eb;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    div[data-view="pathology"] .zones .pad label,
+    div[data-view="restoration"] .zones .pad label {
+        transition: none;
+    }
+}
+
+div[data-view="pathology"] .zones .pad input,
+div[data-view="restoration"] .zones .pad input {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    margin: -1px;
+}
+
+div[data-view="pathology"] .zones .pad input:checked+label,
+div[data-view="restoration"] .zones .pad input:checked+label {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+    background-color: #7a8599;
+}
+
+div[data-view="pathology"] .zones .pad input:focus.focus-visible+label,
+div[data-view="restoration"] .zones .pad input:focus.focus-visible+label {
+    outline: thin dotted #202633;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+div[data-view="pathology"] .zones .pad:first-child,
+div[data-view="restoration"] .zones .pad:first-child {
+    grid-area: cervical1;
+}
+
+div[data-view="pathology"] .zones .pad:nth-child(2),
+div[data-view="restoration"] .zones .pad:nth-child(2) {
+    grid-area: direction1;
+}
+
+div[data-view="pathology"] .zones .pad:nth-child(3),
+div[data-view="restoration"] .zones .pad:nth-child(3) {
+    grid-area: direction2;
+}
+
+div[data-view="pathology"] .zones .pad:nth-child(4),
+div[data-view="restoration"] .zones .pad:nth-child(4) {
+    grid-area: direction3;
+}
+
+div[data-view="pathology"] .zones .pad:nth-child(5),
+div[data-view="restoration"] .zones .pad:nth-child(5) {
+    grid-area: direction4;
+}
+
+div[data-view="pathology"] .zones .pad:nth-child(6),
+div[data-view="restoration"] .zones .pad:nth-child(6) {
+    grid-area: direction5;
+}
+
+div[data-view="pathology"] .zones .pad:nth-child(7),
+div[data-view="restoration"] .zones .pad:nth-child(7) {
+    grid-area: cervical2;
+}
+
+div[data-view="pathology"] .zones .pad:nth-child(8),
+div[data-view="restoration"] .zones .pad:nth-child(8) {
+    grid-area: cusp1;
+}
+
+div[data-view="pathology"] .zones .pad:nth-child(9),
+div[data-view="restoration"] .zones .pad:nth-child(9) {
+    grid-area: cusp2;
+}
+
+div[data-view="pathology"] .zones .pad:nth-child(10),
+div[data-view="restoration"] .zones .pad:nth-child(10) {
+    grid-area: cusp3;
+}
+
+div[data-view="pathology"] .zones .pad:nth-child(11),
+div[data-view="restoration"] .zones .pad:nth-child(11) {
+    grid-area: cusp4;
+}
+
+div[data-view="pathology"] .zones .pad label,
+div[data-view="restoration"] .zones .pad label {
+    height: 100%;
+    color: inherit;
+    white-space: pre-wrap;
+}
+
+div[data-view="pathology"] .zones .pad input:checked+label,
+div[data-view="restoration"] .zones .pad input:checked+label {
+    color: inherit;
+    background-color: #fff;
+    box-shadow: inset 0 0 0 2px #98a1b3;
+}
+
+div[data-view="pathology"] .zones .pad.disabled label,
+div[data-view="restoration"] .zones .pad.disabled label {
+    pointer-events: none;
+    cursor: default;
+    color: #fff;
+    background-color: #fff;
+    box-shadow: 0 0 0 1px #e6e7eb;
+}
+
+div[data-view="pathology"] .detail,
+div[data-view="restoration"] .detail {
+    margin-bottom: 24px;
+}
+
+div[data-view="pathology"] .detail:last-child,
+div[data-view="restoration"] .detail:last-child {
+    margin-bottom: 0;
+}
+
+div[data-view="pathology"] .detail legend,
+div[data-view="restoration"] .detail legend {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: normal;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 700;
+    color: #7a8599;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+div[data-view="pathology"] .detail .options,
+div[data-view="restoration"] .detail .options {
+    display: grid;
+    gap: 8px;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+}
+
+div[data-view="pathology"] .detail .options label,
+div[data-view="restoration"] .detail .options label {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: normal;
+    font-weight: 600;
+    color: #33a5de;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    transition: 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition-property: color, background-color, box-shadow;
+    height: 48px;
+    padding: 0 16px;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 2px 0 0 #e6e7eb;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    div[data-view="pathology"] .detail .options label,
+    div[data-view="restoration"] .detail .options label {
+        transition: none;
+    }
+}
+
+div[data-view="pathology"] .detail .options input,
+div[data-view="restoration"] .detail .options input {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    margin: -1px;
+}
+
+div[data-view="pathology"] .detail .options input:checked+label,
+div[data-view="restoration"] .detail .options input:checked+label {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+    background-color: #7a8599;
+}
+
+div[data-view="pathology"] .detail .options input:focus.focus-visible+label,
+div[data-view="restoration"] .detail .options input:focus.focus-visible+label {
+    outline: thin dotted #202633;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+div[data-view="pathology"] .detail[data-name="level"] .options,
+div[data-view="pathology"] .detail[data-name="material"] .options,
+div[data-view="restoration"] .detail[data-name="level"] .options,
+div[data-view="restoration"] .detail[data-name="material"] .options {
+    grid-auto-flow: row;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+div[data-view="pathology"] .actions,
+div[data-view="restoration"] .actions {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    gap: 8px;
+}
+
+div[data-view="pathology"] .actions .button.monitor,
+div[data-view="restoration"] .actions .button.monitor {
+    color: #202633;
+    background-color: #ffd00a;
+}
+
+div[data-view="pathology"] .actions .button.monitor[disabled],
+div[data-view="restoration"] .actions .button.monitor[disabled] {
+    color: hsla(0, 0%, 100%, 0.5);
+}
+
+div[data-view="pathology"] .actions .button.treat,
+div[data-view="restoration"] .actions .button.treat {
+    background-color: #e13830;
+}
+
+.report {
+    width: 793px;
+}
+
+.report>* {
+    position: relative;
+    width: 632px;
+    margin: 0 auto 24px;
+}
+
+.report .logo {
+    width: 59pt;
+    height: 45pt;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.report .general-info>h1 {
+    padding: 12px 0 48px;
+    color: #4d5565;
+    font-weight: 400;
+    font-size: 28px;
+}
+
+.report .medical-issues>h2,
+.report .mouth-charts .chart>h2,
+.report .treatment-plan>h2 {
+    position: relative;
+    padding: 14px 0 26px;
+    color: #4d5565;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.report .general-info table {
+    border-collapse: collapse;
+    border-top: 2px solid #e6e7eb;
+    width: 100%;
+}
+
+.report .general-info table tr {
+    margin: 0;
+    padding: 0;
+}
+
+.report .general-info table tr td,
+.report .general-info table tr th {
+    text-align: left;
+    padding: 11px 5px 12.5px;
+    border-bottom: 2px solid #e6e7eb;
+}
+
+.report .general-info table tr th {
+    font-weight: 400;
+    width: 30%;
+}
+
+.report .general-info table tr td {
+    font-weight: 700;
+    color: #202633;
+}
+
+.report .medical-issues .issues {
+    display: flex;
+}
+
+.report .medical-issues .issues .column {
+    flex: 1 1 50%;
+}
+
+.report .medical-issues .issues .column:not(.blank) {
+    border-top: 2px solid #e6e7eb;
+}
+
+.report .medical-issues .issues .column:first-child {
+    margin-right: 40px;
+}
+
+.report .medical-issues .issues .column:last-child {
+    margin-left: 40px;
+}
+
+.report .medical-issues .issues .issue {
+    text-align: left;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: normal;
+    margin-bottom: 16px;
+    position: relative;
+    padding-left: 40px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 0;
+    background: 0 0/24px 24px no-repeat;
+    border-bottom: 2px solid #e6e7eb;
+}
+
+.report .medical-issues .issues .issue:last-child {
+    margin-bottom: 0;
+}
+
+.report .medical-issues .issues .issue[data-name="nursing-infant"]:before,
+.report .medical-issues .issues .issue[data-name="tobacco-use"]:before {
+    display: block;
+    position: relative;
+    width: 72px;
+    height: 72px;
+    margin-right: -48px;
+    margin-bottom: -48px;
+    left: 0;
+    top: 0;
+    transform: scale(0.3333333333);
+    transform-origin: top left;
+    top: 8px;
+    position: absolute;
+}
+
+.report .medical-issues .issues .issue[data-name="alcohol-use"]:before,
+.report .medical-issues .issues .issue[data-name="street-or-recreational-drug-use"]:before {
+    display: block;
+    position: relative;
+    width: 72px;
+    height: 72px;
+    margin-right: -48px;
+    margin-bottom: -48px;
+    left: 0;
+    top: 0;
+    transform: scale(0.3333333333);
+    transform-origin: top left;
+    top: 8px;
+    position: absolute;
+}
+
+.report .treatment-plan .records {
+    position: relative;
+    overflow: auto;
+}
+
+.report .treatment-plan .records li {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: normal;
+    margin-bottom: 16px;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    display: flex;
+    padding: 11px 18px;
+    border: 1px solid #e6e7eb;
+    margin-bottom: 8px;
+    color: #4d5565;
+    background: #f2f4f7;
+}
+
+.report .treatment-plan .records li:last-child {
+    margin-bottom: 0;
+}
+
+.report .treatment-plan .records li[data-type]:before {
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    bottom: -1px;
+    width: 4px;
+}
+
+.report .treatment-plan .records li>a {
+    position: relative;
+    flex: 1;
+    margin: -12px -19px;
+    padding: 12px 19px;
+}
+
+.report .treatment-plan .records li[data-type="urgent"]:before {
+    background-color: #e13830;
+}
+
+.report .treatment-plan .records li[data-type="monitor"]:before {
+    background-color: #ffd00a;
+}
+
+.report .treatment-plan .records p {
+    margin: 0;
+}
+
+.report .treatment-plan .records .text {
+    margin-right: auto;
+    color: #7a8599;
+}
+
+.report .treatment-plan .records .date {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: normal;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 700;
+    color: #7a8599;
+    text-transform: uppercase;
+    margin-left: 32px;
+    line-height: 24px;
+    white-space: nowrap;
+}
+
+.report .treatment-plan .records .actions {
+    margin-left: 16px;
+}
+
+.report .treatment-plan .records .delete {
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    width: 24px;
+    height: 24px;
+    padding: 2px;
+    border-radius: 50%;
+    background: linear-gradient(#fff 2px, hsla(0, 0%, 100%, 0) 0) 50%/10px 2px no-repeat,
+        #e13830 content-box;
+    text-indent: 40px;
+}
+
+.report .treatment-plan .records .done {
+    height: 24px;
+    padding: 0 12px;
+    border: 1px solid #e6e7eb;
+    border-radius: 6px;
+    margin-right: 16px;
+    color: inherit;
+    background: #fff;
+}
+
+.report .treatment-plan .records li {
+    page-break-inside: avoid;
+    padding-top: 18px;
+    padding-bottom: 20px;
+    margin-bottom: 14px;
+}
+
+.report .treatment-plan .records li[data-type]:before {
+    width: 8px;
+}
+
+.report .treatment-plan .records li .text {
+    color: #4d5565;
+}
+
+.report .mouth-charts .chart {
+    position: relative;
+}
+
+.report .mouth-charts .full-mouth.chart,
+.report .mouth-charts .upper-jaw.chart {
+    -moz-column-break-before: page;
+    break-before: page;
+}
+
+.report .mouth-charts .upper-jaw.chart {
+    margin-bottom: 10px;
+}
+
+.report .mouth-charts .jaw-box {
+    clear: both;
+    position: relative;
+    width: 118vh;
+    min-width: 774.08px;
+    max-width: 100%;
+    padding: 0 72px;
+    margin: auto;
+}
+
+.report .mouth-charts .jaw-box .jaw {
+    display: flex;
+    justify-content: center;
+}
+
+.report .mouth-charts .jaw-box .jaw .tooth {
+    position: relative;
+    text-align: center;
+}
+
+.report .mouth-charts .jaw-box .jaw .tooth .trigger:not([role="none"]) {
+    cursor: pointer;
+}
+
+.report .mouth-charts .jaw-box .jaw .tooth .trigger[aria-checked="true"]:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg fill='%23fff' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.6 9.5c-.8-.7-.8-1.9-.1-2.7l.1-.1c.8-.7 2.1-.7 2.9 0l2.4 2.4 6.7-6.5c.8-.8 2-.8 2.8 0 .8.8.8 2 0 2.8L7 13.6c-.6.6-1.6.6-2.2 0L.6 9.5z'/%3E%3C/svg%3E");
+    overflow: hidden;
+    width: 20px;
+    height: 20px;
+    padding: 3px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    font-size: 10px;
+    line-height: 10px;
+    background: #008fd6;
+}
+
+.report .mouth-charts .jaw-box .jaw .tooth .visualization {
+    position: relative;
+}
+
+.report .mouth-charts .jaw-box .jaw .tooth .visualization[data-eruption="erupted"][data-state="to-be-extracted"] {
+    outline: 3px dotted #e13830;
+    border-radius: 20px;
+}
+
+.report .mouth-charts .jaw-box .jaw .tooth .visualization[data-eruption="erupted"][data-state="to-be-extracted"][data-projection="incisal"]:after,
+.report .mouth-charts .jaw-box .jaw .tooth .visualization[data-eruption="erupted"][data-state="to-be-extracted"][data-projection="incisal"]:before {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Ccircle cx='9' cy='9' r='9' fill='%23E13830'/%3E%3Cpath fill='%23FFF' fill-rule='nonzero' d='M12.5 6.39V4.74c0-.409-.348-.74-.778-.74H6.278c-.43 0-.778.331-.778.74v1.666c0 .233.116.452.312.593l2.54 1.814-2.54 1.813a.73.73 0 0 0-.312.593v1.666c0 .409.348.74.778.74h5.444c.43 0 .778-.331.778-.74v-1.65a.73.73 0 0 0-.31-.59L9.646 8.812 12.19 6.98a.73.73 0 0 0 .309-.591'/%3E%3C/g%3E%3C/svg%3E");
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    height: 18px;
+    width: 18px;
+    overflow: hidden;
+    margin-left: -9px;
+    margin-top: -9px;
+    z-index: 3;
+}
+
+.report .mouth-charts .jaw-box .jaw .tooth .visualization[data-eruption="erupted"][data-state="to-be-extracted"][data-projection="incisal"]:before {
+    top: 0;
+}
+
+.report .mouth-charts .jaw-box .jaw .tooth .visualization[data-eruption="erupted"][data-state="to-be-extracted"][data-projection="incisal"]:after {
+    top: 100%;
+}
+
+.report .mouth-charts .jaw-box .jaw .tooth .number {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: normal;
+    display: block;
+    width: 24px;
+    height: 24px;
+    padding: 4px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    color: inherit;
+}
+
+.report .mouth-charts .jaw-box .jaw .tooth .number[data-treatment-plan-level="urgent"] {
+    color: #fff;
+    background: #e13830;
+}
+
+.report .mouth-charts .jaw-box .jaw .tooth .number[data-treatment-plan-level="monitor"] {
+    color: #202633;
+    background: #ffd00a;
+}
+
+.report .mouth-charts .jaw-box .jaw .periodontal-issues {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 41px;
+}
+
+@media (max-height: 759px) {
+    .report .mouth-charts .jaw-box .jaw .periodontal-issues {
+        width: 31px;
+        border-spacing: 1px 4px;
+    }
+}
+
+.report .mouth-charts .jaw-box .jaw .periodontal-issues .indicator {
+    width: 11px;
+    height: 11px;
+}
+
+@media (max-height: 759px) {
+    .report .mouth-charts .jaw-box .jaw .periodontal-issues .indicator {
+        width: 9px;
+        height: 9px;
+        border: 1px solid #4d5565;
+        border-radius: 50%;
+    }
+
+    .report .mouth-charts .jaw-box .jaw .periodontal-issues .indicator.active {
+        border-color: currentcolor;
+        background-color: currentcolor;
+    }
+
+    .report .mouth-charts .jaw-box .jaw .periodontal-issues .indicator.active[data-type="bleeding"] {
+        color: #d0021b;
+    }
+
+    .report .mouth-charts .jaw-box .jaw .periodontal-issues .indicator.active[data-type="plaque"] {
+        color: #4a90e2;
+    }
+
+    .report .mouth-charts .jaw-box .jaw .periodontal-issues .indicator.active[data-type="pus"] {
+        color: #f8e71c;
+    }
+
+    .report .mouth-charts .jaw-box .jaw .periodontal-issues .indicator.active[data-type="tartar"] {
+        color: transparent;
+        border-color: #bcc1cc;
+    }
+}
+
+.report .mouth-charts .jaw-box .jaw[data-type="lower"] .periodontal-issues[data-projection="lingual"],
+.report .mouth-charts .jaw-box .jaw[data-type="upper"] .periodontal-issues[data-projection="buccal"] {
+    top: 0;
+    margin-top: 32px;
+    margin-bottom: 24px;
+}
+
+.report .mouth-charts .jaw-box .jaw[data-type="lower"] .periodontal-issues[data-projection="buccal"],
+.report .mouth-charts .jaw-box .jaw[data-type="upper"] .periodontal-issues[data-projection="palatal"] {
+    bottom: 0;
+    margin-top: 24px;
+    margin-bottom: 32px;
+}
+
+.report .mouth-charts .jaw-box .jaw .endodontic-issues {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 64px;
+}
+
+.report .mouth-charts .jaw-box .jaw .endodontic-issues:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 16px;
+    border-left: 1px solid #98a1b3;
+}
+
+.report .mouth-charts .jaw-box .jaw .endodontic-issues .issue {
+    width: 24px;
+    height: 24px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.report .mouth-charts .jaw-box .jaw .endodontic-issues .issue .text {
+    position: absolute;
+    left: -99999px;
+    top: -99999px;
+}
+
+.report .mouth-charts .jaw-box .jaw[data-type="upper"] .endodontic-issues {
+    top: 0;
+}
+
+.report .mouth-charts .jaw-box .jaw[data-type="upper"] .endodontic-issues:before {
+    top: 34px;
+}
+
+.report .mouth-charts .jaw-box .jaw[data-type="lower"] .endodontic-issues {
+    bottom: 0;
+    padding-top: 40px;
+}
+
+.report .mouth-charts .jaw-box .jaw[data-type="lower"] .endodontic-issues:before {
+    bottom: 34px;
+}
+
+.report .mouth-charts .jaw-box.full-mouth .jaw[data-type="upper"] .tooth {
+    padding-top: 64px;
+}
+
+.report .mouth-charts .jaw-box.full-mouth .jaw[data-type="upper"] .tooth .trigger[data-erupted="true"][aria-checked="true"]:after {
+    margin-top: 38%;
+}
+
+.report .mouth-charts .jaw-box.full-mouth .jaw[data-type="upper"] .tooth .trigger[data-erupted="false"][aria-checked="true"]:after {
+    margin-top: 10px;
+}
+
+.report .mouth-charts .jaw-box.full-mouth .jaw[data-type="upper"] .tooth .visualization[data-eruption="erupted"][data-state="to-be-extracted"][data-projection="incisal"]:after {
+    display: none;
+}
+
+.report .mouth-charts .jaw-box.full-mouth .jaw[data-type="lower"] .tooth {
+    padding-bottom: 64px;
+}
+
+.report .mouth-charts .jaw-box.full-mouth .jaw[data-type="lower"] .tooth .trigger[data-erupted="true"][aria-checked="true"]:after {
+    margin-top: -38%;
+}
+
+.report .mouth-charts .jaw-box.full-mouth .jaw[data-type="lower"] .tooth .trigger[data-erupted="false"][aria-checked="true"]:after {
+    margin-top: -10px;
+}
+
+.report .mouth-charts .jaw-box.full-mouth .jaw[data-type="lower"] .tooth .visualization[data-eruption="erupted"][data-state="to-be-extracted"][data-projection="incisal"]:before {
+    display: none;
+}
+
+.report .mouth-charts .jaw-box.full-mouth .tooth .number {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.report .mouth-charts .jaw-box.single-jaw .tooth {
+    padding-top: 72px;
+    padding-bottom: 72px;
+}
+
+.report .mouth-charts .jaw-box.single-jaw .tooth .number {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.report .mouth-charts .jaw-box .periodontal-issue-legend {
+    position: absolute;
+    left: 0;
+    text-align: left;
+}
+
+.report .mouth-charts .jaw-box .periodontal-issue-legend[data-row="top"] {
+    top: 32px;
+}
+
+.report .mouth-charts .jaw-box .periodontal-issue-legend[data-row="bottom"] {
+    bottom: 31px;
+}
+
+.report .mouth-charts .jaw-box .periodontal-issue-legend p {
+    font-size: 8px;
+    line-height: 14px;
+    letter-spacing: 0.5px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.report .mouth-charts .jaw-box .periodontal-issue-legend p[data-type="bleeding"] {
+    color: #d0021b;
+}
+
+.report .mouth-charts .jaw-box .periodontal-issue-legend p[data-type="plaque"] {
+    color: #4a90e2;
+}
+
+.report .mouth-charts .jaw-box .periodontal-issue-legend p[data-type="pus"] {
+    color: #f8e71c;
+}
+
+.report .mouth-charts .jaw-box .periodontal-issue-legend p[data-type="tartar"] {
+    color: transparent;
+}
+
+.report .mouth-charts .jaw-box.full-mouth {
+    margin-left: -80.5px;
+    margin-bottom: 24px;
+}
+
+.report .mouth-charts .jaw-box.single-jaw {
+    padding-right: 0;
+    min-width: 632px;
+}
+
+.report .mouth-charts .jaw-box .jaw .periodontal-issues {
+    width: 31px;
+    border-spacing: 2px 4px;
+}
+
+.report .mouth-charts .jaw-box .jaw .periodontal-issues .indicator {
+    width: 7px;
+    height: 7px;
+    border: 1px solid #4d5565;
+    border-radius: 50%;
+}
+
+.report .mouth-charts .jaw-box .jaw .periodontal-issues .indicator.active {
+    border-color: currentcolor;
+    background-color: currentcolor;
+}
+
+.report .mouth-charts .jaw-box .jaw .periodontal-issues .indicator.active[data-type="bleeding"] {
+    color: #d0021b;
+}
+
+.report .mouth-charts .jaw-box .jaw .periodontal-issues .indicator.active[data-type="plaque"] {
+    color: #4a90e2;
+}
+
+.report .mouth-charts .jaw-box .jaw .periodontal-issues .indicator.active[data-type="pus"] {
+    color: #f8e71c;
+}
+
+.report .mouth-charts .jaw-box .jaw .periodontal-issues .indicator.active[data-type="tartar"] {
+    color: transparent;
+    border-color: #bcc1cc;
+}
+
+.report .mouth-charts .upper-jaw .jaw-box {
+    margin-top: -36px;
+}
+
+.report .mouth-charts .lower-jaw .jaw-box {
+    margin-top: -46px;
+}
+
+.report .mouth-charts .legend .legend-list {
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: 37% 37% 26%;
+    grid-template-rows: auto 1fr;
+}
+
+.report .mouth-charts .legend .legend-list .group {
+    margin-bottom: 32px;
+}
+
+.report .mouth-charts .legend .legend-list .group:last-child {
+    margin-bottom: 0;
+}
+
+.report .mouth-charts .legend .legend-list .group .heading,
+.report .mouth-charts .legend .legend-list .group li {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: normal;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 700;
+    color: #7a8599;
+    text-transform: uppercase;
+    line-height: 24px;
+}
+
+.report .mouth-charts .legend .legend-list .group .heading {
+    color: #202633;
+}
+
+.report .mouth-charts .legend .legend-list .group li {
+    display: flex;
+    padding-left: 40px;
+    margin: 16px 0;
+    font-weight: 600;
+}
+
+.report .mouth-charts .legend .legend-list .group li[data-name]:before {
+    content: "";
+    flex: none;
+    width: 24px;
+    height: 24px;
+    margin-left: -40px;
+    margin-right: 16px;
+    vertical-align: middle;
+}
+
+.report .mouth-charts .legend .legend-list .group li[data-name="depth"]:before {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.51 6.49c-2.09 0-3.29 2.82-4.57 5.81-1.28 3-2.72 6.36-5.52 7.13h18.57v-4.32c-2.24-.81-3.37-2.97-4.32-4.78-1.25-2.38-2.12-3.84-4.16-3.84' fill='%239ad4f2'/%3E%3Cpath d='M15.51 4.49c-3.41 0-4.93 3.57-6.41 7.02-1.34 3.13-2.6 6.08-4.93 6.08-2.45 0-3.31.82-3.62 1.84h4.87c2.8-.77 4.24-4.13 5.52-7.13 1.28-2.99 2.48-5.81 4.57-5.81 2.04 0 2.91 1.46 4.16 3.84.95 1.81 2.09 3.97 4.32 4.78v-2.22c-.99-.65-1.7-1.87-2.55-3.49-1.21-2.3-2.58-4.91-5.93-4.91' fill='%2337a5dd'/%3E%3C/svg%3E");
+}
+
+.report .mouth-charts .legend .legend-list .group li[data-name="margin"]:before {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.6 2.4c-3.1 0-4.6 1.6-5.9 3-1.4 1.5-2.6 2.9-6 2.9-4.2-.1-5.5 3.7-6.7 7-.3 1-.7 1.8-1 2.6v3.8c1.4-1.6 2.2-3.8 2.9-5.7 1.3-3.6 2.2-5.7 4.8-5.7 4.3 0 6.1-1.9 7.5-3.5 1.2-1.3 2.1-2.3 4.4-2.3 2.1 0 3.2 1 4.4 2.2V3.8c-1.1-.8-2.5-1.4-4.4-1.4' fill='%23e13b30'/%3E%3C/svg%3E");
+}
+
+.report .mouth-charts .legend .legend-list .group li[data-name="furcation1"]:before {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 8 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m3.989 2.954-2.51 5.02h-1.49L3.982-.044l.007.013.006-.013L7.99 7.974H6.5l-2.51-5.02z'/%3E%3C/svg%3E");
+}
+
+.report .mouth-charts .legend .legend-list .group li[data-name="furcation2"]:before {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 8 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 8H0l4-8 4 8zM2.3 6.6h3.5L4 3.1 2.3 6.6z'/%3E%3C/svg%3E");
+}
+
+.report .mouth-charts .legend .legend-list .group li[data-name="furcation3"]:before {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 8 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m4 0 4 8H0z'/%3E%3C/svg%3E");
+}
+
+.report .mouth-charts .legend .legend-list .group li[data-name="mobility1"]:before {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 23 9' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.978.498a.571.571 0 0 1 .864.743l-.061.07-3.063 3.022 3.063 3.022c.202.2.224.513.065.737l-.06.071a.57.57 0 0 1-.736.065l-.072-.06L.503 4.74a.57.57 0 0 1-.06-.742l.06-.071zM19.26 8.169a.571.571 0 0 1-.864-.743l.061-.07 3.063-3.023-3.063-3.021a.57.57 0 0 1-.065-.737l.06-.072a.57.57 0 0 1 .737-.065l.07.06 3.476 3.429a.57.57 0 0 1 .06.742l-.06.071z'/%3E%3C/svg%3E");
+}
+
+.report .mouth-charts .legend .legend-list .group li[data-name="mobility2"]:before {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 23 9' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.978.498a.571.571 0 0 1 .864.743l-.061.07-3.063 3.022 3.063 3.022c.202.2.224.513.065.737l-.06.071a.57.57 0 0 1-.736.065l-.072-.06L.503 4.74a.57.57 0 0 1-.06-.742l.06-.071z'/%3E%3Cpath d='M6.874.498a.571.571 0 0 1 .863.743l-.06.07-3.063 3.021 3.063 3.023c.202.2.224.513.065.737l-.06.071a.57.57 0 0 1-.737.065l-.07-.06L3.398 4.74a.57.57 0 0 1-.061-.742l.061-.071zm9.208 7.671a.571.571 0 0 1-.863-.743l.06-.07 3.064-3.022-3.064-3.022a.57.57 0 0 1-.065-.737l.06-.072a.57.57 0 0 1 .737-.065l.071.06 3.475 3.429a.57.57 0 0 1 .061.742l-.06.071z'/%3E%3Cpath d='M19.26 8.169a.571.571 0 0 1-.864-.743l.061-.07 3.063-3.023-3.063-3.021a.57.57 0 0 1-.065-.737l.06-.072a.57.57 0 0 1 .737-.065l.07.06 3.476 3.429a.57.57 0 0 1 .06.742l-.06.071z'/%3E%3C/svg%3E");
+}
+
+.report .mouth-charts .legend .legend-list .group li[data-name="mobility3"]:before {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 23 9' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.978.498a.571.571 0 0 1 .864.743l-.061.07-3.063 3.022 3.063 3.022c.202.2.224.513.065.737l-.06.071a.57.57 0 0 1-.736.065l-.072-.06L.503 4.74a.57.57 0 0 1-.06-.742l.06-.071z'/%3E%3Cpath d='M6.874.498a.571.571 0 0 1 .863.743l-.06.07-3.063 3.021 3.063 3.023c.202.2.224.513.065.737l-.06.071a.57.57 0 0 1-.737.065l-.07-.06L3.398 4.74a.57.57 0 0 1-.061-.742l.061-.071z'/%3E%3Cpath d='M9.77.498a.571.571 0 0 1 .863.743l-.06.07-3.064 3.022 3.064 3.022c.202.2.224.513.065.737l-.06.071a.57.57 0 0 1-.737.065l-.071-.06L6.295 4.74a.57.57 0 0 1-.061-.742l.06-.071zm3.416 7.671a.571.571 0 0 1-.863-.743l.06-.07 3.064-3.023-3.063-3.021a.57.57 0 0 1-.065-.737l.06-.072a.57.57 0 0 1 .736-.065l.071.06 3.475 3.429a.57.57 0 0 1 .062.742l-.062.071z'/%3E%3Cpath d='M16.082 8.169a.571.571 0 0 1-.863-.743l.06-.07 3.064-3.022-3.064-3.022a.57.57 0 0 1-.065-.737l.06-.072a.57.57 0 0 1 .737-.065l.071.06 3.475 3.429a.57.57 0 0 1 .061.742l-.06.071z'/%3E%3Cpath d='M19.26 8.169a.571.571 0 0 1-.864-.743l.061-.07 3.063-3.023-3.063-3.021a.57.57 0 0 1-.065-.737l.06-.072a.57.57 0 0 1 .737-.065l.07.06 3.476 3.429a.57.57 0 0 1 .06.742l-.06.071z'/%3E%3C/svg%3E");
+}
+
+.report .mouth-charts .legend .legend-list .group li[data-name="monitor"]:before {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 0c6.6 0 12 5.4 12 12s-5.4 12-12 12S0 18.6 0 12 5.4 0 12 0z' fill='%23ffd00a'/%3E%3Cpath d='m12.6 16.3.5-2.4h-1.9l-.5 2.4h-.9l.5-2.4H8.9l.2-.8h1.4l.4-2.1H9.5l.2-.8h1.4l.5-2.3h.8l-.5 2.3h1.9l.5-2.3h.8l-.5 2.3h1.5l-.1.8h-1.5l-.4 2.1h1.5l-.2.8h-1.5l-.5 2.4h-.8zm-1.3-3.2h1.9l.4-2.2h-1.9l-.4 2.2z' fill='%23202633'/%3E%3C/svg%3E");
+}
+
+.report .mouth-charts .legend .legend-list .group li[data-name="treatment"]:before {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 0c6.6 0 12 5.4 12 12s-5.4 12-12 12S0 18.6 0 12 5.4 0 12 0z' fill='%23e13830'/%3E%3Cpath d='m12.6 16.3.5-2.4h-1.9l-.5 2.4h-.9l.5-2.4H8.9l.2-.8h1.4l.4-2.1H9.5l.2-.8h1.4l.5-2.3h.8l-.5 2.3h1.9l.5-2.3h.8l-.5 2.3h1.5l-.1.8h-1.5l-.4 2.1h1.5l-.2.8h-1.5l-.5 2.4h-.8zm-1.3-3.2h1.9l.4-2.2h-1.9l-.4 2.2z' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+.report .mouth-charts .legend .legend-list .group li[data-name="extract"]:before {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Ccircle cx='12' cy='12' r='12' fill='%23E13830'/%3E%3Cpath fill='%23FFF' fill-rule='nonzero' d='M16.667 8.52v-2.2c0-.545-.465-.987-1.037-.987H8.37c-.572 0-1.037.442-1.037.988v2.22a.976.976 0 0 0 .416.79l3.387 2.419-3.388 2.419a.98.98 0 0 0-.415.79v2.22c0 .546.465.988 1.037.988h7.26c.572 0 1.037-.442 1.037-.988v-2.198a.97.97 0 0 0-.413-.788L12.86 11.75l3.395-2.443a.98.98 0 0 0 .413-.788'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.report .mouth-charts .legend .legend-list .group li[data-name^="furcation"]:before {
+    padding: 1px 5px 9px;
+}
+
+.report .mouth-charts .legend .legend-list .group li[data-name^="mobility"]:before {
+    width: 32px;
+    margin-left: -44px;
+    margin-right: 12px;
+}
+
+.report .mouth-charts .legend .legend-list .group {
+    margin-bottom: 0;
+}
+
+.report .mouth-charts .legend .legend-list .group:first-child,
+.report .mouth-charts .legend .legend-list .group:nth-child(2) {
+    grid-row: 1 / span 2;
+}
+
+.report .mouth-charts .legend .legend-list .group:nth-child(3) {
+    margin-bottom: 32px;
+}
+
+.report .mouth-charts .legend .legend-list .group li {
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+[data-view="report"] {
+    display: flex;
+    flex-direction: column;
+}
+
+[data-view="report"] .actions {
+    display: flex;
+    flex: 0 0 64px;
+    background: #fff;
+    padding: 8px 16px;
+    border-bottom: 1px solid #e6e7eb;
+    align-items: center;
+}
+
+[data-view="report"] .actions .message {
+    margin-left: 16px;
+}
+
+[data-view="report"] .actions .message.error {
+    color: #e13830;
+}
+
+[data-view="report"] .actions .message a {
+    text-decoration: underline;
+}
+
+[data-view="report"] .preview {
+    overflow: auto;
+}
+
+[data-view="report"] .report {
+    margin: 0 auto;
+    padding-top: 32px;
+}
+
+[data-view="print"] .banner {
+    left: 16px;
+    right: auto;
+}
+
+[data-view="print"] .banner .button,
+[data-view="print"] .banner .close {
+    display: none;
+}
+
+main[data-view="profile"] {
+    padding: 24px;
+}
+
+main[data-view="profile"] .content {
+    width: 320px;
+    margin: 32px auto 0;
+}
+
+main[data-view="profile"] h1 {
+    font-weight: 300;
+    color: #4d5565;
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: 0.17px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+main[data-view="profile"] a.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    margin: 28px;
+    color: #bcc1cc;
+}
+
+main[data-view="profile"] .actions {
+    margin-top: 32px;
+}
+
+main[data-view="profile"] .actions .button {
+    width: 100%;
+}
+
+main[data-view="settings"] {
+    padding: 24px;
+}
+
+main[data-view="settings"] .content {
+    width: 320px;
+    margin: 32px auto 0;
+}
+
+main[data-view="settings"] h1 {
+    font-weight: 300;
+    color: #4d5565;
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: 0.17px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+main[data-view="settings"] a.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    margin: 28px;
+    color: #bcc1cc;
+}
+
+main[data-view="settings"] .field.toggle-switch {
+    border: 1px solid #e6e7eb;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+
+main[data-view="loading"] {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+    background-color: #202633;
+}
+
+main[data-view="not-found"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+main[data-view="not-found"] .content {
+    width: 648px;
+    text-align: center;
+}
+
+main[data-view="not-found"] .text {
+    font-weight: 300;
+    color: #4d5565;
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: 0.17px;
+    margin-bottom: 24px;
+}
+
+main[data-view="billing"] {
+    padding: 24px;
+}
+
+main[data-view="billing"] .content {
+    width: 320px;
+    margin: 32px auto 0;
+}
+
+main[data-view="billing"] h1 {
+    font-weight: 300;
+    color: #4d5565;
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: 0.17px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+main[data-view="billing"] a.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    margin: 28px;
+    color: #bcc1cc;
+}
+
+main[data-view="billing"]>.content ul.prices {
+    display: flex;
+    justify-content: center;
+}
+
+main[data-view="billing"]>.content ul.prices>li {
+    text-align: center;
+    background-color: #202633;
+    border-radius: 10px;
+    min-width: 352px;
+    min-height: 240px;
+    margin: 16px 0;
+    margin-left: 32px;
+    padding: 48px 0;
+}
+
+main[data-view="billing"]>.content ul.prices>li h3 {
+    font-weight: 300;
+    color: #4d5565;
+    font-size: 21px;
+    line-height: 24px;
+    letter-spacing: 0.13px;
+    color: #fff;
+}
+
+main[data-view="billing"]>.content ul.prices>li h4 {
+    font-weight: 300;
+    color: #4d5565;
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: 0.17px;
+    margin-bottom: 24px;
+    margin: 32px 0;
+    color: #fff;
+}
+
+main[data-view="billing"]>.content ul.prices>li .pending-loader {
+    color: #ffd00a;
+}
+
+main[data-view="billing"]>.content ul.prices>li .message {
+    margin: 32px 0;
+    min-height: 48px;
+    color: #ffd00a;
+}
+
+.dental-chart-container .chart-main .chart-body {
+    flex: 1 1 auto;
+}

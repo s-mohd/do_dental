@@ -1,0 +1,218 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-10-22 03:04:08.165498",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "dental_chart",
+  "patient",
+  "tooth",
+  "pathology_type",
+  "column_break_azuv",
+  "date",
+  "time",
+  "notes",
+  "decay_section",
+  "decay_surfaces",
+  "decay_stage",
+  "column_break_lrmg",
+  "cavitation",
+  "pulp",
+  "decay_level",
+  "fracture_section",
+  "fracture_type",
+  "column_break_nubj",
+  "fracture_position",
+  "tooth_wear_section",
+  "wear_type",
+  "column_break_mijk",
+  "wear_surfaces",
+  "discoloration_section",
+  "discoloration_type"
+ ],
+ "fields": [
+  {
+   "fieldname": "dental_chart",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Dental Chart",
+   "options": "Patient Dental Chart",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tooth",
+   "fieldtype": "Data",
+   "label": "Tooth",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Time",
+   "reqd": 1
+  },
+  {
+   "default": "[]",
+   "fieldname": "decay_surfaces",
+   "fieldtype": "Table MultiSelect",
+   "label": "Decay Surfaces",
+   "options": "Tooth Surfaces"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fetch_from": "dental_chart.patient",
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pathology_type",
+   "fieldtype": "Select",
+   "label": "Pathology Type",
+   "options": "Decay\nFracture\nTooth Wear\nDiscoloration\nApical\nDevelopment Disorder",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_azuv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.pathology_type == 'Decay'",
+   "fieldname": "decay_section",
+   "fieldtype": "Section Break",
+   "label": "Decay"
+  },
+  {
+   "fieldname": "decay_stage",
+   "fieldtype": "Select",
+   "label": "Decay Stage",
+   "options": "Dentin\nEnamel"
+  },
+  {
+   "fieldname": "cavitation",
+   "fieldtype": "Select",
+   "label": "Cavitation",
+   "options": "Cavitation\nNo"
+  },
+  {
+   "depends_on": "eval:doc.cavitation == 'Cavitation'",
+   "fieldname": "pulp",
+   "fieldtype": "Select",
+   "label": "Pulp",
+   "options": "Plup Involved\nPlup Not Involved"
+  },
+  {
+   "fieldname": "decay_level",
+   "fieldtype": "Select",
+   "label": "Decay Level",
+   "options": "C1\nC2\nC3\nC4"
+  },
+  {
+   "fieldname": "column_break_lrmg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.pathology_type == 'Fracture'",
+   "fieldname": "fracture_section",
+   "fieldtype": "Section Break",
+   "label": "Fracture"
+  },
+  {
+   "fieldname": "fracture_type",
+   "fieldtype": "Select",
+   "label": "Fracture Type",
+   "options": "Crown Fracture\nRoot Fracture"
+  },
+  {
+   "fieldname": "column_break_nubj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fracture_position",
+   "fieldtype": "Select",
+   "label": "Fracture Position",
+   "options": "Vertical\nHorizontal"
+  },
+  {
+   "depends_on": "eval:doc.pathology_type == 'Tooth Wear'",
+   "fieldname": "tooth_wear_section",
+   "fieldtype": "Section Break",
+   "label": "Tooth Wear"
+  },
+  {
+   "fieldname": "wear_type",
+   "fieldtype": "Select",
+   "label": "Wear Type",
+   "options": "Abrasion\nErosion"
+  },
+  {
+   "fieldname": "column_break_mijk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "[]",
+   "fieldname": "wear_surfaces",
+   "fieldtype": "Table MultiSelect",
+   "label": "Wear Surfaces",
+   "options": "Tooth Surfaces"
+  },
+  {
+   "depends_on": "eval:doc.pathology_type == 'Discoloration'",
+   "fieldname": "discoloration_section",
+   "fieldtype": "Section Break",
+   "label": "Discoloration"
+  },
+  {
+   "fieldname": "discoloration_type",
+   "fieldtype": "Select",
+   "label": "Discoloration Type",
+   "options": "Gray\nRed\nYellow"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-10-22 21:11:55.128866",
+ "modified_by": "Administrator",
+ "module": "Do Dental",
+ "name": "Tooth Pathology",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="142px" height="532px" viewBox="0 0 142 532" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>45/buccal/2</title>
+    <defs>
+        <polygon id="path-1" points="0 0 27.4998556 0 27.4998556 18.0997992 0 18.0997992"></polygon>
+    </defs>
+    <g id="45/buccal/2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-18" transform="translate(70.708028, 179.031356) scale(1, -1) translate(-70.708028, -179.031356) translate(12.030868, 165.691997)"></g>
+        <g id="Group-21" transform="translate(114.593103, 137.382161)">
+            <path d="M25.7225893,11.0897402 C24.7498354,13.4852764 23.6074555,15.2611581 22.1310159,17.5563033 C22.0081235,17.7449691 21.8921546,17.9215187 21.7744548,18.0997992 L7.83741904,18.0997992 C3.50849125,18.0997992 0,14.591308 0,10.2623802 L0,0 L27.1038306,0 C27.297689,0.818705655 27.4153887,1.50586452 27.4638533,2.22937185 C27.7234851,6.07365358 26.5274479,9.10961493 25.7225893,11.0897402" id="Fill-19" fill-opacity="0.7" fill="#4A90E2"></path>
+        </g>
+    </g>
+</svg>

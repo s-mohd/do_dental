@@ -1,0 +1,62 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-10-22 02:37:42.296080",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "tooth",
+  "cold_test",
+  "heat_test",
+  "ept_test",
+  "response_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "tooth",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tooth",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cold_test",
+   "fieldtype": "Select",
+   "label": "Cold Test",
+   "options": "Positive\nNegative\nNot Tested"
+  },
+  {
+   "fieldname": "heat_test",
+   "fieldtype": "Select",
+   "label": "Heat Test",
+   "options": "Positive\nNegative\nNot Tested"
+  },
+  {
+   "fieldname": "ept_test",
+   "fieldtype": "Select",
+   "label": "EPT Test",
+   "options": "Positive\nNegative\nNot Tested"
+  },
+  {
+   "fieldname": "response_notes",
+   "fieldtype": "Small Text",
+   "label": "Response Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-10-22 02:40:00.975339",
+ "modified_by": "Administrator",
+ "module": "Do Dental",
+ "name": "Vitality Test Records",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

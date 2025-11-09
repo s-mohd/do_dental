@@ -1,0 +1,82 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-10-22 02:47:47.515013",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_dental_chart",
+  "patient",
+  "date",
+  "time",
+  "root_canal_records"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient_dental_chart",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient Dental Chart",
+   "options": "Patient Dental Chart",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "root_canal_records",
+   "fieldtype": "Table",
+   "label": "Root Canal Records",
+   "options": "Root Canal Records"
+  },
+  {
+   "fetch_from": "patient_dental_chart.patient",
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-10-22 03:41:50.749179",
+ "modified_by": "Administrator",
+ "module": "Do Dental",
+ "name": "Root Canal Test",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
