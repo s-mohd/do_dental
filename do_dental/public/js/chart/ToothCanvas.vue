@@ -3,6 +3,9 @@
     class="tooth-canvas d-flex flex-column align-items-center"
     :class="{ active: isSelected }"
     @click="emit('select', toothNumber)"
+    @mousedown.left.stop.prevent="handleMouseDown"
+    @mouseenter="handleMouseEnter"
+    @mouseup.left.stop="handleMouseUp"
   >
     <span v-if="showNum == 'up'" class="number">{{ toothNumber }}</span>
     <canvas ref="canvas"></canvas>
@@ -24,14 +27,14 @@ import {
 import { buildPeriodontalValues } from "./utils/periodontal.js"
 import { PERIODONTAL_GRID, getToothGeometry } from "./utils/geometry-map.js"
 
-const emit = defineEmits(["select"])
+const emit = defineEmits(["select", "drag-start", "drag-hover", "drag-end"])
 
 const props = defineProps({
   toothNumber: String,
   arch: String,
   projection: { type: String, default: "buccal" },
   view: String,
-  scale: { type: Number, default: 0.3 },
+  scale: { type: Number, default: 0.1 },
   invertY: { type: Boolean, default: false },
   showNum: { type: String, default: "" },
   isSelected: { type: Boolean, default: false },
@@ -106,14 +109,6 @@ async function loadSVGWithColor(url, color) {
     img.onload = () => resolve(img)
     img.src = URL.createObjectURL(blob)
   })
-}
-
-function shouldInvertCanvas(meta, projection) {
-  return meta.jaw === "upper" && projection === "lingual"
-}
-
-function shouldInvertImage(meta, projection) {
-  return meta.jaw === "upper" && projection === "lingual"
 }
 
 function computeHorizontal(geometry, projectionKey, baseWidth, newWidth) {
@@ -311,8 +306,8 @@ async function drawTooth() {
 
     canvas.value.width = baseWidth
     canvas.value.height = baseHeight
-    canvas.value.style.width = `${Math.max(baseWidth * props.scale, 1)}px`
-    canvas.value.style.height = `${Math.max(baseHeight * props.scale, 1)}px`
+    // canvas.value.style.width = `${Math.max(baseWidth * props.scale, 1)}px`
+    // canvas.value.style.height = `${Math.max(baseHeight * props.scale, 1)}px`
 
     canvas.value.style.transform = props.invertY ? "scaleY(-1)" : ""
 
@@ -516,19 +511,40 @@ watch(
   drawTooth,
   { deep: true }
 )
+
+function handleMouseDown(event) {
+  if (event.button !== 0) return
+  emit("drag-start", {
+    tooth: props.toothNumber,
+    additive: event.metaKey || event.ctrlKey || event.shiftKey,
+    remove: event.altKey,
+  })
+}
+
+function handleMouseEnter(event) {
+  if (!event.buttons) return
+  emit("drag-hover", props.toothNumber)
+}
+
+function handleMouseUp(event) {
+  if (event.button !== 0) return
+  emit("drag-end")
+}
 </script>
 
 
 <style scoped>
 canvas { vertical-align: middle; outline: none; }
 .number {
-  font-size: 12px; line-height: 16px; display: block;
-  width: 24px; height: 24px; padding: 4px; border-radius: 50%;
-  margin: 8px auto;
+  font-size: 10px; 
+  line-height: 16px; 
+  display: block;
+  border-radius: 50%;
 }
 .tooth-canvas {
   cursor: pointer;
   transition: transform 0.15s ease, filter 0.15s ease;
+  user-select: none;
 }
 
 .tooth-canvas.active {

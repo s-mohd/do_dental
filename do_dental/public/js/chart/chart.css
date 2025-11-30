@@ -283,6 +283,7 @@ button::-moz-focus-inner {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
@@ -320,18 +321,18 @@ button::-moz-focus-inner {
 }
 
 .periodontal-panel {
-    position: sticky;
-    top: 72px;
-    flex: 0 0 320px;
-    width: 320px;
+    position: relative;
+    top: 0;
+    flex: 1 1 auto;
+    width: 100%;
     background: #ffffff;
     border-radius: 16px;
-    box-shadow: 0 16px 32px rgba(15, 23, 42, 0.16);
+    box-shadow: 0 16px 32px rgba(15, 23, 42, 0.12);
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    z-index: 10;
+    z-index: 1;
 }
 
 .periodontal-panel .panel-header {
@@ -3070,13 +3071,10 @@ main[data-view="chart"] .jaw-box .jaw .tooth .visualization[data-eruption="erupt
 }
 
 main[data-view="chart"] .jaw-box .jaw .tooth .number {
-    font-size: 12px;
+    font-size: 10px;
     line-height: 16px;
     letter-spacing: normal;
     display: block;
-    width: 24px;
-    height: 24px;
-    padding: 4px;
     border-radius: 50%;
     margin-left: auto;
     margin-right: auto;
@@ -6296,13 +6294,10 @@ div[data-view="restoration"] .actions .button.treat {
 }
 
 .report .mouth-charts .jaw-box .jaw .tooth .number {
-    font-size: 12px;
+    font-size: 10px;
     line-height: 16px;
     letter-spacing: normal;
     display: block;
-    width: 24px;
-    height: 24px;
-    padding: 4px;
     border-radius: 50%;
     margin-left: auto;
     margin-right: auto;

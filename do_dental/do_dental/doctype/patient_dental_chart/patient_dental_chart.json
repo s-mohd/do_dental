@@ -6,6 +6,7 @@
  "engine": "InnoDB",
  "field_order": [
   "patient",
+  "is_pediatric",
   "date",
   "notes",
   "tooth_condition"
@@ -16,6 +17,13 @@
    "fieldtype": "Link",
    "label": "Patient",
    "options": "Patient"
+  },
+  {
+   "default": "0",
+   "description": "Use deciduous teeth chart layout for pediatric patients.",
+   "fieldname": "is_pediatric",
+   "fieldtype": "Check",
+   "label": "Pediatric Chart"
   },
   {
    "fieldname": "notes",

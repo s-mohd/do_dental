@@ -14,6 +14,8 @@
   "date",
   "time",
   "notes",
+  "patient_encounter",
+  "clinical_procedure",
   "decay_section",
   "decay_surfaces",
   "decay_stage",
@@ -90,6 +92,18 @@
    "label": "Pathology Type",
    "options": "Decay\nFracture\nTooth Wear\nDiscoloration\nApical\nDevelopment Disorder",
    "reqd": 1
+  },
+  {
+   "fieldname": "clinical_procedure",
+   "fieldtype": "Link",
+   "label": "Clinical Procedure",
+   "options": "Clinical Procedure"
+  },
+  {
+   "fieldname": "patient_encounter",
+   "fieldtype": "Link",
+   "label": "Patient Encounter",
+   "options": "Patient Encounter"
   },
   {
    "fieldname": "column_break_azuv",
@@ -191,7 +205,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-10-22 21:11:55.128866",
+ "modified": "2025-11-19 06:25:11.791397",
  "modified_by": "Administrator",
  "module": "Do Dental",
  "name": "Tooth Pathology",
